@@ -1,0 +1,10 @@
+D:\Cshart3cs2\ProjectCoffee\bin\Debug\ProjectCoffee.exe.config
+D:\Cshart3cs2\ProjectCoffee\bin\Debug\ProjectCoffee.exe
+D:\Cshart3cs2\ProjectCoffee\bin\Debug\ProjectCoffee.pdb
+D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.csprojAssemblyReference.cache
+D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.Form1.resources
+D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.Properties.Resources.resources
+D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.csproj.GenerateResource.cache
+D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.csproj.CoreCompileInputs.cache
+D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.exe
+D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.pdb
