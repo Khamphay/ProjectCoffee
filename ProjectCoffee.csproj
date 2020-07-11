@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\CShard_3cs2_Lad_P2_Salary\CShard_3cs2_Lad_P2_Salary\bin\Debug\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.20\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,10 +61,92 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoffee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoffee.Designer.cs">
+      <DependentUpon>frmCoffee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSaveEditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaveEditCategory.Designer.cs">
+      <DependentUpon>frmSaveEditCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSaveEditCoffee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaveEditCoffee.Designer.cs">
+      <DependentUpon>frmSaveEditCoffee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSaveEditStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaveEditStaff.Designer.cs">
+      <DependentUpon>frmSaveEditStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSaveEditUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaveEditUnit.Designer.cs">
+      <DependentUpon>frmSaveEditUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaff.Designer.cs">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnit.Designer.cs">
+      <DependentUpon>frmUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyConnect.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoffee.resx">
+      <DependentUpon>frmCoffee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSaveEditCategory.resx">
+      <DependentUpon>frmSaveEditCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSaveEditCoffee.resx">
+      <DependentUpon>frmSaveEditCoffee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSaveEditStaff.resx">
+      <DependentUpon>frmSaveEditStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSaveEditUnit.resx">
+      <DependentUpon>frmSaveEditUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaff.resx">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnit.resx">
+      <DependentUpon>frmUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
