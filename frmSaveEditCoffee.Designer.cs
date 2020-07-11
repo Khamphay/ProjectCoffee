@@ -43,17 +43,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbUnit = new System.Windows.Forms.ComboBox();
             this.cbCatg = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.picCoffee = new System.Windows.Forms.PictureBox();
             this.btChooseImg = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.picCoffee)).BeginInit();
+            this.gunaGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btCancel
             // 
             this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCancel.Location = new System.Drawing.Point(258, 407);
+            this.btCancel.Location = new System.Drawing.Point(258, 417);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(63, 36);
             this.btCancel.TabIndex = 17;
@@ -63,7 +63,7 @@
             // btSave
             // 
             this.btSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSave.Location = new System.Drawing.Point(156, 407);
+            this.btSave.Location = new System.Drawing.Point(156, 417);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(63, 36);
             this.btSave.TabIndex = 18;
@@ -74,7 +74,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(264, 17);
+            this.label7.Location = new System.Drawing.Point(258, 95);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 28);
             this.label7.TabIndex = 5;
@@ -83,7 +83,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(264, 95);
+            this.label6.Location = new System.Drawing.Point(258, 17);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 28);
             this.label6.TabIndex = 6;
@@ -94,7 +94,8 @@
             this.txtSaleprice.Location = new System.Drawing.Point(34, 308);
             this.txtSaleprice.Name = "txtSaleprice";
             this.txtSaleprice.Size = new System.Drawing.Size(210, 36);
-            this.txtSaleprice.TabIndex = 13;
+            this.txtSaleprice.TabIndex = 3;
+            this.txtSaleprice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // label5
             // 
@@ -110,7 +111,8 @@
             this.txtImprice.Location = new System.Drawing.Point(34, 216);
             this.txtImprice.Name = "txtImprice";
             this.txtImprice.Size = new System.Drawing.Size(210, 36);
-            this.txtImprice.TabIndex = 14;
+            this.txtImprice.TabIndex = 2;
+            this.txtImprice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // label3
             // 
@@ -126,7 +128,8 @@
             this.txtname.Location = new System.Drawing.Point(34, 126);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(210, 36);
-            this.txtname.TabIndex = 15;
+            this.txtname.TabIndex = 1;
+            this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // label2
             // 
@@ -142,7 +145,8 @@
             this.txtid.Location = new System.Drawing.Point(34, 48);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(210, 36);
-            this.txtid.TabIndex = 16;
+            this.txtid.TabIndex = 0;
+            this.txtid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // label1
             // 
@@ -156,57 +160,72 @@
             // cbUnit
             // 
             this.cbUnit.FormattingEnabled = true;
-            this.cbUnit.Location = new System.Drawing.Point(264, 126);
+            this.cbUnit.Location = new System.Drawing.Point(258, 48);
             this.cbUnit.Name = "cbUnit";
             this.cbUnit.Size = new System.Drawing.Size(210, 36);
-            this.cbUnit.TabIndex = 19;
+            this.cbUnit.TabIndex = 6;
+            this.cbUnit.SelectedIndexChanged += new System.EventHandler(this.cbUnit_SelectedIndexChanged);
+            this.cbUnit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // cbCatg
             // 
             this.cbCatg.FormattingEnabled = true;
-            this.cbCatg.Location = new System.Drawing.Point(264, 48);
+            this.cbCatg.Location = new System.Drawing.Point(258, 126);
             this.cbCatg.Name = "cbCatg";
             this.cbCatg.Size = new System.Drawing.Size(210, 36);
-            this.cbCatg.TabIndex = 19;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.picCoffee);
-            this.groupBox1.Location = new System.Drawing.Point(309, 168);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(140, 179);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ຮູບພາບ";
+            this.cbCatg.TabIndex = 5;
+            this.cbCatg.SelectedIndexChanged += new System.EventHandler(this.cbCatg_SelectedIndexChanged);
+            this.cbCatg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // picCoffee
             // 
             this.picCoffee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picCoffee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picCoffee.Location = new System.Drawing.Point(3, 32);
+            this.picCoffee.Location = new System.Drawing.Point(0, 0);
             this.picCoffee.Name = "picCoffee";
-            this.picCoffee.Size = new System.Drawing.Size(134, 144);
+            this.picCoffee.Size = new System.Drawing.Size(210, 179);
             this.picCoffee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCoffee.TabIndex = 0;
             this.picCoffee.TabStop = false;
+            this.picCoffee.Click += new System.EventHandler(this.picCoffee_Click);
             // 
             // btChooseImg
             // 
             this.btChooseImg.FlatAppearance.BorderSize = 0;
             this.btChooseImg.Image = ((System.Drawing.Image)(resources.GetObject("btChooseImg.Image")));
-            this.btChooseImg.Location = new System.Drawing.Point(359, 350);
+            this.btChooseImg.Location = new System.Drawing.Point(344, 350);
             this.btChooseImg.Name = "btChooseImg";
             this.btChooseImg.Size = new System.Drawing.Size(39, 33);
             this.btChooseImg.TabIndex = 18;
             this.btChooseImg.UseVisualStyleBackColor = true;
             this.btChooseImg.Click += new System.EventHandler(this.btChooseImg_Click);
             // 
+            // gunaGroupBox1
+            // 
+            this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGroupBox1.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaGroupBox1.BorderColor = System.Drawing.Color.White;
+            this.gunaGroupBox1.BorderSize = 1;
+            this.gunaGroupBox1.Controls.Add(this.picCoffee);
+            this.gunaGroupBox1.LineBottom = 1;
+            this.gunaGroupBox1.LineColor = System.Drawing.Color.White;
+            this.gunaGroupBox1.LineLeft = 1;
+            this.gunaGroupBox1.LineRight = 1;
+            this.gunaGroupBox1.LineTop = 1;
+            this.gunaGroupBox1.Location = new System.Drawing.Point(258, 168);
+            this.gunaGroupBox1.Name = "gunaGroupBox1";
+            this.gunaGroupBox1.Radius = 2;
+            this.gunaGroupBox1.Size = new System.Drawing.Size(210, 179);
+            this.gunaGroupBox1.TabIndex = 1;
+            this.gunaGroupBox1.Text = "ຮູບພາບ";
+            this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
+            // 
             // frmSaveEditCoffee
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(502, 465);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.cbCatg);
             this.Controls.Add(this.cbUnit);
             this.Controls.Add(this.btCancel);
@@ -228,8 +247,8 @@
             this.Name = "frmSaveEditCoffee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSaveEditCoffee";
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCoffee)).EndInit();
+            this.gunaGroupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,7 +264,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btChooseImg;
         public System.Windows.Forms.TextBox txtSaleprice;
         public System.Windows.Forms.TextBox txtImprice;
@@ -254,5 +272,6 @@
         public System.Windows.Forms.ComboBox cbUnit;
         public System.Windows.Forms.ComboBox cbCatg;
         public System.Windows.Forms.PictureBox picCoffee;
+        private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
     }
 }

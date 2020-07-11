@@ -42,8 +42,14 @@
             this.btAdd = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
+            this.txtname = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtid = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatg)).BeginInit();
             this.panel1.SuspendLayout();
+            this.gunaGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaSeparator1
@@ -51,9 +57,9 @@
             this.gunaSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaSeparator1.LineColor = System.Drawing.Color.DimGray;
-            this.gunaSeparator1.Location = new System.Drawing.Point(12, 165);
+            this.gunaSeparator1.Location = new System.Drawing.Point(333, 165);
             this.gunaSeparator1.Name = "gunaSeparator1";
-            this.gunaSeparator1.Size = new System.Drawing.Size(898, 1);
+            this.gunaSeparator1.Size = new System.Drawing.Size(577, 1);
             this.gunaSeparator1.TabIndex = 14;
             // 
             // dgvCatg
@@ -64,6 +70,7 @@
             this.dgvCatg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCatg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvCatg.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.dgvCatg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCatg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -89,8 +96,7 @@
             this.dgvCatg.EnableHeadersVisualStyles = false;
             this.dgvCatg.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.dgvCatg.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dgvCatg.Location = new System.Drawing.Point(12, 126);
-            this.dgvCatg.MinimumSize = new System.Drawing.Size(776, 317);
+            this.dgvCatg.Location = new System.Drawing.Point(333, 126);
             this.dgvCatg.Name = "dgvCatg";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
@@ -105,7 +111,7 @@
             this.dgvCatg.RowTemplate.Height = 40;
             this.dgvCatg.RowTemplate.ReadOnly = true;
             this.dgvCatg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCatg.Size = new System.Drawing.Size(915, 401);
+            this.dgvCatg.Size = new System.Drawing.Size(594, 401);
             this.dgvCatg.TabIndex = 13;
             this.dgvCatg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCatg_CellClick);
             this.dgvCatg.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCatg_CellDoubleClick);
@@ -114,9 +120,6 @@
             // 
             this.panel1.Controls.Add(this.gunaSeparator2);
             this.panel1.Controls.Add(this.btExit);
-            this.panel1.Controls.Add(this.btDel);
-            this.panel1.Controls.Add(this.btEdit);
-            this.panel1.Controls.Add(this.btAdd);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -152,7 +155,8 @@
             // btDel
             // 
             this.btDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDel.Location = new System.Drawing.Point(660, 36);
+            this.btDel.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.btDel.Location = new System.Drawing.Point(191, 254);
             this.btDel.Name = "btDel";
             this.btDel.Size = new System.Drawing.Size(63, 36);
             this.btDel.TabIndex = 2;
@@ -162,7 +166,8 @@
             // btEdit
             // 
             this.btEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btEdit.Location = new System.Drawing.Point(579, 36);
+            this.btEdit.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.btEdit.Location = new System.Drawing.Point(110, 254);
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(63, 36);
             this.btEdit.TabIndex = 2;
@@ -173,7 +178,8 @@
             // btAdd
             // 
             this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAdd.Location = new System.Drawing.Point(498, 37);
+            this.btAdd.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.btAdd.Location = new System.Drawing.Point(29, 255);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(63, 36);
             this.btAdd.TabIndex = 2;
@@ -197,6 +203,69 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ຄົ້ນຫາ:";
             // 
+            // gunaGroupBox1
+            // 
+            this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGroupBox1.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gunaGroupBox1.BorderSize = 1;
+            this.gunaGroupBox1.Controls.Add(this.txtname);
+            this.gunaGroupBox1.Controls.Add(this.label2);
+            this.gunaGroupBox1.Controls.Add(this.txtid);
+            this.gunaGroupBox1.Controls.Add(this.label3);
+            this.gunaGroupBox1.Controls.Add(this.btAdd);
+            this.gunaGroupBox1.Controls.Add(this.btEdit);
+            this.gunaGroupBox1.Controls.Add(this.btDel);
+            this.gunaGroupBox1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGroupBox1.LineBottom = 1;
+            this.gunaGroupBox1.LineColor = System.Drawing.Color.White;
+            this.gunaGroupBox1.LineLeft = 1;
+            this.gunaGroupBox1.LineRight = 1;
+            this.gunaGroupBox1.LineTop = 1;
+            this.gunaGroupBox1.Location = new System.Drawing.Point(12, 163);
+            this.gunaGroupBox1.Name = "gunaGroupBox1";
+            this.gunaGroupBox1.Radius = 2;
+            this.gunaGroupBox1.Size = new System.Drawing.Size(302, 364);
+            this.gunaGroupBox1.TabIndex = 16;
+            this.gunaGroupBox1.Text = "ປ້ອນຂໍ້ມູນ";
+            this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // txtname
+            // 
+            this.txtname.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtname.Location = new System.Drawing.Point(18, 169);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(263, 36);
+            this.txtname.TabIndex = 31;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 138);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 28);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "ປະເພດ";
+            // 
+            // txtid
+            // 
+            this.txtid.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtid.Location = new System.Drawing.Point(18, 91);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(263, 36);
+            this.txtid.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 28);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "ລະຫັດ";
+            // 
             // frmCategory
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -204,6 +273,7 @@
             this.AutoScrollMinSize = new System.Drawing.Size(900, 500);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(939, 544);
+            this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.gunaSeparator1);
             this.Controls.Add(this.dgvCatg);
             this.Controls.Add(this.panel1);
@@ -214,6 +284,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatg)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.gunaGroupBox1.ResumeLayout(false);
+            this.gunaGroupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -230,5 +302,10 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaSeparator gunaSeparator2;
+        private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
+        public System.Windows.Forms.TextBox txtname;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txtid;
+        private System.Windows.Forms.Label label3;
     }
 }

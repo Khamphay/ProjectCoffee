@@ -43,6 +43,7 @@ namespace ProjectCoffee
                 {
                     dgvCatg.Columns[c].HeaderText = col[c];
                 }
+                dgvCatg.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             catch (Exception ex)
             {
@@ -133,18 +134,22 @@ namespace ProjectCoffee
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            frmSaveEditCategory add = new frmSaveEditCategory(this);
-            add.ShowDialog();
+            //frmSaveEditCategory add = new frmSaveEditCategory(this);
+            //add.ShowDialog();
+            Save(txtid.Text, txtname.Text);
         }
 
         private void btEdit_Click(object sender, EventArgs e)
         {
-            ShowEdit(index);
+            //ShowEdit(index);
+            Edit(txtid.Text, txtname.Text);
         }
 
         private void dgvCatg_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            ShowEdit(e.RowIndex);
+            //ShowEdit(e.RowIndex);
+            txtid.Text = dgvCatg.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtname.Text = dgvCatg.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
 
         private void dgvCatg_CellClick(object sender, DataGridViewCellEventArgs e)

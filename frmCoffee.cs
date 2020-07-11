@@ -26,6 +26,7 @@ namespace ProjectCoffee
         MySqlDataAdapter da;
         MySqlDataReader dr;
         DataSet ds;
+        DataTable table;
         string[] col = { "ລະຫັດ", "ຊື່ກາເຟ", "ລາຄານຳເຂົ້າ", "ລາຄາຂາຍ", "ຫົວໜ່ວຍ", "ປະເພດ"};
         int idx;
 
@@ -38,10 +39,12 @@ namespace ProjectCoffee
                 da = new MySqlDataAdapter("Select tbcoffee.Coff_ID, tbcoffee.Coff_Name, tbcoffee.Im_Price, tbcoffee.Sale_Price, tbunit.Uni_Name, tbcategory.Catg_Name From tbcoffee Inner Join tbunit On tbcoffee.Uni_ID=tbunit.Uni_ID Inner Join tbcategory On tbcoffee.Catg_ID=tbcategory.Catg_ID", con);
                 da.Fill(ds, "cof");
                 dgvCoffee.DataSource = ds.Tables["cof"];
+
                 for (int c = 0; c < col.Length; c++)
                 {
                     dgvCoffee.Columns[c].HeaderText = col[c];
                 }
+                dgvCoffee.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             catch (Exception ex)
             {
@@ -112,12 +115,12 @@ namespace ProjectCoffee
                 editcoffee.txtSaleprice.Text = dgvCoffee.Rows[index].Cells[3].Value.ToString();
                 editcoffee.cbUnit.SelectedItem = dgvCoffee.Rows[index].Cells[4].Value.ToString();
                 editcoffee.cbCatg.SelectedItem = dgvCoffee.Rows[index].Cells[5].Value.ToString();
-                if (dgvCoffee.Rows[index].Cells[5].Value.ToString() != "")
+
+                if (picCoffee.Image != null)
                 {
-                    byte[] by = (byte[])(dgvCoffee.Rows[index].Cells[1].Value);
-                    MemoryStream memory = new MemoryStream(by);
-                    editcoffee.picCoffee.Image = Image.FromStream(memory);
+                    editcoffee.picCoffee.Image = picCoffee.Image;
                 }
+
                 editcoffee.Show();
             }
         }
@@ -125,7 +128,7 @@ namespace ProjectCoffee
         {
             try
             {
-                cmd = new MySqlCommand("Delete From tbcoffee Where Coffe_ID=@id", con);
+                cmd = new MySqlCommand("Delete From tbcoffee Where Coff_ID=@id", con);
                 cmd.Parameters.AddWithValue("id", id);
                 if (cmd.ExecuteNonQuery() == 1)
                 {
@@ -159,6 +162,36 @@ namespace ProjectCoffee
         private void dgvCoffee_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            idx = e.RowIndex;
+
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    table = new DataTable();
+                    da = new MySqlDataAdapter("Select Image From tbcoffee Where Coff_ID='" + dgvCoffee.Rows[e.RowIndex].Cells[0].Value.ToString() + "'", con);
+                    da.Fill(table);
+                    if (table.Rows.Count > 0)
+                    {
+                        byte[] by = (byte[])(table.Rows[0][0]);
+                        MemoryStream memory = new MemoryStream(by);
+                        picCoffee.Image = Image.FromStream(memory);
+                    }
+                    else
+                    {
+                        picCoffee.Image = null;
+                    }
+                }
+                else
+                {
+                    picCoffee.Image = null;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         private void btEdit_Click(object sender, EventArgs e)

@@ -42,6 +42,7 @@ namespace ProjectCoffee
                 {
                     dgvUnit.Columns[c].HeaderText = col[c];
                 }
+                dgvUnit.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             catch (Exception ex)
             {
@@ -132,8 +133,9 @@ namespace ProjectCoffee
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            frmSaveEditUnit add = new frmSaveEditUnit(this);
-            add.ShowDialog();
+            //frmSaveEditUnit add = new frmSaveEditUnit(this);
+            //add.ShowDialog();
+            Save(txtid.Text, txtname.Text);
         }
 
         private void btDel_Click(object sender, EventArgs e)
@@ -146,7 +148,8 @@ namespace ProjectCoffee
 
         private void btEdit_Click(object sender, EventArgs e)
         {
-            ShowEdit(index);
+            //ShowEdit(index);
+            Edit(txtid.Text, txtname.Text);
         }
 
         private void dgvUnit_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -156,7 +159,9 @@ namespace ProjectCoffee
 
         private void dgvUnit_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            ShowEdit(e.RowIndex);
+            //ShowEdit(e.RowIndex);
+            txtid.Text = dgvUnit.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtname.Text = dgvUnit.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }

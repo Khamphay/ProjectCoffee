@@ -17,8 +17,23 @@ namespace ProjectCoffee
         {
             InitializeComponent();
             _home = home;
-            pnTopMenu.BackColor = Color.FromArgb(100, 0, 0, 0);
+            //gbMenu.BackColor = Color.FromArgb(100, 0, 0, 0);
             pnBottom.BackColor=Color.FromArgb(100, 0, 0, 0);
+        }
+
+        private void picFacebook_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/perrycountycafe/");
+        }
+
+        private void picInstragram_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.instagram.com/cafebuur/");
+        }
+
+        private void picIatam_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.studfold.com/static-caravans/cafe-and-shop/");
         }
     }
 }

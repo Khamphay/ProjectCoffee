@@ -48,5 +48,13 @@ namespace ProjectCoffee
                 }
             }
         }
+
+        private void Key_EnterNextControl(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+               SelectNextControl((Control)sender, true, true, true,true);
+            }
+        }
     }
 }

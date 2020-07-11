@@ -68,7 +68,8 @@
             this.txtid.Location = new System.Drawing.Point(27, 57);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(184, 36);
-            this.txtid.TabIndex = 1;
+            this.txtid.TabIndex = 0;
+            this.txtid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // label2
             // 
@@ -85,6 +86,7 @@
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(184, 36);
             this.txtname.TabIndex = 1;
+            this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // label3
             // 
@@ -100,7 +102,8 @@
             this.txtsurename.Location = new System.Drawing.Point(27, 214);
             this.txtsurename.Name = "txtsurename";
             this.txtsurename.Size = new System.Drawing.Size(184, 36);
-            this.txtsurename.TabIndex = 1;
+            this.txtsurename.TabIndex = 2;
+            this.txtsurename.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // label4
             // 
@@ -116,7 +119,8 @@
             this.txtvill.Location = new System.Drawing.Point(459, 57);
             this.txtvill.Name = "txtvill";
             this.txtvill.Size = new System.Drawing.Size(184, 36);
-            this.txtvill.TabIndex = 1;
+            this.txtvill.TabIndex = 6;
+            this.txtvill.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // label5
             // 
@@ -132,7 +136,8 @@
             this.txttel.Location = new System.Drawing.Point(245, 57);
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(184, 36);
-            this.txttel.TabIndex = 1;
+            this.txttel.TabIndex = 3;
+            this.txttel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // label6
             // 
@@ -148,7 +153,8 @@
             this.txtcard.Location = new System.Drawing.Point(245, 135);
             this.txtcard.Name = "txtcard";
             this.txtcard.Size = new System.Drawing.Size(184, 36);
-            this.txtcard.TabIndex = 1;
+            this.txtcard.TabIndex = 4;
+            this.txtcard.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // label7
             // 
@@ -164,7 +170,8 @@
             this.txtemail.Location = new System.Drawing.Point(245, 214);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(184, 36);
-            this.txtemail.TabIndex = 1;
+            this.txtemail.TabIndex = 5;
+            this.txtemail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // label8
             // 
@@ -180,7 +187,8 @@
             this.txtdis.Location = new System.Drawing.Point(459, 135);
             this.txtdis.Name = "txtdis";
             this.txtdis.Size = new System.Drawing.Size(184, 36);
-            this.txtdis.TabIndex = 1;
+            this.txtdis.TabIndex = 7;
+            this.txtdis.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
             // label9
             // 
@@ -196,7 +204,7 @@
             this.txtpro.Location = new System.Drawing.Point(459, 214);
             this.txtpro.Name = "txtpro";
             this.txtpro.Size = new System.Drawing.Size(184, 36);
-            this.txtpro.TabIndex = 1;
+            this.txtpro.TabIndex = 8;
             // 
             // groupBox1
             // 
@@ -217,13 +225,13 @@
             this.rdbFemale.Name = "rdbFemale";
             this.rdbFemale.Size = new System.Drawing.Size(43, 32);
             this.rdbFemale.TabIndex = 3;
-            this.rdbFemale.TabStop = true;
             this.rdbFemale.Text = "ຍິງ";
             this.rdbFemale.UseVisualStyleBackColor = true;
             // 
             // rdbMale
             // 
             this.rdbMale.AutoSize = true;
+            this.rdbMale.Checked = true;
             this.rdbMale.Location = new System.Drawing.Point(29, 29);
             this.rdbMale.Name = "rdbMale";
             this.rdbMale.Size = new System.Drawing.Size(49, 32);
