@@ -37,11 +37,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaSeparator2 = new Guna.UI.WinForms.GunaSeparator();
             this.btExit = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btDel = new System.Windows.Forms.Button();
             this.btEdit = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -152,6 +152,22 @@
             this.btExit.UseVisualStyleBackColor = true;
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(140, 38);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(274, 36);
+            this.txtSearch.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(89, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ຄົ້ນຫາ:";
+            // 
             // btDel
             // 
             this.btDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -186,22 +202,6 @@
             this.btAdd.Text = "ເພີ່ມ";
             this.btAdd.UseVisualStyleBackColor = true;
             this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(140, 38);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(274, 36);
-            this.txtSearch.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(89, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ຄົ້ນຫາ:";
             // 
             // gunaGroupBox1
             // 
@@ -269,8 +269,6 @@
             // frmCategory
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoScroll = true;
-            this.AutoScrollMinSize = new System.Drawing.Size(900, 500);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(939, 544);
             this.Controls.Add(this.gunaGroupBox1);

@@ -200,8 +200,6 @@
             // frmStaff
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoScroll = true;
-            this.AutoScrollMinSize = new System.Drawing.Size(800, 500);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(939, 544);
             this.Controls.Add(this.panel1);

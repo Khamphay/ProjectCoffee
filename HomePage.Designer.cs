@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
-            this.pnBottom = new System.Windows.Forms.Panel();
             this.picInstragram = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.picIatam = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.picTweeter = new Guna.UI.WinForms.GunaCirclePictureBox();
@@ -37,25 +36,14 @@
             this.gbMenu = new Guna.UI.WinForms.GunaGroupBox();
             this.btReport = new System.Windows.Forms.Button();
             this.btSale = new System.Windows.Forms.Button();
-            this.pnBottom.SuspendLayout();
+            this.pnBottom = new Guna.UI.WinForms.GunaLinePanel();
             ((System.ComponentModel.ISupportInitialize)(this.picInstragram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIatam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTweeter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFacebook)).BeginInit();
             this.gbMenu.SuspendLayout();
+            this.pnBottom.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnBottom
-            // 
-            this.pnBottom.Controls.Add(this.picInstragram);
-            this.pnBottom.Controls.Add(this.picIatam);
-            this.pnBottom.Controls.Add(this.picTweeter);
-            this.pnBottom.Controls.Add(this.picFacebook);
-            this.pnBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnBottom.Location = new System.Drawing.Point(0, 536);
-            this.pnBottom.Name = "pnBottom";
-            this.pnBottom.Size = new System.Drawing.Size(915, 72);
-            this.pnBottom.TabIndex = 0;
             // 
             // picInstragram
             // 
@@ -63,7 +51,7 @@
             this.picInstragram.BackColor = System.Drawing.Color.Transparent;
             this.picInstragram.BaseColor = System.Drawing.Color.White;
             this.picInstragram.Image = ((System.Drawing.Image)(resources.GetObject("picInstragram.Image")));
-            this.picInstragram.Location = new System.Drawing.Point(419, 21);
+            this.picInstragram.Location = new System.Drawing.Point(469, 10);
             this.picInstragram.Name = "picInstragram";
             this.picInstragram.Size = new System.Drawing.Size(35, 35);
             this.picInstragram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -78,7 +66,7 @@
             this.picIatam.BackColor = System.Drawing.Color.Transparent;
             this.picIatam.BaseColor = System.Drawing.Color.White;
             this.picIatam.Image = ((System.Drawing.Image)(resources.GetObject("picIatam.Image")));
-            this.picIatam.Location = new System.Drawing.Point(486, 21);
+            this.picIatam.Location = new System.Drawing.Point(536, 10);
             this.picIatam.Name = "picIatam";
             this.picIatam.Size = new System.Drawing.Size(35, 35);
             this.picIatam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -93,7 +81,7 @@
             this.picTweeter.BackColor = System.Drawing.Color.Transparent;
             this.picTweeter.BaseColor = System.Drawing.Color.White;
             this.picTweeter.Image = ((System.Drawing.Image)(resources.GetObject("picTweeter.Image")));
-            this.picTweeter.Location = new System.Drawing.Point(354, 21);
+            this.picTweeter.Location = new System.Drawing.Point(404, 10);
             this.picTweeter.Name = "picTweeter";
             this.picTweeter.Size = new System.Drawing.Size(35, 35);
             this.picTweeter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -107,7 +95,7 @@
             this.picFacebook.BackColor = System.Drawing.Color.Transparent;
             this.picFacebook.BaseColor = System.Drawing.Color.White;
             this.picFacebook.Image = ((System.Drawing.Image)(resources.GetObject("picFacebook.Image")));
-            this.picFacebook.Location = new System.Drawing.Point(283, 21);
+            this.picFacebook.Location = new System.Drawing.Point(333, 10);
             this.picFacebook.Name = "picFacebook";
             this.picFacebook.Size = new System.Drawing.Size(35, 35);
             this.picFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -168,29 +156,42 @@
             this.btSale.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btSale.UseVisualStyleBackColor = true;
             // 
+            // pnBottom
+            // 
+            this.pnBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnBottom.Controls.Add(this.picTweeter);
+            this.pnBottom.Controls.Add(this.picInstragram);
+            this.pnBottom.Controls.Add(this.picFacebook);
+            this.pnBottom.Controls.Add(this.picIatam);
+            this.pnBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnBottom.LineColor = System.Drawing.Color.Black;
+            this.pnBottom.LineStyle = System.Windows.Forms.BorderStyle.None;
+            this.pnBottom.Location = new System.Drawing.Point(0, 551);
+            this.pnBottom.Name = "pnBottom";
+            this.pnBottom.Size = new System.Drawing.Size(915, 57);
+            this.pnBottom.TabIndex = 2;
+            // 
             // HomePage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.gbMenu);
             this.Controls.Add(this.pnBottom);
+            this.Controls.Add(this.gbMenu);
             this.Font = new System.Drawing.Font("Alice5 95", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "HomePage";
             this.Size = new System.Drawing.Size(915, 608);
-            this.pnBottom.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picInstragram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIatam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTweeter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFacebook)).EndInit();
             this.gbMenu.ResumeLayout(false);
+            this.pnBottom.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnBottom;
         private Guna.UI.WinForms.GunaCirclePictureBox picInstragram;
         private Guna.UI.WinForms.GunaCirclePictureBox picIatam;
         private Guna.UI.WinForms.GunaCirclePictureBox picTweeter;
@@ -198,5 +199,6 @@
         private Guna.UI.WinForms.GunaGroupBox gbMenu;
         private System.Windows.Forms.Button btReport;
         private System.Windows.Forms.Button btSale;
+        private Guna.UI.WinForms.GunaLinePanel pnBottom;
     }
 }

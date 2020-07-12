@@ -244,6 +244,10 @@
             // 
             // pnDesktop
             // 
+            this.pnDesktop.AutoScroll = true;
+            this.pnDesktop.AutoScrollMinSize = new System.Drawing.Size(800, 500);
+            this.pnDesktop.AutoSize = true;
+            this.pnDesktop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnDesktop.Location = new System.Drawing.Point(251, 0);
             this.pnDesktop.Name = "pnDesktop";
@@ -267,6 +271,7 @@
             this.gunaLinePanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
