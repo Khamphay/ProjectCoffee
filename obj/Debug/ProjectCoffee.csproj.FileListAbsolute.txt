@@ -34,3 +34,4 @@ D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.frmSaveEditStaff.resources
 D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.frmSaveEditCoffee.resources
 D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.frmSaveEditCategory.resources
 D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.frmSaveEditUnit.resources
+D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.frmCustomerPage.resources

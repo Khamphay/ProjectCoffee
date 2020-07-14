@@ -33,7 +33,14 @@ namespace ProjectCoffee
 
         private void picIatam_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.studfold.com/static-caravans/cafe-and-shop/");
+            System.Diagnostics.Process.Start("https://github.com/Khamphay");
+        }
+
+        private void btSale_Click(object sender, EventArgs e)
+        {
+            frmCustomerPage customer = new frmCustomerPage();
+            customer.Show();
+
         }
     }
 }

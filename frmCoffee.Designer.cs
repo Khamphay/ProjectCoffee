@@ -217,7 +217,7 @@
             this.picCoffee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picCoffee.Location = new System.Drawing.Point(0, 0);
             this.picCoffee.Name = "picCoffee";
-            this.picCoffee.Size = new System.Drawing.Size(228, 227);
+            this.picCoffee.Size = new System.Drawing.Size(228, 189);
             this.picCoffee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCoffee.TabIndex = 17;
             this.picCoffee.TabStop = false;
@@ -237,7 +237,7 @@
             this.gunaGroupBox1.Location = new System.Drawing.Point(9, 165);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Radius = 2;
-            this.gunaGroupBox1.Size = new System.Drawing.Size(228, 227);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(228, 189);
             this.gunaGroupBox1.TabIndex = 17;
             this.gunaGroupBox1.Text = "ຮູບພາບ";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);

@@ -56,7 +56,6 @@ namespace ProjectCoffee
             try
             {
                 cmd = new MySqlCommand("Insert Into tbcoffee Values(@id, @name, @imprice, @sprice, @uid, @cid, @img)", con);
-
                 cmd.Parameters.AddWithValue("id", data[0]);
                 cmd.Parameters.AddWithValue("name", data[1]);
                 cmd.Parameters.AddWithValue("imprice", MySqlDbType.Double).Value= data[2];

@@ -73,6 +73,12 @@
     <Compile Include="frmCoffee.Designer.cs">
       <DependentUpon>frmCoffee.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCustomerPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerPage.Designer.cs">
+      <DependentUpon>frmCustomerPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSaveEditCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCoffee.resx">
       <DependentUpon>frmCoffee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerPage.resx">
+      <DependentUpon>frmCustomerPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSaveEditCategory.resx">
       <DependentUpon>frmSaveEditCategory.cs</DependentUpon>

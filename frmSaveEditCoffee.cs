@@ -93,7 +93,7 @@ namespace ProjectCoffee
             if(txtid.Text!="" && txtname.Text!="" && txtImprice.Text!="" && txtSaleprice.Text !="" && cbCatg.Text!="" && cbUnit.Text != "")
             {
                 MemoryStream stream = new MemoryStream();
-                picCoffee.Image.Save(stream, ImageFormat.Png);
+                picCoffee.Image.Save(stream, picCoffee.Image.RawFormat);
 
                 string[] data = { txtid.Text, txtname.Text, txtImprice.Text, txtSaleprice.Text, unit_id, catg_id};
 

@@ -98,7 +98,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Alice5 95", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 131);
+            this.label5.Location = new System.Drawing.Point(21, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 27);
             this.label5.TabIndex = 0;
@@ -108,7 +108,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Alice5 95", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 89);
+            this.label4.Location = new System.Drawing.Point(4, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 27);
             this.label4.TabIndex = 0;
@@ -118,7 +118,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Alice5 95", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 52);
+            this.label3.Location = new System.Drawing.Point(22, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 27);
             this.label3.TabIndex = 0;

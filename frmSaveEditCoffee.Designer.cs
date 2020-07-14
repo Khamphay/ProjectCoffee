@@ -183,7 +183,7 @@
             this.picCoffee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picCoffee.Location = new System.Drawing.Point(0, 0);
             this.picCoffee.Name = "picCoffee";
-            this.picCoffee.Size = new System.Drawing.Size(210, 179);
+            this.picCoffee.Size = new System.Drawing.Size(210, 137);
             this.picCoffee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCoffee.TabIndex = 0;
             this.picCoffee.TabStop = false;
@@ -193,7 +193,7 @@
             // 
             this.btChooseImg.FlatAppearance.BorderSize = 0;
             this.btChooseImg.Image = ((System.Drawing.Image)(resources.GetObject("btChooseImg.Image")));
-            this.btChooseImg.Location = new System.Drawing.Point(344, 350);
+            this.btChooseImg.Location = new System.Drawing.Point(334, 311);
             this.btChooseImg.Name = "btChooseImg";
             this.btChooseImg.Size = new System.Drawing.Size(39, 33);
             this.btChooseImg.TabIndex = 18;
@@ -215,7 +215,7 @@
             this.gunaGroupBox1.Location = new System.Drawing.Point(258, 168);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Radius = 2;
-            this.gunaGroupBox1.Size = new System.Drawing.Size(210, 179);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(210, 137);
             this.gunaGroupBox1.TabIndex = 1;
             this.gunaGroupBox1.Text = "ຮູບພາບ";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);

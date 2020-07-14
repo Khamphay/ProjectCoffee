@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.picInstragram = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.picIatam = new Guna.UI.WinForms.GunaCirclePictureBox();
@@ -37,6 +38,7 @@
             this.btReport = new System.Windows.Forms.Button();
             this.btSale = new System.Windows.Forms.Button();
             this.pnBottom = new Guna.UI.WinForms.GunaLinePanel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picInstragram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIatam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTweeter)).BeginInit();
@@ -155,6 +157,7 @@
             this.btSale.Text = "Sale";
             this.btSale.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btSale.UseVisualStyleBackColor = true;
+            this.btSale.Click += new System.EventHandler(this.btSale_Click);
             // 
             // pnBottom
             // 
@@ -200,5 +203,6 @@
         private System.Windows.Forms.Button btReport;
         private System.Windows.Forms.Button btSale;
         private Guna.UI.WinForms.GunaLinePanel pnBottom;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
