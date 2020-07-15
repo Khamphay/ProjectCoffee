@@ -15,9 +15,11 @@ namespace ProjectCoffee
 {
     public partial class frmCustomerPage : Form
     {
-        public frmCustomerPage()
+        frmStaff_Page _sale;
+        public frmCustomerPage(frmStaff_Page sale)
         {
             InitializeComponent();
+            _sale = sale;
         }
 
         //MySql
@@ -25,29 +27,70 @@ namespace ProjectCoffee
         MySqlDataAdapter da;
         MySqlCommand cmd;
         MySqlDataReader dr;
-        DataTable table;
+        DataTable table, tableLoad;
 
+        List<MyModel> list = new List<MyModel>();
         //Image
         MemoryStream memory;
 
         //Conponent
         PictureBox cofImg;
-        Label lbcofName, lbpriceName, lbTotalPrice, lbcofPrice, lbQtyName, lbType;
-        GunaNumeric upQty;
+        Label lbcofName, lbpriceName, lbTotalPricePer_Iteem, lbTotalPriceName, lbcofPrice, lbQtyName, lbType, lbUnit;
+        //GunaNumeric upQty;
+        ComboBox cbType, cbUnit;
+        GunaLinePanel pnProd;
+        TextBox text;
+        Button btUp, btDown;
 
-        private void gunaNumeric1_ValueChanged(object sender, EventArgs e)
+        //Valible
+        string[] type, unit;
+        int qty = 0, qtyTotal=0;
+        double price = 0.0, priceTotalPer_Item = 0.0, PriceAll_Item=0.0;
+        string[] data = new string[6];
+
+        private void LoadType()
         {
+            //Slect Type
+            da = new MySqlDataAdapter("Select Catg_Name From tbcategory", con);
+            tableLoad = new DataTable();
+            da.Fill(tableLoad);
+            type = new string[tableLoad.Rows.Count];
+            if (tableLoad.Rows.Count > 0)
+            {
+                for (int t = 0; t < type.Length; t++)
+                {
+                    type[t] = tableLoad.Rows[t][0].ToString();
+                }
+            }
 
         }
+        private void LoadUnit()
+        {
+            //Slect Type
+            da = new MySqlDataAdapter("Select Uni_Name From tbunit", con);
+            tableLoad = new DataTable();
+            da.Fill(tableLoad);
+            unit = new string[tableLoad.Rows.Count];
+            if (tableLoad.Rows.Count > 0)
+            {
+                for (int u = 0; u < unit.Length; u++)
+                {
+                    unit[u] = tableLoad.Rows[u][0].ToString();
+                }
+            }
 
-        ComboBox cbType;
-        GunaLinePanel pnProd;
-
-
-        public void ShowItem(string item)
+        }
+        //Build Conponent
+        public void ShowAndSearch_Item(string item)
         {
             try
             {
+                if (flPnl.Controls.Count > 0)
+                {
+                    flPnl.Controls.Clear();
+                }
+
+                //Select Item
                 table = new DataTable();
                 table.Clear();
                 if(item !="")
@@ -58,20 +101,20 @@ namespace ProjectCoffee
                     da = new MySqlDataAdapter("Select Coff_ID, Coff_Name, Sale_Price, Image From tbcoffee", con);
                 }
                 da.Fill(table);
-
                 for (int i = 0; i < table.Rows.Count; i++)
                 {
                     //Panel Set Data of Coffee 
                     pnProd = new GunaLinePanel();
                     {
                         //Poperties of Panel
-                        pnProd.Size = new Size(291, 186);
+                        pnProd.Name = "pnl" + i;
+                        pnProd.Size = new Size(300, 186);
                         pnProd.LineTop = 1;
                         pnProd.LineRight = 1;
                         pnProd.LineBottom = 1;
                         pnProd.LineLeft = 1;
                         pnProd.BackColor = Color.Transparent;
-                        pnProd.LineColor = Color.Silver;
+                        pnProd.LineColor = Color.FromArgb(69, 52, 88);
                     }
 
                     //Coffee Image
@@ -95,8 +138,8 @@ namespace ProjectCoffee
                     lbcofName = new Label();
                     {
                         lbcofName.Name = "lbName" + i;
-                        lbcofName.Location = new Point(9, 122);
-                        lbcofName.Text = "Item: " + table.Rows[i][1];
+                        lbcofName.Location = new Point(5, 122);
+                        lbcofName.Text = "ລາຍການ: " + table.Rows[i][1];
                         lbcofName.AutoSize = true;
                     }
 
@@ -112,9 +155,9 @@ namespace ProjectCoffee
                     //Label Show Coffee Price
                     lbcofPrice = new Label();
                     {
-                        lbcofPrice.Name = "lbPrice" + 1;
+                        lbcofPrice.Name = "lbPrice" + i;
                         lbcofPrice.Location = new Point(200, 6);
-                        lbcofPrice.Text = Double.Parse(table.Rows[i][2].ToString()).ToString("#,##0.00");
+                        lbcofPrice.Text = Double.Parse(table.Rows[i][2].ToString()).ToString("#,##0.00 ກີບ");
                         lbcofPrice.BringToFront();
                         lbcofPrice.AutoSize = true;
                     }
@@ -129,19 +172,58 @@ namespace ProjectCoffee
                         lbQtyName.AutoSize = true;
                     }
 
-                    //Numeric Qty
-                    upQty = new GunaNumeric();
+
+                    //Button Up Qty
+                    btDown= new Button();
                     {
-                        upQty.Size = new Size(54, 30);
-                        upQty.Location = new Point(206, 42);
-                        upQty.Radius = 2;
+                        btDown.Name = "downQty" + i;
+                        btDown.Size = new Size(24, 22);
+                        btDown.Location = new Point(200, 47);
+                        btDown.Image = Properties.Resources.down;
+                        btDown.FlatStyle = FlatStyle.Flat;
+                        btDown.FlatAppearance.BorderSize = 0;
+                        btDown.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 255);
+                        btDown.FlatAppearance.MouseOverBackColor = Color.FromArgb(178, 150, 205);
+                        //Set Event To Click By My Method "downQty_AddQty"
+                        btDown.Click += new EventHandler(this.downQty_Click);
                     }
+
+                    //Button Up Qty
+                    text = new TextBox();
+                    {
+                        text.Name = "text" + i;
+                        text.Size = new Size(34, 22);
+                        text.Location = new Point(226, 47);
+                        text.Font = new Font("Times New Roman", 10);
+                        text.Text = "0";
+                        text.TextAlign = HorizontalAlignment.Center;
+
+                        //Set Event to TextBox object "text" When KeyPress
+                        //text.TextChanged += new EventHandler(this.text_Changed);
+                        text.KeyPress += new KeyPressEventHandler(this.text_KeyPress);
+                    }
+
+                    //Button Up Qty
+                    btUp = new Button();
+                    {
+                        btUp.Name = "upQty" + i;
+                        btUp.Size = new Size(24, 22);
+                        btUp.Location = new Point(260, 47);
+                        btUp.Image = Properties.Resources.up;
+                        btUp.FlatStyle = FlatStyle.Flat;
+                        btUp.FlatAppearance.BorderSize = 0;
+                        btUp.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 255);
+                        btUp.FlatAppearance.MouseOverBackColor = Color.FromArgb(178, 150, 205);
+                        //Set Event To Click By My Method "upQty_AddQty"
+                        btUp.Click += new EventHandler(this.upQty_Click);
+                    }
+
 
                     //Qty Name of price
                     lbType = new Label();
                     {
                         lbType.Name = "lbQty" + 1;
-                        lbType.Size = new Size(41, 22);
+                        lbType.Size = new Size(48, 22);
                         lbType.Location = new Point(156, 88);
                         lbType.Text = "ປະເພດ:";
                     }
@@ -149,17 +231,60 @@ namespace ProjectCoffee
                     //Combox Type
                     cbType = new ComboBox();
                     {
+                        cbType.Name = "cbtype" + i;
                         cbType.Size = new Size(75, 30);
-                        cbType.Location = new Point(199, 84);
+                        cbType.Location = new Point(215, 84);
+                        cbType.BackColor = Color.FromArgb(240, 240, 240);
+
+                        if (type.Length > 0)
+                        {
+                            cbType.Items.AddRange(type);
+                        }
+                        cbType.SelectedIndex = 0;
+                        cbType.BringToFront();
+                    }
+
+                    //Lable Unit
+                    lbUnit = new Label();
+                    {
+                        lbUnit.Name = "lbUnit" + 1;
+                        lbUnit.Location = new Point(160, 152);
+                        lbUnit.Text = "ຫົວໜ່ວຍ:";
+                        lbUnit.AutoSize = true;
+                        lbUnit.SendToBack();
+                    }
+
+                    //Combobox Unit
+                    cbUnit = new ComboBox();
+                    {
+                        cbUnit.Name = "cbUnit" + i;
+                        cbUnit.Size = new Size(70, 20);
+                        cbUnit.Location = new Point(220, 147);
+                        cbUnit.BringToFront();
+                        cbUnit.BackColor = Color.FromArgb(240, 240, 240);
+
+                        //Set data to cbUnit
+                        for(int u = 0; u < unit.Length; u++)
+                        {
+                            cbUnit.Items.Add(unit[u]);
+                        }
+                        cbUnit.SelectedIndex = 0;
                     }
 
                     //Total Price
-                    lbTotalPrice = new Label();
+                    lbTotalPriceName = new Label();
                     {
-                        lbTotalPrice.Name = "lbTotal" + i;
-                        lbTotalPrice.Location = new Point(9, 155);
-                        lbTotalPrice.Text = "ລາຄາລວມ:";
-                        lbcofPrice.AutoSize = true;
+                        lbTotalPriceName.Location = new Point(5, 154);
+                        lbTotalPriceName.Text = "ລາຄາລວມ:";
+                        lbTotalPriceName.AutoSize = true;
+                    }
+                    //Total Price
+                    lbTotalPricePer_Iteem = new Label();
+                    {
+                        lbTotalPricePer_Iteem.Name = "lbTotal" + i;
+                        lbTotalPricePer_Iteem.Location = new Point(61, 154);
+                        lbTotalPricePer_Iteem.Text = "0.00 ກີບ";
+                        lbTotalPricePer_Iteem.AutoSize = true;
                     }
 
                     //Add All Conponent to Panel 'pnProd'
@@ -168,10 +293,15 @@ namespace ProjectCoffee
                         pnProd.Controls.Add(lbpriceName);
                         pnProd.Controls.Add(lbcofPrice);
                         pnProd.Controls.Add(lbQtyName);
-                        pnProd.Controls.Add(upQty);
+                        pnProd.Controls.Add(btDown);
+                        pnProd.Controls.Add(text);
+                        pnProd.Controls.Add(btUp);
                         pnProd.Controls.Add(lbType);
                         pnProd.Controls.Add(cbType);
-                        pnProd.Controls.Add(lbTotalPrice);
+                        pnProd.Controls.Add(lbUnit);
+                        pnProd.Controls.Add(cbUnit);
+                        pnProd.Controls.Add(lbTotalPriceName);
+                        pnProd.Controls.Add(lbTotalPricePer_Iteem);
                         pnProd.Controls.Add(lbcofName);
                     }
 
@@ -184,13 +314,356 @@ namespace ProjectCoffee
             }
         }
 
-        private void upQty_ValueChanged(object sender, EventArgs e) { 
+        //Add data to Staff Page
+        private void AddDataSaleTo_StaffPage()
+        {
+            
+            try
+            {
+                int index;
+                foreach(Control p in flPnl.Controls)
+                {
+                    //Now 'p' As object "pnProd"
+                    index = int.Parse(p.Name.ToString().Substring(3));
+                    if (p.GetType() == typeof(GunaLinePanel))
+                    {
+                        // Now 'obj' As any conponent in object "pnProd"
+                        foreach (Control obj in p.Controls)
+                        {
+                            if (obj.GetType() == typeof(TextBox))
+                            {
+                                // Now 'obj' As object TextBox "text"
+                                if (obj.Name == "text" + index)
+                                {
+                                    if (int.Parse(obj.Text) > 0)
+                                    {
+                                        data[3] = obj.Text;
+                                        obj.Text = "0";
+                                    }
+                                    else
+                                    {
+                                        // ຖ້າບໍ່ສັ່ງຈຳນວນຈະເທົ່າ 0 ສະນັ້ນໃຫ້ຂ້າມ ຮອບ(Loob) ນີ້ເລີຍ
+                                        continue;
+                                    }
+
+                                }
+                            }
+                            if (obj.GetType() == typeof(ComboBox))
+                            {
+                                // Now 'obj' As object of ComboBox "cbType"
+                                if (obj.Name == "cbtype" + index)
+                                {
+                                    data[2] = obj.Text;
+                                    obj.Text = "ຮ໊ອນ";
+                                }
+                                // Now 'obj' As object of ComboBox "cbUnit"
+                                if (obj.Name == "cbUnit" + index)
+                                {
+                                    data[1] = obj.Text;
+                                    obj.Text = "ນ້ອຍ";
+                                }
+                            }
+                            if (obj.GetType() == typeof(Label))
+                            {
+                                // Now 'lb' As any Label in object "pnProd"
+                                if (obj.Name == "lbName" + index)
+                                {
+                                    data[0] = obj.Text.Substring(obj.Text.IndexOf(" ") + 1);
+                                }
+                                if(obj.Name== "lbPrice" + index)
+                                {
+                                    data[4] = obj.Text;
+                                }
+                                if(obj.Name == "lbTotal" + index)
+                                {
+                                    data[5] = obj.Text;
+                                    obj.Text = "0.00 ກີບ";
+                                }
+                            }
+                        }
+
+                        if (data[0] != null && data[1] != null && data[2] != null && data[3] != null && data[4]!=null && data[5] != null)
+                        {
+                            list.Add(new MyModel
+                            {
+                                getCofName = data[0],
+                                getUnit = data[1],
+                                getCatg = data[2],
+                                getQty = data[3],
+                                getPrice = data[4],
+                                getPriceTotal = data[5]
+                            });
+
+                            //set data to null
+                            data[0] = null;
+                            data[1] = null;
+                            data[2] = null;
+                            data[3] = null;
+                            data[4] = null;
+                            data[5] = null;
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
 
+        //Create Event when click the upQty
+        private void upQty_Click(object sender, EventArgs e) {
+
+            //Set the object "up" know object "btUp" by pass object 'sender'
+            Button up = sender as Button;
+            //Find Index Of lable Price
+            int index = int.Parse(up.Name.Substring(5));
+
+            //Get Price From "lbcofPrice", Calcolate Total Qty and Total Price
+            foreach (Control p in flPnl.Controls)
+            {
+                //Now 'p' As object "pnProd"
+                if (p.GetType() == typeof(GunaLinePanel))
+                {
+
+                    //Get the Qty values of TextBox in object "text"
+                    // Now 'tx' As object "text"
+                    foreach (Control tx in p.Controls)
+                    {
+                        if (tx.GetType() == typeof(TextBox))
+                        {
+                            if (tx.Name == "text" + index)
+                            {
+                                //Increment Qty
+                                int imcreqty = int.Parse(tx.Text) + 1;
+                                tx.Text = imcreqty.ToString();
+                                //Cancolat Qty
+                                {
+                                    qty = int.Parse(tx.Text);
+                                    if (qtyTotal == 0 && qtyTotal < qty)
+                                    {
+                                        qtyTotal = qty;
+                                    }
+                                    else if (qtyTotal > qty)
+                                    {
+                                        qtyTotal = (qtyTotal - qty) + qty + 1;
+                                    }
+                                    else if (qtyTotal == qty && qty!=0)
+                                    {
+                                        qtyTotal = (qtyTotal / qty) + qty;
+                                    }
+                                    else
+                                    {
+                                        qtyTotal = qty;
+                                    }
+                                }
+                                lbQtyTotal.Text = qtyTotal.ToString();
+                            }
+                        }
+                    }
+
+                    //Get Price
+                    // Now 'lb' As any Label in object "pnProd"
+                    foreach (Control l in p.Controls)
+                    {
+                        if (l.GetType() == typeof(Label))
+                        {
+                            //Get Price
+                            if (l.Name == "lbPrice" + index)
+                            {
+                                price = Double.Parse(l.Text.Substring(0,l.Text.IndexOf(" ")));
+                            }
+
+                            //Set Total Price To "lbTotalPrice"
+                            if (l.Name == "lbTotal" + index)
+                            {
+                                //priceTotalPer_Item = price * Convert.ToDouble(qty);
+                                //l.Text = priceTotalPer_Item.ToString("#,###.00 ກິບ");
+                                l.Text = (price * Convert.ToDouble(qty)).ToString("#,###.00 ກິບ");
+                                {
+                                    //if ((PriceAll_Item < priceTotalPer_Item))
+                                    //{
+                                    //    PriceAll_Item += (priceTotalPer_Item/qty);
+                                    //}
+                                    //else if (PriceAll_Item > priceTotalPer_Item)
+                                    //{
+                                    //    PriceAll_Item += (priceTotalPer_Item/qty);
+                                    //}else if(PriceAll_Item == priceTotalPer_Item)
+                                    //{
+                                    //    PriceAll_Item += priceTotalPer_Item;
+                                    //}
+                                }
+                                PriceAll_Item += price;
+                                lbPrice_Total.Text = PriceAll_Item.ToString("#,###.00 ກີບ");
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Create Event when click the downQty
+        private void downQty_Click(object sender, EventArgs e)
+        {
+            //Set the object "down" know object "btDown" by pass object 'sender'
+            Button down = sender as Button;
+            //Find Index Of lable Price
+            int index = int.Parse(down.Name.Substring(7));
+            int qtdown=0;
+
+            //Get Price From "lbcofPrice", Qty and Total Price
+            foreach (Control p in flPnl.Controls)
+            {
+                if (p.GetType() == typeof(GunaLinePanel))
+                {
+                    //Get the values of TextBox in object "text"
+                    foreach (Control tx in p.Controls)
+                    {
+                        if(tx.GetType()== typeof(TextBox))
+                        {
+                            if (tx.Name == "text" + index)
+                            {
+                                //Decrement Qty
+                                qtdown = int.Parse(tx.Text) - 1;
+                                if (qtdown > -1)
+                                {
+                                    tx.Text = qtdown.ToString();
+                                    //Cancolat Qty
+                                    {
+                                        //{
+                                        //    qty = int.Parse(tx.Text);
+                                        //}
+                                        qtyTotal -= 1;
+                                    }
+                                    lbQtyTotal.Text = qtyTotal.ToString();
+                                }
+                            }
+                        }
+                    }
+
+                    if (qtdown > -1)
+                    {
+                        //Get Price
+                        foreach (Control l in p.Controls)
+                        {
+                            if (l.GetType() == typeof(Label))
+                            {
+                                //Get Price
+                                if (l.Name == "lbPrice" + index)
+                                {
+                                    price = Double.Parse(l.Text.Substring(0,l.Text.IndexOf(" ")));
+                                }
+
+                                //Set Total Price To "lbTotalPrice"
+                                if (l.Name == "lbTotal" + index)
+                                {
+                                    l.Text = (price * Convert.ToDouble(qtdown)).ToString("#,###.00 ກີບ");
+                                    PriceAll_Item -= price;
+                                    lbPrice_Total.Text = PriceAll_Item.ToString("#,###.00 ກີບ");
+
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void text_KeyPress(object serder, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void text_Changed(object serder, EventArgs e)
+        {
+            //Set object "box" to know object "text" by Pass serder
+            TextBox box = serder as TextBox;
+            int index = int.Parse(box.Name.ToString().Substring(4));
+            if (box.Text != "" && int.Parse(box.Text) > 0)
+            {
+                foreach (Control p in flPnl.Controls)
+                {
+                    if (p.GetType() == typeof(GunaLinePanel))
+                    {
+                        foreach (Control l in p.Controls)
+                        {
+                            if (l.GetType() == typeof(Label))
+                            {
+                                //Get Price
+                                if (l.Name == "lbPrice" + index)
+                                {
+                                    price = Double.Parse(l.Text.Substring(0, l.Text.IndexOf(" ")));
+                                }
+
+                                //Set Total Price To "lbTotalPrice"
+                                if (l.Name == "lbTotal" + index)
+                                {
+                                    qty = int.Parse(box.Text);
+                                    l.Text = (price * Convert.ToDouble(qty)).ToString("#,###.00 ກິບ");
+                                    {
+                                        if ((PriceAll_Item < priceTotalPer_Item))
+                                        {
+                                            PriceAll_Item += ((price * Convert.ToDouble(qty)) / qty);
+                                        }
+                                        else if (PriceAll_Item > priceTotalPer_Item)
+                                        {
+                                            PriceAll_Item += ((price * Convert.ToDouble(qty)) / qty);
+                                        }
+                                        else if (PriceAll_Item == priceTotalPer_Item)
+                                        {
+                                            PriceAll_Item += price * Convert.ToDouble(qty);
+                                        }
+                                    }
+                                    // PriceAll_Item += price;
+                                    lbPrice_Total.Text = PriceAll_Item.ToString("#,###.00 ກີບ");
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if(box.Text== "0" || box.Text=="")
+            {
+                if(lbTotalPricePer_Iteem.Name == "lbTotal" + index) {
+                    lbTotalPricePer_Iteem.Text= (price * Convert.ToDouble(qty)).ToString("#,###.00 ກິບ");
+                }
+                lbPrice_Total.Text = PriceAll_Item.ToString("#,###.00 ກີບ");
+                box.Text = "0";
+            }
+        }
+
         private void frmCustomerPage_Load(object sender, EventArgs e)
         {
-            ShowItem("");
+            LoadType();
+            LoadUnit();
+            ShowAndSearch_Item("");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (int.Parse(lbQtyTotal.Text) > 0)
+            {
+                AddDataSaleTo_StaffPage();
+                _sale.item = list;
+                _sale.ShowData();
+
+                lbQtyTotal.Text = "0";
+                lbPrice_Total.Text = "0.00 ກີບ";
+                PriceAll_Item = 0.0;
+                qty = 0;
+                qtyTotal = 0;
+                price = 0.0;
+                priceTotalPer_Item = 0.0;
+                PriceAll_Item = 0.0;
+            }
+            else
+            {
+                MessageBox.Show("Pleace choose item, and try again", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

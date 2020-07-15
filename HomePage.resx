@@ -137,19 +137,19 @@
   </data>
   <data name="picIatam.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAKaSURBVEhLzZZLbExhGIZLpCgqShRJlWBTYYW1DVVREQsLKyG6JBFrCxJtVYgFG7cQsUBiY2Hl
-        UhIhbomVVLAlEff7pZ73/9/OnJkzMz1HJTzJk0y/7/3+P3PO6X+m7r9ncHCwHtuxB8/iTavPqq3EesdH
-        Dou14nF8i8PxBo9hi8fzw7C+YS9+xrxophvzXQEG9C0f4Ei5j7O9bG0INuMzTf0lnuJ0L18ZAg14T+m/
-        zC0c623S0NwfYkW+4yrciNdUMHrQdFXkOxXMZdyAHfhThQTd3qYUGnPxS4gUeeS2+qNwDS50qQC1xdju
-        PwP8/RyT6IFrdbsIxVOhXcqA27lh9kVcooQTbkco6N5+Cq1SfmGjY5lhZlaYTvMBxzkWgrqElXiFEx3L
-        DDPT8L0WqECHYyHYF2spdjmSG2b3xSVS9DoSQjpvK7HckdwwuzYukeKMIyF0NdZSpJ7grDC7Oi6R4ooj
-        IXQD9a23YlfCBY7khtklZWtJ7dHvSAhdxIe4G4c234x/dKmZG43rvYbUentQe1xwLAQP4EvUSaTTKskW
-        xzLDzN44WuAbam3t0edYCK7DaujoO4STHK8KmSY8jbXodDwMTMHke1fn8sH4sYAOGN2SHdiJjVZP7068
-        hOVHbjkfcbK3jVA4GVpFdG+2o06vJAM4x2Oaa3EtC0c9VoTiIkze38eoF4NuwxHUc7ANZ3ikALU2/IG1
-        0H1u80gpNMpfi5vcGhay5+NIVXocTUNTL4u7IRbRZb6D5+wKR1PQ032uxm0c72hlCMzEaj99uhxLoV6M
-        pHiCzY7VhuBU7NdUGXk3vo5NjmSDgQmon7dfcYisG+vfSj9vG9zOD8PzUU/1a1zqcgp6y5w5jPNcHjks
-        NsYfq5Il84+pq/sNrry21Y/KFTQAAAAASUVORK5CYII=
+        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
+        vLbVj8oVNAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="picTweeter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

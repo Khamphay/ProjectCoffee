@@ -21,6 +21,8 @@ namespace ProjectCoffee
             pnBottom.BackColor=Color.FromArgb(100, 0, 0, 0);
         }
 
+        frmStaff_Page sale = new frmStaff_Page();
+
         private void picFacebook_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.facebook.com/perrycountycafe/");
@@ -38,9 +40,14 @@ namespace ProjectCoffee
 
         private void btSale_Click(object sender, EventArgs e)
         {
-            frmCustomerPage customer = new frmCustomerPage();
+            frmCustomerPage customer = new frmCustomerPage(sale);
             customer.Show();
 
+        }
+
+        private void btPay_Click(object sender, EventArgs e)
+        {
+            sale.Show();
         }
     }
 }

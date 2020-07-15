@@ -39,6 +39,7 @@
             this.btSale = new System.Windows.Forms.Button();
             this.pnBottom = new Guna.UI.WinForms.GunaLinePanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btPay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picInstragram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIatam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTweeter)).BeginInit();
@@ -114,6 +115,7 @@
             this.gbMenu.BorderColor = System.Drawing.Color.Gainsboro;
             this.gbMenu.BorderSize = 1;
             this.gbMenu.Controls.Add(this.btReport);
+            this.gbMenu.Controls.Add(this.btPay);
             this.gbMenu.Controls.Add(this.btSale);
             this.gbMenu.Font = new System.Drawing.Font("Alice5 95", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbMenu.ForeColor = System.Drawing.Color.White;
@@ -122,10 +124,10 @@
             this.gbMenu.LineLeft = 1;
             this.gbMenu.LineRight = 1;
             this.gbMenu.LineTop = 1;
-            this.gbMenu.Location = new System.Drawing.Point(247, 111);
+            this.gbMenu.Location = new System.Drawing.Point(140, 111);
             this.gbMenu.Name = "gbMenu";
             this.gbMenu.Radius = 4;
-            this.gbMenu.Size = new System.Drawing.Size(485, 336);
+            this.gbMenu.Size = new System.Drawing.Size(662, 336);
             this.gbMenu.TabIndex = 0;
             this.gbMenu.Text = "Menu";
             this.gbMenu.TextLocation = new System.Drawing.Point(4, -10);
@@ -136,7 +138,7 @@
             this.btReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btReport.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btReport.Location = new System.Drawing.Point(287, 117);
+            this.btReport.Location = new System.Drawing.Point(463, 109);
             this.btReport.Name = "btReport";
             this.btReport.Size = new System.Drawing.Size(129, 104);
             this.btReport.TabIndex = 0;
@@ -150,7 +152,7 @@
             this.btSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSale.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSale.Location = new System.Drawing.Point(81, 117);
+            this.btSale.Location = new System.Drawing.Point(257, 109);
             this.btSale.Name = "btSale";
             this.btSale.Size = new System.Drawing.Size(129, 104);
             this.btSale.TabIndex = 0;
@@ -173,6 +175,21 @@
             this.pnBottom.Name = "pnBottom";
             this.pnBottom.Size = new System.Drawing.Size(915, 57);
             this.pnBottom.TabIndex = 2;
+            // 
+            // btPay
+            // 
+            this.btPay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btPay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPay.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPay.Location = new System.Drawing.Point(58, 109);
+            this.btPay.Name = "btPay";
+            this.btPay.Size = new System.Drawing.Size(129, 104);
+            this.btPay.TabIndex = 0;
+            this.btPay.Text = "Pay";
+            this.btPay.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btPay.UseVisualStyleBackColor = true;
+            this.btPay.Click += new System.EventHandler(this.btPay_Click);
             // 
             // HomePage
             // 
@@ -204,5 +221,6 @@
         private System.Windows.Forms.Button btSale;
         private Guna.UI.WinForms.GunaLinePanel pnBottom;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btPay;
     }
 }
