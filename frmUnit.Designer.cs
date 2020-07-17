@@ -57,9 +57,9 @@
             this.gunaSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaSeparator1.LineColor = System.Drawing.Color.DimGray;
-            this.gunaSeparator1.Location = new System.Drawing.Point(335, 165);
+            this.gunaSeparator1.Location = new System.Drawing.Point(320, 165);
             this.gunaSeparator1.Name = "gunaSeparator1";
-            this.gunaSeparator1.Size = new System.Drawing.Size(575, 1);
+            this.gunaSeparator1.Size = new System.Drawing.Size(607, 1);
             this.gunaSeparator1.TabIndex = 11;
             // 
             // dgvUnit
@@ -77,7 +77,7 @@
             this.dgvUnit.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
@@ -96,8 +96,7 @@
             this.dgvUnit.EnableHeadersVisualStyles = false;
             this.dgvUnit.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.dgvUnit.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dgvUnit.Location = new System.Drawing.Point(335, 126);
-            this.dgvUnit.MinimumSize = new System.Drawing.Size(776, 317);
+            this.dgvUnit.Location = new System.Drawing.Point(320, 126);
             this.dgvUnit.Name = "dgvUnit";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
@@ -112,7 +111,7 @@
             this.dgvUnit.RowTemplate.Height = 40;
             this.dgvUnit.RowTemplate.ReadOnly = true;
             this.dgvUnit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUnit.Size = new System.Drawing.Size(776, 403);
+            this.dgvUnit.Size = new System.Drawing.Size(607, 403);
             this.dgvUnit.TabIndex = 10;
             this.dgvUnit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUnit_CellClick);
             this.dgvUnit.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUnit_CellDoubleClick);

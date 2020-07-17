@@ -39,7 +39,6 @@
             this.btSale = new System.Windows.Forms.Button();
             this.pnBottom = new Guna.UI.WinForms.GunaLinePanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btPay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picInstragram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIatam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTweeter)).BeginInit();
@@ -60,6 +59,7 @@
             this.picInstragram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picInstragram.TabIndex = 1;
             this.picInstragram.TabStop = false;
+            this.toolTip1.SetToolTip(this.picInstragram, "Instragrame");
             this.picInstragram.UseTransfarantBackground = false;
             this.picInstragram.Click += new System.EventHandler(this.picInstragram_Click);
             // 
@@ -75,6 +75,7 @@
             this.picIatam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picIatam.TabIndex = 1;
             this.picIatam.TabStop = false;
+            this.toolTip1.SetToolTip(this.picIatam, "GitHub");
             this.picIatam.UseTransfarantBackground = false;
             this.picIatam.Click += new System.EventHandler(this.picIatam_Click);
             // 
@@ -90,6 +91,7 @@
             this.picTweeter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picTweeter.TabIndex = 1;
             this.picTweeter.TabStop = false;
+            this.toolTip1.SetToolTip(this.picTweeter, "Twitter");
             this.picTweeter.UseTransfarantBackground = false;
             // 
             // picFacebook
@@ -104,6 +106,7 @@
             this.picFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFacebook.TabIndex = 1;
             this.picFacebook.TabStop = false;
+            this.toolTip1.SetToolTip(this.picFacebook, "Facbook");
             this.picFacebook.UseTransfarantBackground = false;
             this.picFacebook.Click += new System.EventHandler(this.picFacebook_Click);
             // 
@@ -115,7 +118,6 @@
             this.gbMenu.BorderColor = System.Drawing.Color.Gainsboro;
             this.gbMenu.BorderSize = 1;
             this.gbMenu.Controls.Add(this.btReport);
-            this.gbMenu.Controls.Add(this.btPay);
             this.gbMenu.Controls.Add(this.btSale);
             this.gbMenu.Font = new System.Drawing.Font("Alice5 95", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbMenu.ForeColor = System.Drawing.Color.White;
@@ -127,7 +129,7 @@
             this.gbMenu.Location = new System.Drawing.Point(140, 111);
             this.gbMenu.Name = "gbMenu";
             this.gbMenu.Radius = 4;
-            this.gbMenu.Size = new System.Drawing.Size(662, 336);
+            this.gbMenu.Size = new System.Drawing.Size(619, 336);
             this.gbMenu.TabIndex = 0;
             this.gbMenu.Text = "Menu";
             this.gbMenu.TextLocation = new System.Drawing.Point(4, -10);
@@ -137,27 +139,32 @@
             this.btReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btReport.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btReport.Location = new System.Drawing.Point(463, 109);
+            this.btReport.Font = new System.Drawing.Font("Alice5 95", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btReport.Image = ((System.Drawing.Image)(resources.GetObject("btReport.Image")));
+            this.btReport.Location = new System.Drawing.Point(366, 100);
             this.btReport.Name = "btReport";
-            this.btReport.Size = new System.Drawing.Size(129, 104);
+            this.btReport.Size = new System.Drawing.Size(129, 116);
             this.btReport.TabIndex = 0;
             this.btReport.Text = "Report";
             this.btReport.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.btReport, "Report");
             this.btReport.UseVisualStyleBackColor = true;
+            this.btReport.Click += new System.EventHandler(this.btReport_Click);
             // 
             // btSale
             // 
             this.btSale.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSale.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSale.Location = new System.Drawing.Point(257, 109);
+            this.btSale.Font = new System.Drawing.Font("Alice5 95", 20.25F, System.Drawing.FontStyle.Bold);
+            this.btSale.Image = ((System.Drawing.Image)(resources.GetObject("btSale.Image")));
+            this.btSale.Location = new System.Drawing.Point(125, 100);
             this.btSale.Name = "btSale";
-            this.btSale.Size = new System.Drawing.Size(129, 104);
+            this.btSale.Size = new System.Drawing.Size(129, 116);
             this.btSale.TabIndex = 0;
             this.btSale.Text = "Sale";
             this.btSale.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.btSale, "Sale");
             this.btSale.UseVisualStyleBackColor = true;
             this.btSale.Click += new System.EventHandler(this.btSale_Click);
             // 
@@ -175,21 +182,6 @@
             this.pnBottom.Name = "pnBottom";
             this.pnBottom.Size = new System.Drawing.Size(915, 57);
             this.pnBottom.TabIndex = 2;
-            // 
-            // btPay
-            // 
-            this.btPay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btPay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btPay.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btPay.Location = new System.Drawing.Point(58, 109);
-            this.btPay.Name = "btPay";
-            this.btPay.Size = new System.Drawing.Size(129, 104);
-            this.btPay.TabIndex = 0;
-            this.btPay.Text = "Pay";
-            this.btPay.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btPay.UseVisualStyleBackColor = true;
-            this.btPay.Click += new System.EventHandler(this.btPay_Click);
             // 
             // HomePage
             // 
@@ -221,6 +213,5 @@
         private System.Windows.Forms.Button btSale;
         private Guna.UI.WinForms.GunaLinePanel pnBottom;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button btPay;
     }
 }

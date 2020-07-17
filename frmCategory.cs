@@ -129,6 +129,7 @@ namespace ProjectCoffee
 
         private void frmCategory_Load(object sender, EventArgs e)
         {
+            dgvCatg.ColumnHeadersDefaultCellStyle.Font = new Font("Lao_Ketmany2", 12F, FontStyle.Bold);
             ShowData();
         }
 

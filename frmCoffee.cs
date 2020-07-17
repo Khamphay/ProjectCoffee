@@ -149,6 +149,8 @@ namespace ProjectCoffee
 
         private void frmCoffee_Load(object sender, EventArgs e)
         {
+            //Set font to dgvCoffee Header
+            dgvCoffee.ColumnHeadersDefaultCellStyle.Font = new Font("Lao_Ketmany2", 12F, FontStyle.Bold);
             ShowData();
         }
 

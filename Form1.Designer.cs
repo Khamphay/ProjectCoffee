@@ -37,13 +37,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnDesktop = new System.Windows.Forms.Panel();
             this.btCatg = new System.Windows.Forms.Button();
             this.btUnit = new System.Windows.Forms.Button();
             this.btCoff = new System.Windows.Forms.Button();
             this.btStaff = new System.Windows.Forms.Button();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnDesktop = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.gunaLinePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
@@ -144,6 +144,28 @@
             this.gunaSeparator1.Size = new System.Drawing.Size(251, 10);
             this.gunaSeparator1.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Alice5 95", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(220, 44);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cafe Of My Dream";
+            // 
+            // pnDesktop
+            // 
+            this.pnDesktop.AutoScroll = true;
+            this.pnDesktop.AutoScrollMinSize = new System.Drawing.Size(800, 500);
+            this.pnDesktop.AutoSize = true;
+            this.pnDesktop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnDesktop.Location = new System.Drawing.Point(251, 0);
+            this.pnDesktop.Name = "pnDesktop";
+            this.pnDesktop.Size = new System.Drawing.Size(915, 608);
+            this.pnDesktop.TabIndex = 0;
+            // 
             // btCatg
             // 
             this.btCatg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -151,7 +173,7 @@
             this.btCatg.FlatAppearance.BorderSize = 0;
             this.btCatg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCatg.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCatg.Image = ((System.Drawing.Image)(resources.GetObject("btCatg.Image")));
+            this.btCatg.Image = global::ProjectCoffee.Properties.Resources.icons8_sugar_cube_30;
             this.btCatg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btCatg.Location = new System.Drawing.Point(0, 334);
             this.btCatg.Name = "btCatg";
@@ -189,7 +211,7 @@
             this.btCoff.FlatAppearance.BorderSize = 0;
             this.btCoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCoff.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCoff.Image = ((System.Drawing.Image)(resources.GetObject("btCoff.Image")));
+            this.btCoff.Image = global::ProjectCoffee.Properties.Resources.icons8_tableware_30;
             this.btCoff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btCoff.Location = new System.Drawing.Point(0, 230);
             this.btCoff.Name = "btCoff";
@@ -231,28 +253,6 @@
             this.gunaCirclePictureBox1.TabIndex = 1;
             this.gunaCirclePictureBox1.TabStop = false;
             this.gunaCirclePictureBox1.UseTransfarantBackground = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Alice5 95", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 44);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cafe Of My Dream";
-            // 
-            // pnDesktop
-            // 
-            this.pnDesktop.AutoScroll = true;
-            this.pnDesktop.AutoScrollMinSize = new System.Drawing.Size(800, 500);
-            this.pnDesktop.AutoSize = true;
-            this.pnDesktop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDesktop.Location = new System.Drawing.Point(251, 0);
-            this.pnDesktop.Name = "pnDesktop";
-            this.pnDesktop.Size = new System.Drawing.Size(915, 608);
-            this.pnDesktop.TabIndex = 0;
             // 
             // Form1
             // 

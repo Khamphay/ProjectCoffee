@@ -21,7 +21,7 @@ namespace ProjectCoffee
             pnBottom.BackColor=Color.FromArgb(100, 0, 0, 0);
         }
 
-        frmStaff_Page sale = new frmStaff_Page();
+        frmStaff_Page sale;
 
         private void picFacebook_Click(object sender, EventArgs e)
         {
@@ -40,14 +40,15 @@ namespace ProjectCoffee
 
         private void btSale_Click(object sender, EventArgs e)
         {
-            frmCustomerPage customer = new frmCustomerPage(sale);
-            customer.Show();
+            sale = new frmStaff_Page();
+            sale.Show();
 
         }
 
-        private void btPay_Click(object sender, EventArgs e)
+        private void btReport_Click(object sender, EventArgs e)
         {
-            sale.Show();
+            frmReport_Sale report_Sale = new frmReport_Sale();
+            report_Sale.Show();
         }
     }
 }

@@ -29,7 +29,7 @@ namespace ProjectCoffee
         MySqlDataReader dr;
         DataTable table, tableLoad;
 
-        List<MyModel> list = new List<MyModel>();
+        List<MyModel> list;
         //Image
         MemoryStream memory;
 
@@ -43,45 +43,125 @@ namespace ProjectCoffee
         Button btUp, btDown;
 
         //Valible
-        string[] type, unit;
         int qty = 0, qtyTotal=0;
         double price = 0.0, priceTotalPer_Item = 0.0, PriceAll_Item=0.0;
         string[] data = new string[6];
 
-        private void LoadType()
+        private void ClearData()
+        {
+            lbQtyTotal_display.Text = "0";
+            lbPrice_Total_display.Text = "0.00 ກີບ";
+            PriceAll_Item = 0.0;
+            qty = 0;
+            qtyTotal = 0;
+            price = 0.0;
+            priceTotalPer_Item = 0.0;
+            PriceAll_Item = 0.0;
+        }
+        private void MaxBill_ID()
+        {
+            try
+            {
+                cmd = new MySqlCommand("Select Max(Bill_ID) maxid From tbsale", con);
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows && dr["maxid"].ToString() != "")
+                {
+                    string billid = dr["maxid"].ToString();
+                    string[] str = billid.Split('/');
+                    StringBuilder sb = new StringBuilder();
+                    char[] chr = str[0].ToCharArray();
+                    for(int i = 0; i < chr.Length; i++)
+                    {
+                        if (char.IsLetter(chr[i]))
+                        {
+                            sb.Append(chr[i]);
+                        }
+                    }
+
+                    string maxid = str[0].Substring(sb.Length);
+                    int id = int.Parse(maxid) +1;
+
+                    lbBill.Text = (sb.ToString() + maxid.Substring(0,maxid.Length- id.ToString().Length)) + id + "/" + DateTime.Now.ToString("ddMMyy");
+
+                }
+                else
+                {
+                    lbBill.Text = "SB00001/" + DateTime.Now.ToString("ddMMyy");
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dr.Close();
+            }
+        }
+        private void LoadType(string coff_id)
         {
             //Slect Type
-            da = new MySqlDataAdapter("Select Catg_Name From tbcategory", con);
+            da = new MySqlDataAdapter("Select Catg_Name From vw_coff_catg Where Coff_ID='"+coff_id+"'", con);
             tableLoad = new DataTable();
             da.Fill(tableLoad);
-            type = new string[tableLoad.Rows.Count];
             if (tableLoad.Rows.Count > 0)
             {
-                for (int t = 0; t < type.Length; t++)
+                for (int t = 0; t < tableLoad.Rows.Count; t++)
                 {
-                    type[t] = tableLoad.Rows[t][0].ToString();
+                    //Set item to cbType
+                    cbType.Items.Add(tableLoad.Rows[t][0].ToString());
                 }
+                cbType.SelectedIndex = 0;
+            }
+        }
+        private void LoadUnit(string coff_id)
+        {
+            //Slect Type
+            da = new MySqlDataAdapter("Select Uni_Name From vw_coff_unit Where Coff_ID='"+ coff_id + "'", con);
+            tableLoad = new DataTable();
+            da.Fill(tableLoad);
+            if (tableLoad.Rows.Count > 0)
+            {
+                for (int u = 0; u < tableLoad.Rows.Count; u++)
+                {
+                    //Set item to cbUnit
+                    cbUnit.Items.Add(tableLoad.Rows[u][0].ToString());
+                }
+                cbUnit.SelectedIndex = 0;
             }
 
         }
-        private void LoadUnit()
+        private void SaveaAndShow_Data_toSale_Page()
         {
-            //Slect Type
-            da = new MySqlDataAdapter("Select Uni_Name From tbunit", con);
-            tableLoad = new DataTable();
-            da.Fill(tableLoad);
-            unit = new string[tableLoad.Rows.Count];
-            if (tableLoad.Rows.Count > 0)
+            try
             {
-                for (int u = 0; u < unit.Length; u++)
+                if (list != null)
                 {
-                    unit[u] = tableLoad.Rows[u][0].ToString();
+                    cmd = new MySqlCommand("Insert into tbsale Values(@b_id, @qty, @price, @date, @st_id)", con);
+                    cmd.Parameters.AddWithValue("@b_id", lbBill.Text);
+                    cmd.Parameters.AddWithValue("@qty", MySqlDbType.Int32).Value = int.Parse(lbQtyTotal_display.Text);
+                    cmd.Parameters.AddWithValue("@price", MySqlDbType.Double).Value = double.Parse(lbPrice_Total_display.Text.Substring(0, lbPrice_Total_display.Text.IndexOf(" ")));
+                    cmd.Parameters.Add("@date", MySqlDbType.Date).Value = DateTime.Now.Date;
+                    cmd.Parameters.AddWithValue("@st_id", MyVarible.staff_id);
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        _sale.item=list;
+                        _sale.ShowData();
+                        MessageBox.Show("Completed", "Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearData();
+                        MaxBill_ID();
+                    }
                 }
             }
-
+            catch (Exception)
+            {
+                throw;
+            }
         }
+
         //Build Conponent
-        public void ShowAndSearch_Item(string item)
+        public void Build_ShowAndSearch_Item(string item)
         {
             try
             {
@@ -172,13 +252,12 @@ namespace ProjectCoffee
                         lbQtyName.AutoSize = true;
                     }
 
-
                     //Button Up Qty
                     btDown= new Button();
                     {
                         btDown.Name = "downQty" + i;
                         btDown.Size = new Size(24, 22);
-                        btDown.Location = new Point(200, 47);
+                        btDown.Location = new Point(204, 47);
                         btDown.Image = Properties.Resources.down;
                         btDown.FlatStyle = FlatStyle.Flat;
                         btDown.FlatAppearance.BorderSize = 0;
@@ -193,7 +272,7 @@ namespace ProjectCoffee
                     {
                         text.Name = "text" + i;
                         text.Size = new Size(34, 22);
-                        text.Location = new Point(226, 47);
+                        text.Location = new Point(230, 47);
                         text.Font = new Font("Times New Roman", 10);
                         text.Text = "0";
                         text.TextAlign = HorizontalAlignment.Center;
@@ -208,7 +287,7 @@ namespace ProjectCoffee
                     {
                         btUp.Name = "upQty" + i;
                         btUp.Size = new Size(24, 22);
-                        btUp.Location = new Point(260, 47);
+                        btUp.Location = new Point(266, 47);
                         btUp.Image = Properties.Resources.up;
                         btUp.FlatStyle = FlatStyle.Flat;
                         btUp.FlatAppearance.BorderSize = 0;
@@ -236,12 +315,8 @@ namespace ProjectCoffee
                         cbType.Location = new Point(215, 84);
                         cbType.BackColor = Color.FromArgb(240, 240, 240);
 
-                        if (type.Length > 0)
-                        {
-                            cbType.Items.AddRange(type);
-                        }
-                        cbType.SelectedIndex = 0;
-                        cbType.BringToFront();
+                        //Load Category And //Set item to cbType
+                        LoadType(table.Rows[i][0].ToString());
                     }
 
                     //Lable Unit
@@ -263,12 +338,8 @@ namespace ProjectCoffee
                         cbUnit.BringToFront();
                         cbUnit.BackColor = Color.FromArgb(240, 240, 240);
 
-                        //Set data to cbUnit
-                        for(int u = 0; u < unit.Length; u++)
-                        {
-                            cbUnit.Items.Add(unit[u]);
-                        }
-                        cbUnit.SelectedIndex = 0;
+                        //Load Unit And //Set item to cbUnit
+                        LoadUnit(table.Rows[i][0].ToString());
                     }
 
                     //Total Price
@@ -314,10 +385,10 @@ namespace ProjectCoffee
             }
         }
 
-        //Add data to Staff Page
-        private void AddDataSaleTo_StaffPage()
+        //Add data to Sale Page
+        private void AddDataSaleTo_List()
         {
-            
+            list = new List<MyModel>();
             try
             {
                 int index;
@@ -386,21 +457,25 @@ namespace ProjectCoffee
                         {
                             list.Add(new MyModel
                             {
+                                getBillID = lbBill.Text,
                                 getCofName = data[0],
                                 getUnit = data[1],
                                 getCatg = data[2],
                                 getQty = data[3],
                                 getPrice = data[4],
-                                getPriceTotal = data[5]
+                                getPriceTotal = data[5],
+                                getAllQty = int.Parse(lbQtyTotal_display.Text),
+                                getAllPrice = double.Parse(lbPrice_Total_display.Text.Substring(0, lbPrice_Total_display.Text.IndexOf(" ")))
                             });
-
                             //set data to null
-                            data[0] = null;
-                            data[1] = null;
-                            data[2] = null;
-                            data[3] = null;
-                            data[4] = null;
-                            data[5] = null;
+                            {
+                                data[0] = null;
+                                data[1] = null;
+                                data[2] = null;
+                                data[3] = null;
+                                data[4] = null;
+                                data[5] = null;
+                            }
                         }
                     }
                 }
@@ -410,7 +485,6 @@ namespace ProjectCoffee
                 throw;
             }
         }
-
 
         //Create Event when click the upQty
         private void upQty_Click(object sender, EventArgs e) {
@@ -458,7 +532,7 @@ namespace ProjectCoffee
                                         qtyTotal = qty;
                                     }
                                 }
-                                lbQtyTotal.Text = qtyTotal.ToString();
+                                lbQtyTotal_display.Text = qtyTotal.ToString();
                             }
                         }
                     }
@@ -495,7 +569,7 @@ namespace ProjectCoffee
                                     //}
                                 }
                                 PriceAll_Item += price;
-                                lbPrice_Total.Text = PriceAll_Item.ToString("#,###.00 ກີບ");
+                                lbPrice_Total_display.Text = PriceAll_Item.ToString("#,###.00 ກີບ");
                                 break;
                             }
                         }
@@ -537,7 +611,7 @@ namespace ProjectCoffee
                                         //}
                                         qtyTotal -= 1;
                                     }
-                                    lbQtyTotal.Text = qtyTotal.ToString();
+                                    lbQtyTotal_display.Text = qtyTotal.ToString();
                                 }
                             }
                         }
@@ -561,7 +635,7 @@ namespace ProjectCoffee
                                 {
                                     l.Text = (price * Convert.ToDouble(qtdown)).ToString("#,###.00 ກີບ");
                                     PriceAll_Item -= price;
-                                    lbPrice_Total.Text = PriceAll_Item.ToString("#,###.00 ກີບ");
+                                    lbPrice_Total_display.Text = PriceAll_Item.ToString("#,###.00 ກີບ");
 
                                     break;
                                 }
@@ -618,7 +692,7 @@ namespace ProjectCoffee
                                         }
                                     }
                                     // PriceAll_Item += price;
-                                    lbPrice_Total.Text = PriceAll_Item.ToString("#,###.00 ກີບ");
+                                    lbPrice_Total_display.Text = PriceAll_Item.ToString("#,###.00 ກີບ");
                                     break;
                                 }
                             }
@@ -631,34 +705,24 @@ namespace ProjectCoffee
                 if(lbTotalPricePer_Iteem.Name == "lbTotal" + index) {
                     lbTotalPricePer_Iteem.Text= (price * Convert.ToDouble(qty)).ToString("#,###.00 ກິບ");
                 }
-                lbPrice_Total.Text = PriceAll_Item.ToString("#,###.00 ກີບ");
+                lbPrice_Total_display.Text = PriceAll_Item.ToString("#,###.00 ກີບ");
                 box.Text = "0";
             }
         }
 
         private void frmCustomerPage_Load(object sender, EventArgs e)
         {
-            LoadType();
-            LoadUnit();
-            ShowAndSearch_Item("");
+            MaxBill_ID();
+            Build_ShowAndSearch_Item("");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (int.Parse(lbQtyTotal.Text) > 0)
+            if (int.Parse(lbQtyTotal_display.Text) > 0)
             {
-                AddDataSaleTo_StaffPage();
-                _sale.item = list;
-                _sale.ShowData();
-
-                lbQtyTotal.Text = "0";
-                lbPrice_Total.Text = "0.00 ກີບ";
-                PriceAll_Item = 0.0;
-                qty = 0;
-                qtyTotal = 0;
-                price = 0.0;
-                priceTotalPer_Item = 0.0;
-                PriceAll_Item = 0.0;
+                AddDataSaleTo_List();
+                SaveaAndShow_Data_toSale_Page();
+                
             }
             else
             {

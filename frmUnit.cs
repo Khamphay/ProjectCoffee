@@ -128,6 +128,8 @@ namespace ProjectCoffee
 
         private void frmUnit_Load(object sender, EventArgs e)
         {
+            //Set font to dgvUnit Header
+            dgvUnit.ColumnHeadersDefaultCellStyle.Font = new Font("Lao_Ketmany2", 12F, FontStyle.Bold);
             ShowData();
         }
 

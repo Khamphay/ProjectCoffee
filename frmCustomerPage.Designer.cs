@@ -30,12 +30,14 @@
         {
             this.flPnl = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaLinePanel2 = new Guna.UI.WinForms.GunaLinePanel();
-            this.lbPrice_Total = new System.Windows.Forms.Label();
-            this.lbQtyTotal = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbBill = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbPrice_Total_display = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btAdd = new System.Windows.Forms.Button();
+            this.lbQtyTotal_display = new System.Windows.Forms.Label();
             this.gunaLinePanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,78 +47,67 @@
             this.flPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flPnl.Font = new System.Drawing.Font("Lao_Ketmany2", 11F);
             this.flPnl.Location = new System.Drawing.Point(0, 72);
-            this.flPnl.Margin = new System.Windows.Forms.Padding(3, 3, 3, 40);
+            this.flPnl.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.flPnl.Name = "flPnl";
-            this.flPnl.Padding = new System.Windows.Forms.Padding(10, 10, 10, 20);
-            this.flPnl.Size = new System.Drawing.Size(1143, 480);
+            this.flPnl.Padding = new System.Windows.Forms.Padding(10, 10, 10, 0);
+            this.flPnl.Size = new System.Drawing.Size(965, 598);
             this.flPnl.TabIndex = 0;
             // 
             // gunaLinePanel2
             // 
             this.gunaLinePanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(168)))), ((int)(((byte)(175)))));
-            this.gunaLinePanel2.Controls.Add(this.lbPrice_Total);
+            this.gunaLinePanel2.Controls.Add(this.lbBill);
+            this.gunaLinePanel2.Controls.Add(this.label4);
+            this.gunaLinePanel2.Controls.Add(this.lbPrice_Total_display);
             this.gunaLinePanel2.Controls.Add(this.label2);
             this.gunaLinePanel2.Controls.Add(this.label3);
             this.gunaLinePanel2.Controls.Add(this.label1);
-            this.gunaLinePanel2.Controls.Add(this.button1);
-            this.gunaLinePanel2.Controls.Add(this.lbQtyTotal);
+            this.gunaLinePanel2.Controls.Add(this.btAdd);
+            this.gunaLinePanel2.Controls.Add(this.lbQtyTotal_display);
             this.gunaLinePanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaLinePanel2.LineBottom = 1;
             this.gunaLinePanel2.LineColor = System.Drawing.Color.DimGray;
             this.gunaLinePanel2.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaLinePanel2.Location = new System.Drawing.Point(0, 0);
+            this.gunaLinePanel2.MinimumSize = new System.Drawing.Size(965, 72);
             this.gunaLinePanel2.Name = "gunaLinePanel2";
-            this.gunaLinePanel2.Size = new System.Drawing.Size(1143, 72);
+            this.gunaLinePanel2.Size = new System.Drawing.Size(965, 72);
             this.gunaLinePanel2.TabIndex = 2;
             // 
-            // lbPrice_Total
+            // lbBill
             // 
-            this.lbPrice_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbPrice_Total.AutoSize = true;
-            this.lbPrice_Total.Location = new System.Drawing.Point(1034, 24);
-            this.lbPrice_Total.Name = "lbPrice_Total";
-            this.lbPrice_Total.Size = new System.Drawing.Size(59, 28);
-            this.lbPrice_Total.TabIndex = 1;
-            this.lbPrice_Total.Text = "0.00 ກີບ";
-            this.lbPrice_Total.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbBill.AutoSize = true;
+            this.lbBill.Location = new System.Drawing.Point(52, 24);
+            this.lbBill.Name = "lbBill";
+            this.lbBill.Size = new System.Drawing.Size(48, 28);
+            this.lbBill.TabIndex = 4;
+            this.lbBill.Text = "00/00";
             // 
-            // lbQtyTotal
+            // label4
             // 
-            this.lbQtyTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbQtyTotal.AutoSize = true;
-            this.lbQtyTotal.Location = new System.Drawing.Point(832, 24);
-            this.lbQtyTotal.Name = "lbQtyTotal";
-            this.lbQtyTotal.Size = new System.Drawing.Size(20, 28);
-            this.lbQtyTotal.TabIndex = 0;
-            this.lbQtyTotal.Text = "0";
-            this.lbQtyTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 28);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "ເລກບິນ:";
             // 
-            // button1
+            // lbPrice_Total_display
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(150, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 35);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "ສັ່ງຊື້";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(742, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 28);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "ຈຳນວນທັງໝົດ:";
+            this.lbPrice_Total_display.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbPrice_Total_display.AutoSize = true;
+            this.lbPrice_Total_display.Location = new System.Drawing.Point(856, 24);
+            this.lbPrice_Total_display.Name = "lbPrice_Total_display";
+            this.lbPrice_Total_display.Size = new System.Drawing.Size(59, 28);
+            this.lbPrice_Total_display.TabIndex = 1;
+            this.lbPrice_Total_display.Text = "0.00 ກີບ";
+            this.lbPrice_Total_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(955, 24);
+            this.label2.Location = new System.Drawing.Point(777, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 28);
             this.label2.TabIndex = 3;
@@ -126,11 +117,47 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(865, 24);
+            this.label3.Location = new System.Drawing.Point(687, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 28);
             this.label3.TabIndex = 3;
             this.label3.Text = "ຈອກ";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(564, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 28);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "ຈຳນວນທັງໝົດ:";
+            // 
+            // btAdd
+            // 
+            this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAdd.Image = global::ProjectCoffee.Properties.Resources.save;
+            this.btAdd.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btAdd.Location = new System.Drawing.Point(303, 19);
+            this.btAdd.Name = "btAdd";
+            this.btAdd.Size = new System.Drawing.Size(84, 39);
+            this.btAdd.TabIndex = 2;
+            this.btAdd.Text = "ສັ່ງຊື້";
+            this.btAdd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lbQtyTotal_display
+            // 
+            this.lbQtyTotal_display.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbQtyTotal_display.AutoSize = true;
+            this.lbQtyTotal_display.Location = new System.Drawing.Point(654, 24);
+            this.lbQtyTotal_display.Name = "lbQtyTotal_display";
+            this.lbQtyTotal_display.Size = new System.Drawing.Size(20, 28);
+            this.lbQtyTotal_display.TabIndex = 0;
+            this.lbQtyTotal_display.Text = "0";
+            this.lbQtyTotal_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmCustomerPage
             // 
@@ -138,11 +165,12 @@
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(665, 0);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(1143, 552);
+            this.ClientSize = new System.Drawing.Size(965, 680);
             this.Controls.Add(this.flPnl);
             this.Controls.Add(this.gunaLinePanel2);
             this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmCustomerPage";
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCustomerPage";
             this.Load += new System.EventHandler(this.frmCustomerPage_Load);
@@ -156,11 +184,13 @@
 
         private System.Windows.Forms.FlowLayoutPanel flPnl;
         private Guna.UI.WinForms.GunaLinePanel gunaLinePanel2;
-        private System.Windows.Forms.Label lbPrice_Total;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lbQtyTotal;
+        private System.Windows.Forms.Label lbPrice_Total_display;
+        private System.Windows.Forms.Button btAdd;
+        private System.Windows.Forms.Label lbQtyTotal_display;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbBill;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -152,6 +152,8 @@ namespace ProjectCoffee
 
         private void frmStaff_Load(object sender, EventArgs e)
         {
+            //Set font to dgvStaff Header
+            dgvStaff.ColumnHeadersDefaultCellStyle.Font = new Font("Lao_Ketmany2", 12F, FontStyle.Bold);
             ShowData();
         }
 
