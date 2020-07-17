@@ -29,51 +29,78 @@ namespace ProjectCoffee
         //Componet
         DataGridView dgv;
         GunaLinePanel Pnl;
-        Label lbBill_ID, lbQtyTotal, lbPriceTotal, lbQtyName, lbPriceName;
+        Label lbBill_ID, lbQtyTotal, lbPriceTotal, lbQtyName, lbPriceName, lbListCount;
         Button btSave;
 
-        private void Completed_Sale(string pnlName)
+        private void Completed_Sale(Control p)
         {
-            if(Pnl.Name== "pnl"+ pnlName)
-            {
-                Pnl.Dispose();
-                lbAllOrder.Text = (flPnl.Controls.Count - 2).ToString() + " ລາຍການ";
-            }
+            p.Dispose();
+            lbAllOrder.Text = (flPnl.Controls.Count - 2).ToString() + " ລາຍການ";
         }
         private void SaveData(string objname)
         {
+            bool complete = false;
+            string bill = "";
             try
             {
-                if (dgv.Name == "dgv" + objname)
+                foreach (Control p in flPnl.Controls)
                 {
-                    if (dgv.RowCount > 0)
+                    if (p.GetType() == typeof(GunaLinePanel) && p.Name == "pnl" + objname)
                     {
-                        bool complete = false;
-                        for (int row = 0; row < dgv.Rows.Count; row++)
+                        foreach(Control lb in p.Controls)
                         {
-                            table = new DataTable();
-                            da = new MySqlDataAdapter("Select Coff_ID From tbcoffee Where Coff_Name='" + dgv.Rows[row].Cells[1].Value.ToString() + "'", con);
-                            da.Fill(table);
-                            string coff_id = table.Rows[0][0].ToString();
-                            if (table.Rows.Count > 0 && coff_id != "")
+                            //Now the Controls name 'lb' is the "lbBill_ID" of show in the display
+                            if (lb.GetType() == typeof(Label) && lb.Name == "lbBill" + objname)
                             {
-                                cmd = new MySqlCommand("Insert Into tbsaledetail Values(@b_id, @cof_id, @qty, @price, @date)", con);
-                                cmd.Parameters.AddWithValue("b_id", lbBill_ID.Text);
-                                cmd.Parameters.AddWithValue("cof_id", coff_id);
-                                cmd.Parameters.AddWithValue("qty", MySqlDbType.Int32).Value = dgv.Rows[row].Cells[5].Value.ToString();
-                                cmd.Parameters.AddWithValue("price", MySqlDbType.Double).Value = double.Parse(dgv.Rows[row].Cells[6].Value.ToString().Substring(0, dgv.Rows[row].Cells[6].Value.ToString().IndexOf(" ")));
-                                cmd.Parameters.Add("date", MySqlDbType.Date).Value = DateTime.Now.Date;
-                                if (cmd.ExecuteNonQuery() == 1)
+                                bill = lb.Text;
+                                break;
+                            }
+                        }
+                        foreach (Control obj in p.Controls)
+                        {
+                            if (obj.GetType()== typeof(DataGridView) && obj.Name == "dgv" + objname)
+                            {
+                                //Now the Controls name 'obj' is the DataGridView "dgv" of show in the display
+                                //Convert Or Cast type Controls "obj" to DataGridView 'new_dgv'
+                                DataGridView new_dgv =(DataGridView)(obj);
+                                if (new_dgv.RowCount > 0)
                                 {
-                                    complete = true;
+                                    for (int row = 0; row < new_dgv.Rows.Count; row++)
+                                    {
+                                        table = new DataTable();
+                                        da = new MySqlDataAdapter("Select Coff_ID From tbcoffee Where Coff_Name='" + new_dgv.Rows[row].Cells[1].Value.ToString() + "'", con);
+                                        da.Fill(table);
+                                        string coff_id = table.Rows[0][0].ToString();
+                                        if (table.Rows.Count > 0 && coff_id != "")
+                                        {
+                                            cmd = new MySqlCommand("Insert Into tbsaledetail Values(@b_id, @cof_id, @qty, @price, @date)", con);
+                                            cmd.Parameters.AddWithValue("b_id", bill);
+                                            cmd.Parameters.AddWithValue("cof_id", coff_id);
+                                            cmd.Parameters.AddWithValue("qty", MySqlDbType.Int32).Value = new_dgv.Rows[row].Cells[5].Value.ToString();
+                                            cmd.Parameters.AddWithValue("price", MySqlDbType.Double).Value = double.Parse(new_dgv.Rows[row].Cells[6].Value.ToString().Substring(0, new_dgv.Rows[row].Cells[6].Value.ToString().IndexOf(" ")));
+                                            cmd.Parameters.Add("date", MySqlDbType.Date).Value = DateTime.Now.Date;
+                                            if (cmd.ExecuteNonQuery() == 1)
+                                            {
+                                                complete = true;
+                                            }
+                                        }
+                                    }
+                                    if (complete == true)
+                                    {
+                                        Completed_Sale(p);
+                                        break;
+                                    }
                                 }
                             }
                         }
                         if (complete == true)
                         {
-                            MessageBox.Show("Completed!!!", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Completed_Sale(objname);
+                            break;
                         }
+                    }
+                    else
+                    {
+                        continue;
                     }
                 }
             }
@@ -120,6 +147,14 @@ namespace ProjectCoffee
                     //Set Event to btSave
                     btSave.Click += new EventHandler(this.btSave_Click);
                 }
+
+                //lbListCount
+                lbListCount = new Label();
+                {
+                    lbListCount.Location = new Point(202, 140);
+                    lbListCount.AutoSize = true;
+                }
+
 
                 //Label Qty And Name
                 lbQtyName = new Label();
@@ -215,6 +250,7 @@ namespace ProjectCoffee
                     Pnl.Controls.Add(dgv);
                     Pnl.Controls.Add(lbBill_ID);
                     Pnl.Controls.Add(btSave);
+                    Pnl.Controls.Add(lbListCount);
                     Pnl.Controls.Add(lbQtyName);
                     Pnl.Controls.Add(lbQtyTotal);
                     Pnl.Controls.Add(lbPriceName);
@@ -222,9 +258,10 @@ namespace ProjectCoffee
                 }
 
                 //Add data to DataGridView "dgv"
-                int index = 1;
+                int index = 0;
                 foreach (MyModel list in item)
                 {
+                    index += 1;
                     lbBill_ID.Text = list.getBillID;
 
                     int row = dgv.Rows.Add();
@@ -238,16 +275,14 @@ namespace ProjectCoffee
 
                     lbQtyTotal.Text = list.getAllQty.ToString() + " ຈອກ";
                     lbPriceTotal.Text = list.getAllPrice.ToString("#,###.00 ກີບ");
-
-
-                    index += 1;
                 }
-
+                lbListCount.Text = $"ຈຳນວນລາຍການ: {index} ລາຍການ";
                 //Set Name To any conponet this is inportant (Do not cheng the location below)
                 //Below name is inportant to be Specifier when have Event
                 //ການລຸດຊື່ລຸ່ມນີ້ມີຄວາມສຳຄັນຕໍ່ການອ້າງເວລາທີເກີດ ການກະໃດໜື່ງ (Event)
                 {
                     Pnl.Name = "pnl" + lbBill_ID.Text;
+                    btSave.Name = "btSave" + lbBill_ID.Text;
                     lbBill_ID.Name = "lbBill" + lbBill_ID.Text;
                     dgv.Name = "dgv" + lbBill_ID.Text;
                     btSave.Name = "btSave" + lbBill_ID.Text;
@@ -284,7 +319,5 @@ namespace ProjectCoffee
             string objName = save.Name.ToString().Substring(6); //The first name of "btSave" or 'save' is btSave
             SaveData(objName);
         }
-
-       
     }
 }

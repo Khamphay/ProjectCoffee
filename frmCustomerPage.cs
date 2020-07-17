@@ -47,6 +47,11 @@ namespace ProjectCoffee
         double price = 0.0, priceTotalPer_Item = 0.0, PriceAll_Item=0.0;
         string[] data = new string[6];
 
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            Build_ShowAndSearch_Item(txtSearch.Text);
+        }
+
         private void ClearData()
         {
             lbQtyTotal_display.Text = "0";
@@ -101,6 +106,7 @@ namespace ProjectCoffee
         }
         private void LoadType(string coff_id)
         {
+            cbType.ResetText();
             //Slect Type
             da = new MySqlDataAdapter("Select Catg_Name From vw_coff_catg Where Coff_ID='"+coff_id+"'", con);
             tableLoad = new DataTable();
@@ -117,6 +123,7 @@ namespace ProjectCoffee
         }
         private void LoadUnit(string coff_id)
         {
+            cbUnit.ResetText();
             //Slect Type
             da = new MySqlDataAdapter("Select Uni_Name From vw_coff_unit Where Coff_ID='"+ coff_id + "'", con);
             tableLoad = new DataTable();
@@ -175,7 +182,7 @@ namespace ProjectCoffee
                 table.Clear();
                 if(item !="")
                 {
-                    da = new MySqlDataAdapter("Select Coff_ID, Coff_Name, Sale_Price, Image From tbcoffee Where Where Coff_Name Like '%"+item+"%'", con);
+                    da = new MySqlDataAdapter("Select Coff_ID, Coff_Name, Sale_Price, Image From tbcoffee Where Coff_Name Like '%"+item+"%'", con);
                 }
                 else{
                     da = new MySqlDataAdapter("Select Coff_ID, Coff_Name, Sale_Price, Image From tbcoffee", con);

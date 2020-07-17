@@ -4,6 +4,9 @@
 
     partial class dsTable_Rport
     {
+        partial class Sale_ReportDataTable
+        {
+        }
     }
 }
 

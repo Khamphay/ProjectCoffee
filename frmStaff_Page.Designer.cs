@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flPnl = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaLinePanel2 = new Guna.UI.WinForms.GunaLinePanel();
             this.dgvSale = new System.Windows.Forms.DataGridView();
@@ -68,6 +68,7 @@
             // flPnl
             // 
             this.flPnl.AutoScroll = true;
+            this.flPnl.AutoScrollMargin = new System.Drawing.Size(2, 2);
             this.flPnl.Controls.Add(this.gunaLinePanel2);
             this.flPnl.Controls.Add(this.panel2);
             this.flPnl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -76,7 +77,7 @@
             this.flPnl.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.flPnl.Name = "flPnl";
             this.flPnl.Padding = new System.Windows.Forms.Padding(20);
-            this.flPnl.Size = new System.Drawing.Size(1221, 749);
+            this.flPnl.Size = new System.Drawing.Size(1221, 744);
             this.flPnl.TabIndex = 9;
             // 
             // gunaLinePanel2
@@ -103,14 +104,14 @@
             this.dgvSale.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSale.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvSale.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSale.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSale.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvSale.ColumnHeadersHeight = 40;
             this.dgvSale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSale.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -121,14 +122,14 @@
             this.Column3,
             this.Column2,
             this.Column1});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(55)))), ((int)(((byte)(86)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSale.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(55)))), ((int)(((byte)(86)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSale.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvSale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSale.EnableHeadersVisualStyles = false;
             this.dgvSale.GridColor = System.Drawing.Color.White;
@@ -136,14 +137,14 @@
             this.dgvSale.Location = new System.Drawing.Point(133, 0);
             this.dgvSale.Margin = new System.Windows.Forms.Padding(6, 11, 6, 11);
             this.dgvSale.Name = "dgvSale";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSale.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSale.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvSale.RowHeadersWidth = 5;
             this.dgvSale.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvSale.RowTemplate.Height = 40;
@@ -187,9 +188,9 @@
             // 
             // Column2
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column2.HeaderText = "ຈຳນວນ";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
@@ -306,7 +307,7 @@
             // 
             // gunaLinePanel1
             // 
-            this.gunaLinePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(168)))), ((int)(((byte)(175)))));
+            this.gunaLinePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(224)))), ((int)(((byte)(227)))));
             this.gunaLinePanel1.Controls.Add(this.button2);
             this.gunaLinePanel1.Controls.Add(this.label7);
             this.gunaLinePanel1.Controls.Add(this.lbAllOrder);
@@ -337,11 +338,11 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(904, 11);
+            this.label7.Location = new System.Drawing.Point(883, 11);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 28);
+            this.label7.Size = new System.Drawing.Size(153, 28);
             this.label7.TabIndex = 2;
-            this.label7.Text = "ຈຳນວນລາຍການທີ່ກຳລັງສັ່ງ:";
+            this.label7.Text = "ຈຳນວນລາຍການບິນທີ່ກຳລັງສັ່ງ:";
             // 
             // lbAllOrder
             // 
@@ -364,6 +365,7 @@
             this.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 11, 6, 11);
             this.Name = "frmStaff_Page";
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmStaff_Page";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmStaff_Page_FormClosing);

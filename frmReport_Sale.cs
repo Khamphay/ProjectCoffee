@@ -28,7 +28,8 @@ namespace ProjectCoffee
         {
             try
             {
-                da = new MySqlDataAdapter("SELECT Bill_ID, Coff_ID, Coff_Name, Im_Price, Sale_Price, Catg_Name, Uni_Name, Sum(Qty) as Qty, Sum(Total) as Total FROM vw_salereport GROUP BY Coff_ID", con);
+                //SELECT Bill_ID, Coff_ID, Coff_Name, Im_Price, Sale_Price, Catg_Name, Uni_Name, Sum(Qty) as Qty, Sum(Total) as Total FROM vw_salereport GROUP BY Coff_ID
+                da = new MySqlDataAdapter("SELECT * FROM vw_salereport", con);
                 ds = new dsTable_Rport();
                 da.Fill(ds, "Sale_Report");
                 rd = new ReportDocument();
