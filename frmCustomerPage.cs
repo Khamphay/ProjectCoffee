@@ -52,16 +52,80 @@ namespace ProjectCoffee
             Build_ShowAndSearch_Item(txtSearch.Text);
         }
 
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            ClearData();
+        }
+
         private void ClearData()
         {
-            lbQtyTotal_display.Text = "0";
-            lbPrice_Total_display.Text = "0.00 ກີບ";
-            PriceAll_Item = 0.0;
-            qty = 0;
-            qtyTotal = 0;
-            price = 0.0;
-            priceTotalPer_Item = 0.0;
-            PriceAll_Item = 0.0;
+            int index;
+            foreach (Control p in flPnl.Controls)
+            {
+                //Now 'p' As object "pnProd"
+                index = int.Parse(p.Name.ToString().Substring(3));
+                if (p.GetType() == typeof(GunaLinePanel))
+                {
+                    // Now 'obj' As any conponent in object "pnProd"
+                    foreach (Control obj in p.Controls)
+                    {
+                        if (obj.GetType() == typeof(TextBox))
+                        {
+                            // Now 'obj' As object TextBox "text"
+                            if (obj.Name == "text" + index)
+                            {
+                                if (int.Parse(obj.Text) > 0)
+                                {
+                                    obj.Text = "0";
+                                }
+                                else
+                                {
+                                    // ຖ້າບໍ່ສັ່ງຈຳນວນຈະເທົ່າ 0 ສະນັ້ນໃຫ້ຂ້າມ ຮອບ(Loob) ນີ້ເລີຍ
+                                    continue;
+                                }
+
+                            }
+                        }
+                        if (obj.GetType() == typeof(ComboBox))
+                        {
+                            // Now 'obj' As object of ComboBox "cbType"
+                            if (obj.Name == "cbtype" + index)
+                            {
+                                //Cast the Controls 'obj' to ComboBox "type"
+                                ComboBox type = (ComboBox)(obj);
+                                type.SelectedIndex = 0;
+                            }
+                            // Now 'obj' As object of ComboBox "cbUnit"
+                            if (obj.Name == "cbUnit" + index)
+                            {
+                                //Cast the Controls 'obj' to ComboBox "unit"
+                                ComboBox unit = (ComboBox)(obj);
+                                unit.SelectedIndex = 0;
+                            }
+                        }
+                        if (obj.GetType() == typeof(Label))
+                        {
+                            // Now 'lb' As any Label in object "pnProd"
+                            if (obj.Name == "lbTotal" + index)
+                            {
+                                obj.Text = "0.00 ກີບ";
+                            }
+                        }
+                    }
+                }
+            }
+            //Clear varible and Lable
+            {
+                lbQtyTotal_display.Text = "0";
+                lbPrice_Total_display.Text = "0.00 ກີບ";
+                PriceAll_Item = 0.0;
+                qty = 0;
+                qtyTotal = 0;
+                price = 0.0;
+                priceTotalPer_Item = 0.0;
+                PriceAll_Item = 0.0;
+            }
+           
         }
         private void MaxBill_ID()
         {

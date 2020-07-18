@@ -38,8 +38,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btAdd = new System.Windows.Forms.Button();
             this.lbQtyTotal_display = new System.Windows.Forms.Label();
+            this.btCancel = new System.Windows.Forms.Button();
+            this.btAdd = new System.Windows.Forms.Button();
             this.gunaLinePanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@
             this.gunaLinePanel2.Controls.Add(this.label2);
             this.gunaLinePanel2.Controls.Add(this.label3);
             this.gunaLinePanel2.Controls.Add(this.label1);
+            this.gunaLinePanel2.Controls.Add(this.btCancel);
             this.gunaLinePanel2.Controls.Add(this.btAdd);
             this.gunaLinePanel2.Controls.Add(this.lbQtyTotal_display);
             this.gunaLinePanel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -73,7 +75,7 @@
             this.gunaLinePanel2.LineColor = System.Drawing.Color.DimGray;
             this.gunaLinePanel2.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaLinePanel2.Location = new System.Drawing.Point(0, 0);
-            this.gunaLinePanel2.MinimumSize = new System.Drawing.Size(1140, 72);
+            this.gunaLinePanel2.MinimumSize = new System.Drawing.Size(1190, 72);
             this.gunaLinePanel2.Name = "gunaLinePanel2";
             this.gunaLinePanel2.Size = new System.Drawing.Size(1254, 72);
             this.gunaLinePanel2.TabIndex = 2;
@@ -81,7 +83,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(362, 25);
+            this.label5.Location = new System.Drawing.Point(443, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 28);
             this.label5.TabIndex = 6;
@@ -89,9 +91,10 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(413, 21);
+            this.txtSearch.Location = new System.Drawing.Point(494, 20);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(242, 36);
+            this.txtSearch.Size = new System.Drawing.Size(238, 36);
             this.txtSearch.TabIndex = 5;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -154,21 +157,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "ຈຳນວນທັງໝົດ:";
             // 
-            // btAdd
-            // 
-            this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAdd.Image = global::ProjectCoffee.Properties.Resources.save;
-            this.btAdd.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btAdd.Location = new System.Drawing.Point(225, 19);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(84, 39);
-            this.btAdd.TabIndex = 2;
-            this.btAdd.Text = "ສັ່ງຊື້";
-            this.btAdd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btAdd.UseVisualStyleBackColor = true;
-            this.btAdd.Click += new System.EventHandler(this.button1_Click);
-            // 
             // lbQtyTotal_display
             // 
             this.lbQtyTotal_display.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -179,6 +167,36 @@
             this.lbQtyTotal_display.TabIndex = 0;
             this.lbQtyTotal_display.Text = "0";
             this.lbQtyTotal_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btCancel
+            // 
+            this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCancel.Image = global::ProjectCoffee.Properties.Resources.delete;
+            this.btCancel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btCancel.Location = new System.Drawing.Point(314, 19);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(89, 39);
+            this.btCancel.TabIndex = 2;
+            this.btCancel.Text = "ຍົກເລີກ";
+            this.btCancel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
+            // 
+            // btAdd
+            // 
+            this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAdd.Image = global::ProjectCoffee.Properties.Resources.save;
+            this.btAdd.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btAdd.Location = new System.Drawing.Point(213, 19);
+            this.btAdd.Name = "btAdd";
+            this.btAdd.Size = new System.Drawing.Size(89, 39);
+            this.btAdd.TabIndex = 2;
+            this.btAdd.Text = "ສັ່ງຊື້";
+            this.btAdd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmCustomerPage
             // 
@@ -215,5 +233,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btCancel;
     }
 }
