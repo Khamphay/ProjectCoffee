@@ -20,6 +20,20 @@ namespace ProjectCoffee
         }
         public bool edit = false;
 
+        private void ClearData()
+        {
+            txtid.Clear();
+            txtname.Clear();
+            txtsurename.Clear();
+            txtcard.Clear();
+            txtdis.Clear();
+            txtvill.Clear();
+            txttel.Clear();
+            txtpro.Clear();
+            txtemail.Clear();
+            rdbMale.Checked = true;
+        }
+
         private void btSave_Click(object sender, EventArgs e)
         {
             if (txtid.Text != "" && txtname.Text != "" && txtsurename.Text != "" && txttel.Text != "" && txtcard.Text != "" && txtvill.Text != "" && txtdis.Text != "" && txtpro.Text != "")
@@ -37,13 +51,17 @@ namespace ProjectCoffee
                 string[] data = { txtid.Text, txtname.Text, txtsurename.Text, gen, txttel.Text, txtcard.Text, txtemail.Text, txtvill.Text, txtdis.Text, txtpro.Text };
                 if (edit == false)
                 {
-                    _staff.Save(data);
+                    if (_staff.Save(data) == 1)
+                    {
+                        ClearData();
+                    }
                 }
                 else
                 {
                     if (_staff.Edit(data) == 1)
                     {
                         edit = false;
+                        ClearData();
                     }
                 }
             }
@@ -55,6 +73,11 @@ namespace ProjectCoffee
             {
                SelectNextControl((Control)sender, true, true, true,true);
             }
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            ClearData();
         }
     }
 }

@@ -10,9 +10,11 @@
     }
 }
 
-namespace ProjectCoffee.dsTable_RportTableAdapters {
-    
-    
-    public partial class DataTable1TableAdapter {
+namespace ProjectCoffee.dsTable_RportTableAdapters
+{
+
+
+    public partial class SaleByMonthTableAdapter
+    {
     }
 }

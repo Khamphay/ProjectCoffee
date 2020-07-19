@@ -59,6 +59,7 @@
             this.btCancel.TabIndex = 17;
             this.btCancel.Text = "ຍົກເລີກ";
             this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // btSave
             // 

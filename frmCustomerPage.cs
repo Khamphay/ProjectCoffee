@@ -393,7 +393,7 @@ namespace ProjectCoffee
                     //Lable Unit
                     lbUnit = new Label();
                     {
-                        lbUnit.Name = "lbUnit" + 1;
+                        lbUnit.Name = "lbUnit" + i;
                         lbUnit.Location = new Point(160, 152);
                         lbUnit.Text = "ຫົວໜ່ວຍ:";
                         lbUnit.AutoSize = true;
@@ -495,14 +495,18 @@ namespace ProjectCoffee
                                 // Now 'obj' As object of ComboBox "cbType"
                                 if (obj.Name == "cbtype" + index)
                                 {
-                                    data[2] = obj.Text;
-                                    obj.Text = "ຮ໊ອນ";
+                                    //Cast 'obj' to ComboBox "type"
+                                    ComboBox type = (ComboBox)(obj);
+                                    data[2] = type.Text;
+                                    type.SelectedIndex = 0;
                                 }
                                 // Now 'obj' As object of ComboBox "cbUnit"
                                 if (obj.Name == "cbUnit" + index)
                                 {
-                                    data[1] = obj.Text;
-                                    obj.Text = "ນ້ອຍ";
+                                    //Cast 'obj' to ComboBox "unit"
+                                    ComboBox unit = (ComboBox)(obj);
+                                    data[1] = unit.Text;
+                                    unit.SelectedIndex = 0;
                                 }
                             }
                             if (obj.GetType() == typeof(Label))

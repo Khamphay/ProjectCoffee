@@ -51,7 +51,7 @@ namespace ProjectCoffee
                 throw;
             }
         }
-        public void Save(string[] data, MemoryStream memory)
+        public int Save(string[] data, MemoryStream memory)
         {
             try
             {
@@ -67,10 +67,11 @@ namespace ProjectCoffee
                 {
                     ShowData();
                 }
+                return 1;
             }
             catch (Exception)
             {
-
+                return 0;
                 throw;
             }
         }
@@ -87,11 +88,9 @@ namespace ProjectCoffee
                 cmd.Parameters.AddWithValue("uid", data[4]);
                 cmd.Parameters.AddWithValue("cid", data[5]);
                 cmd.Parameters.AddWithValue("img", memory.ToArray());
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    ShowData();
-                    idx = -1;
-                }
+                cmd.ExecuteNonQuery();
+                ShowData();
+                idx = -1;
                 return 1;
             }
             catch (Exception)
@@ -129,11 +128,9 @@ namespace ProjectCoffee
             {
                 cmd = new MySqlCommand("Delete From tbcoffee Where Coff_ID=@id", con);
                 cmd.Parameters.AddWithValue("id", id);
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    idx = -1;
-                    ShowData();
-                }
+                cmd.ExecuteNonQuery();
+                idx = -1;
+                ShowData();
             }
             catch (Exception)
             {

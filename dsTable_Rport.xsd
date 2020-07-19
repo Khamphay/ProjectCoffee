@@ -2,13 +2,16 @@
 <xs:schema id="dsTable_Rport" targetNamespace="http://tempuri.org/dsTable_Rport.xsd" xmlns:mstns="http://tempuri.org/dsTable_Rport.xsd" xmlns="http://tempuri.org/dsTable_Rport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="4" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="7" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbcafeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbcafeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectCoffee.Properties.Settings.GlobalReference.Default.dbcafeConnectionString" Provider="MySql.Data.MySqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbcafeConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbcafeConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectCoffee.Properties.Settings.GlobalReference.Default.dbcafeConnectionString" Provider="MySql.Data.MySqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbcafeConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbcafeConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectCoffee.Properties.Settings.GlobalReference.Default.dbcafeConnectionString" Provider="MySql.Data.MySqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbcafeConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbcafeConnectionString3 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectCoffee.Properties.Settings.GlobalReference.Default.dbcafeConnectionString" Provider="MySql.Data.MySqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbcafeConnectionString4" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbcafeConnectionString4 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectCoffee.Properties.Settings.GlobalReference.Default.dbcafeConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbcafeConnectionString5" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbcafeConnectionString5 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectCoffee.Properties.Settings.GlobalReference.Default.dbcafeConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbcafeConnectionString6" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbcafeConnectionString6 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectCoffee.Properties.Settings.GlobalReference.Default.dbcafeConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbcafeConnectionString7" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbcafeConnectionString7 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectCoffee.Properties.Settings.GlobalReference.Default.dbcafeConnectionString" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables />
         <Sources />
@@ -67,13 +70,34 @@
         <xs:element name="Sale_Report" msprop:Generator_TableClassName="Sale_ReportDataTable" msprop:Generator_TableVarName="tableSale_Report" msprop:Generator_RowChangedName="Sale_ReportRowChanged" msprop:Generator_TablePropName="Sale_Report" msprop:Generator_RowDeletingName="Sale_ReportRowDeleting" msprop:Generator_RowChangingName="Sale_ReportRowChanging" msprop:Generator_RowEvHandlerName="Sale_ReportRowChangeEventHandler" msprop:Generator_RowDeletedName="Sale_ReportRowDeleted" msprop:Generator_RowClassName="Sale_ReportRow" msprop:Generator_UserTableName="Sale_Report" msprop:Generator_RowEvArgName="Sale_ReportRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Bill_ID" msprop:Generator_ColumnVarNameInTable="columnBill_ID" msprop:Generator_ColumnPropNameInRow="Bill_ID" msprop:Generator_ColumnPropNameInTable="Bill_IDColumn" msprop:Generator_UserColumnName="Bill_ID">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="16" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="Bill_ID" msprop:Generator_ColumnVarNameInTable="columnBill_ID" msprop:Generator_ColumnPropNameInRow="Bill_ID" msprop:Generator_ColumnPropNameInTable="Bill_IDColumn" msprop:Generator_UserColumnName="Bill_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Coff_ID" msprop:Generator_ColumnVarNameInTable="columnCoff_ID" msprop:Generator_ColumnPropNameInRow="Coff_ID" msprop:Generator_ColumnPropNameInTable="Coff_IDColumn" msprop:Generator_UserColumnName="Coff_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Coff_Name" msprop:Generator_ColumnVarNameInTable="columnCoff_Name" msprop:Generator_ColumnPropNameInRow="Coff_Name" msprop:Generator_ColumnPropNameInTable="Coff_NameColumn" msprop:Generator_UserColumnName="Coff_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Im_Price" msprop:Generator_ColumnVarNameInTable="columnIm_Price" msprop:Generator_ColumnPropNameInRow="Im_Price" msprop:Generator_ColumnPropNameInTable="Im_PriceColumn" msprop:Generator_UserColumnName="Im_Price" type="xs:long" minOccurs="0" />
+              <xs:element name="Sale_Price" msprop:Generator_ColumnVarNameInTable="columnSale_Price" msprop:Generator_ColumnPropNameInRow="Sale_Price" msprop:Generator_ColumnPropNameInTable="Sale_PriceColumn" msprop:Generator_UserColumnName="Sale_Price" type="xs:long" minOccurs="0" />
+              <xs:element name="Catg_Name" msprop:Generator_ColumnVarNameInTable="columnCatg_Name" msprop:Generator_ColumnPropNameInRow="Catg_Name" msprop:Generator_ColumnPropNameInTable="Catg_NameColumn" msprop:Generator_UserColumnName="Catg_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Uni_Name" msprop:Generator_ColumnVarNameInTable="columnUni_Name" msprop:Generator_ColumnPropNameInRow="Uni_Name" msprop:Generator_ColumnPropNameInTable="Uni_NameColumn" msprop:Generator_UserColumnName="Uni_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:int" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:double" minOccurs="0" />
+              <xs:element name="BDate" msprop:Generator_ColumnVarNameInTable="columnBDate" msprop:Generator_ColumnPropNameInRow="BDate" msprop:Generator_ColumnPropNameInTable="BDateColumn" msprop:Generator_UserColumnName="BDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="St_ID" msprop:Generator_ColumnVarNameInTable="columnSt_ID" msprop:Generator_ColumnPropNameInRow="St_ID" msprop:Generator_ColumnPropNameInTable="St_IDColumn" msprop:Generator_UserColumnName="St_ID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SaleByMonth" msprop:Generator_TableClassName="SaleByMonthDataTable" msprop:Generator_TableVarName="tableSaleByMonth" msprop:Generator_RowChangedName="SaleByMonthRowChanged" msprop:Generator_TablePropName="SaleByMonth" msprop:Generator_RowDeletingName="SaleByMonthRowDeleting" msprop:Generator_RowChangingName="SaleByMonthRowChanging" msprop:Generator_RowEvHandlerName="SaleByMonthRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleByMonthRowDeleted" msprop:Generator_RowClassName="SaleByMonthRow" msprop:Generator_UserTableName="SaleByMonth" msprop:Generator_RowEvArgName="SaleByMonthRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ImPrice" msprop:Generator_ColumnVarNameInTable="columnImPrice" msprop:Generator_ColumnPropNameInRow="ImPrice" msprop:Generator_ColumnPropNameInTable="ImPriceColumn" msprop:Generator_UserColumnName="ImPrice" type="xs:double" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:int" minOccurs="0" />
+              <xs:element name="SalePrice" msprop:Generator_ColumnVarNameInTable="columnSalePrice" msprop:Generator_ColumnPropNameInRow="SalePrice" msprop:Generator_ColumnPropNameInTable="SalePriceColumn" msprop:Generator_UserColumnName="SalePrice" type="xs:double" minOccurs="0" />
+              <xs:element name="Month" msprop:Generator_ColumnVarNameInTable="columnMonth" msprop:Generator_ColumnPropNameInRow="Month" msprop:Generator_ColumnPropNameInTable="MonthColumn" msprop:Generator_UserColumnName="Month" type="xs:string" minOccurs="0" />
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Sale_PerMonth" msprop:Generator_TableClassName="Sale_PerMonthDataTable" msprop:Generator_TableVarName="tableSale_PerMonth" msprop:Generator_TablePropName="Sale_PerMonth" msprop:Generator_RowDeletingName="Sale_PerMonthRowDeleting" msprop:Generator_RowChangingName="Sale_PerMonthRowChanging" msprop:Generator_RowEvHandlerName="Sale_PerMonthRowChangeEventHandler" msprop:Generator_RowDeletedName="Sale_PerMonthRowDeleted" msprop:Generator_UserTableName="Sale_PerMonth" msprop:Generator_RowChangedName="Sale_PerMonthRowChanged" msprop:Generator_RowEvArgName="Sale_PerMonthRowChangeEvent" msprop:Generator_RowClassName="Sale_PerMonthRow">
+          <xs:complexType>
+            <xs:sequence>
               <xs:element name="Coff_ID" msprop:Generator_ColumnVarNameInTable="columnCoff_ID" msprop:Generator_ColumnPropNameInRow="Coff_ID" msprop:Generator_ColumnPropNameInTable="Coff_IDColumn" msprop:Generator_UserColumnName="Coff_ID">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -88,8 +112,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Im_Price" msprop:Generator_ColumnVarNameInTable="columnIm_Price" msprop:Generator_ColumnPropNameInRow="Im_Price" msprop:Generator_ColumnPropNameInTable="Im_PriceColumn" msprop:Generator_UserColumnName="Im_Price" type="xs:double" />
-              <xs:element name="Sale_Price" msprop:Generator_ColumnVarNameInTable="columnSale_Price" msprop:Generator_ColumnPropNameInRow="Sale_Price" msprop:Generator_ColumnPropNameInTable="Sale_PriceColumn" msprop:Generator_UserColumnName="Sale_Price" type="xs:double" />
               <xs:element name="Catg_Name" msprop:Generator_ColumnVarNameInTable="columnCatg_Name" msprop:Generator_ColumnPropNameInRow="Catg_Name" msprop:Generator_ColumnPropNameInTable="Catg_NameColumn" msprop:Generator_UserColumnName="Catg_Name">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -104,16 +126,23 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:int" />
-              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:double" />
-              <xs:element name="BDate" msprop:Generator_ColumnVarNameInTable="columnBDate" msprop:Generator_ColumnPropNameInRow="BDate" msprop:Generator_ColumnPropNameInTable="BDateColumn" msprop:Generator_UserColumnName="BDate" type="xs:dateTime" />
-              <xs:element name="St_ID" msprop:Generator_ColumnVarNameInTable="columnSt_ID" msprop:Generator_ColumnPropNameInRow="St_ID" msprop:Generator_ColumnPropNameInTable="St_IDColumn" msprop:Generator_UserColumnName="St_ID">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SalePrice" msprop:Generator_ColumnVarNameInTable="columnSalePrice" msprop:Generator_ColumnPropNameInRow="SalePrice" msprop:Generator_ColumnPropNameInTable="SalePriceColumn" msprop:Generator_UserColumnName="SalePrice" type="xs:double" minOccurs="0" />
+              <xs:element name="Smont" msprop:Generator_ColumnVarNameInTable="columnSmont" msprop:Generator_ColumnPropNameInRow="Smont" msprop:Generator_ColumnPropNameInTable="SmontColumn" msprop:Generator_UserColumnName="Smont" type="xs:int" minOccurs="0" />
+              <xs:element name="Syear" msprop:Generator_ColumnVarNameInTable="columnSyear" msprop:Generator_ColumnPropNameInRow="Syear" msprop:Generator_ColumnPropNameInTable="SyearColumn" msprop:Generator_UserColumnName="Syear" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Sale_PerDay" msprop:Generator_TableClassName="Sale_PerDayDataTable" msprop:Generator_TableVarName="tableSale_PerDay" msprop:Generator_RowChangedName="Sale_PerDayRowChanged" msprop:Generator_TablePropName="Sale_PerDay" msprop:Generator_RowDeletingName="Sale_PerDayRowDeleting" msprop:Generator_RowChangingName="Sale_PerDayRowChanging" msprop:Generator_RowEvHandlerName="Sale_PerDayRowChangeEventHandler" msprop:Generator_RowDeletedName="Sale_PerDayRowDeleted" msprop:Generator_RowClassName="Sale_PerDayRow" msprop:Generator_UserTableName="Sale_PerDay" msprop:Generator_RowEvArgName="Sale_PerDayRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Coff_ID" msprop:Generator_ColumnVarNameInTable="columnCoff_ID" msprop:Generator_ColumnPropNameInRow="Coff_ID" msprop:Generator_ColumnPropNameInTable="Coff_IDColumn" msprop:Generator_UserColumnName="Coff_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Coff_Name" msprop:Generator_ColumnVarNameInTable="columnCoff_Name" msprop:Generator_ColumnPropNameInRow="Coff_Name" msprop:Generator_ColumnPropNameInTable="Coff_NameColumn" msprop:Generator_UserColumnName="Coff_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Catg_Name" msprop:Generator_ColumnVarNameInTable="columnCatg_Name" msprop:Generator_ColumnPropNameInRow="Catg_Name" msprop:Generator_ColumnPropNameInTable="Catg_NameColumn" msprop:Generator_UserColumnName="Catg_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Uni_Name" msprop:Generator_ColumnVarNameInTable="columnUni_Name" msprop:Generator_ColumnPropNameInRow="Uni_Name" msprop:Generator_ColumnPropNameInTable="Uni_NameColumn" msprop:Generator_UserColumnName="Uni_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:long" minOccurs="0" />
+              <xs:element name="SalePrice" msprop:Generator_ColumnVarNameInTable="columnSalePrice" msprop:Generator_ColumnPropNameInRow="SalePrice" msprop:Generator_ColumnPropNameInTable="SalePriceColumn" msprop:Generator_UserColumnName="SalePrice" type="xs:double" minOccurs="0" />
+              <xs:element name="BDate" msprop:Generator_ColumnVarNameInTable="columnBDate" msprop:Generator_ColumnPropNameInRow="BDate" msprop:Generator_ColumnPropNameInTable="BDateColumn" msprop:Generator_UserColumnName="BDate" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

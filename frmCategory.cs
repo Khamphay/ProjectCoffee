@@ -61,6 +61,7 @@ namespace ProjectCoffee
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     ShowData();
+                    ClearData();
                 }
             }
             catch (Exception)
@@ -77,11 +78,9 @@ namespace ProjectCoffee
 
                 cmd.Parameters.AddWithValue("id", id);
                 cmd.Parameters.AddWithValue("name", name);
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    ShowData();
-                    index = -1;
-                }
+                cmd.ExecuteNonQuery();
+                ShowData();
+                ClearData();
                 return 1;
             }
             catch (Exception)
@@ -109,10 +108,10 @@ namespace ProjectCoffee
             {
                 cmd = new MySqlCommand("Delete From tbcategory Where Catg_ID=@id", con);
                 cmd.Parameters.AddWithValue("id", id);
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    ShowData();
-                }
+                cmd.ExecuteNonQuery() ;
+                ShowData();
+                ClearData();
+
             }
             catch (Exception)
             {
@@ -120,7 +119,12 @@ namespace ProjectCoffee
                 throw;
             }
         }
-        
+        private void ClearData()
+        {
+            txtid.Clear();
+            txtname.Clear();
+            index = -1;
+        }
 
         private void btExit_Click(object sender, EventArgs e)
         {
@@ -156,6 +160,11 @@ namespace ProjectCoffee
         private void dgvCatg_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             index = e.RowIndex;
+        }
+
+        private void btDel_Click(object sender, EventArgs e)
+        {
+            Delete(dgvCatg.Rows[index].Cells[0].Value.ToString());
         }
     }
 }

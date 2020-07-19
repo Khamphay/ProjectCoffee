@@ -47,7 +47,7 @@ namespace ProjectCoffee
 
             }
         }
-        public void Save(string[] data)
+        public int Save(string[] data)
         {
             try
             {
@@ -67,10 +67,11 @@ namespace ProjectCoffee
                 {
                     ShowData();
                 }
+                return 1;
             }
             catch (Exception)
             {
-
+                return 0;
                 throw;
             }
         }
@@ -89,11 +90,9 @@ namespace ProjectCoffee
                 cmd.Parameters.AddWithValue("vill", data[7]);
                 cmd.Parameters.AddWithValue("dis", data[8]);
                 cmd.Parameters.AddWithValue("pro", data[9]);
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    ShowData();
-                    index = -1;
-                }
+                cmd.ExecuteNonQuery();
+                ShowData();
+                index = -1;
                 return 1;
             }
             catch (Exception)
@@ -137,11 +136,9 @@ namespace ProjectCoffee
             {
                 cmd = new MySqlCommand("Delete From tbstaff Where St_ID=@id", con);
                 cmd.Parameters.AddWithValue("id", id);
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    ShowData();
-                    index = -1;
-                }
+                cmd.ExecuteNonQuery();
+                ShowData();
+                index = -1;
             }
             catch (Exception)
             {
@@ -181,6 +178,28 @@ namespace ProjectCoffee
         private void dgvStaff_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             ShowEdit(e.RowIndex);
+        }
+
+        private void btEdit_Click(object sender, EventArgs e)
+        {
+            frmSaveEditStaff staff = new frmSaveEditStaff(this);
+            staff.txtid.Text = dgvStaff.Rows[index].Cells[0].Value.ToString();
+            staff.txtname.Text = dgvStaff.Rows[index].Cells[1].Value.ToString();
+            staff.txtsurename.Text = dgvStaff.Rows[index].Cells[2].Value.ToString();
+
+            if (dgvStaff.Rows[index].Cells[3].Value.ToString()=="ຊາຍ")
+            {
+                staff.rdbMale.Checked = true;
+            }
+            staff.txttel.Text = dgvStaff.Rows[index].Cells[4].Value.ToString();
+            staff.txtcard.Text = dgvStaff.Rows[index].Cells[5].Value.ToString();
+            staff.txtemail.Text = dgvStaff.Rows[index].Cells[6].Value.ToString();
+            staff.txtvill.Text = dgvStaff.Rows[index].Cells[7].Value.ToString();
+            staff.txtdis.Text = dgvStaff.Rows[index].Cells[8].Value.ToString();
+            staff.txtpro.Text = dgvStaff.Rows[index].Cells[9].Value.ToString();
+            staff.txtname.Text = dgvStaff.Rows[index].Cells[1].Value.ToString();
+
+            staff.Show();
         }
     }
 }

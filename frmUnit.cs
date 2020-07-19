@@ -60,6 +60,7 @@ namespace ProjectCoffee
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     ShowData();
+                    ClearData();
                 }
             }
             catch (Exception)
@@ -76,11 +77,9 @@ namespace ProjectCoffee
 
                 cmd.Parameters.AddWithValue("id", id);
                 cmd.Parameters.AddWithValue("name", name);
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    ShowData();
-                    index = -1;
-                }
+                cmd.ExecuteNonQuery();
+                ShowData();
+                ClearData();
                 return 1;
             }
             catch (Exception)
@@ -108,11 +107,9 @@ namespace ProjectCoffee
             {
                 cmd = new MySqlCommand("Delete From tbunit Where Uni_ID=@id", con);
                 cmd.Parameters.AddWithValue("id", id);
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    index = -1;
-                    ShowData();
-                }
+                cmd.ExecuteNonQuery();
+                ShowData();
+                ClearData();
             }
             catch (Exception)
             {
@@ -120,6 +117,12 @@ namespace ProjectCoffee
                 throw;
             }
         }
+        private void ClearData()
+        {
+            txtid.Clear();
+            txtname.Clear();
+        }
+
 
         private void btExit_Click(object sender, EventArgs e)
         {

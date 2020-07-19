@@ -68,6 +68,24 @@
       <DependentUpon>ceReport_Sale.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="crReportByYear.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crReportByYear.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crReport_PerDay.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crReport_PerDay.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crReport_PerMonth.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crReport_PerMonth.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="dsTable_Rport.cs">
       <DependentUpon>dsTable_Rport.xsd</DependentUpon>
     </Compile>
@@ -162,6 +180,18 @@
     <EmbeddedResource Include="ceReport_Sale.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ceReport_Sale.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crReportByYear.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crReportByYear.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crReport_PerDay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crReport_PerDay.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crReport_PerMonth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crReport_PerMonth.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

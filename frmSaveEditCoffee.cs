@@ -83,6 +83,15 @@ namespace ProjectCoffee
            
         }
 
+        private void ClearData()
+        {
+            txtid.Clear();
+            txtname.Clear();
+            txtImprice.Clear();
+            txtSaleprice.Clear();
+            picCoffee.Image = null;
+        }
+
         private void btChooseImg_Click(object sender, EventArgs e)
         {
             ChooseImage();
@@ -99,13 +108,17 @@ namespace ProjectCoffee
 
                 if (edit == false)
                 {
-                    _coffee.Save(data, stream);
+                   if( _coffee.Save(data, stream) == 1)
+                    {
+                        ClearData();
+                    }
                 }
                 else
                 {
                     if (_coffee.Edit(data, stream)==1)
                     {
                         edit = false;
+                        ClearData();
                     }
                 }
             }
@@ -138,6 +151,11 @@ namespace ProjectCoffee
         private void picCoffee_Click(object sender, EventArgs e)
         {
             ChooseImage();
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            ClearData();
         }
 
         private void cbCatg_SelectedIndexChanged(object sender, EventArgs e)
