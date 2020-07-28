@@ -154,11 +154,6 @@ namespace ProjectCoffee
             ShowData();
         }
 
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            _home.ShowHomePage();
-        }
-
         private void btAdd_Click(object sender, EventArgs e)
         {
             frmSaveEditStaff add = new frmSaveEditStaff(this);
@@ -200,6 +195,11 @@ namespace ProjectCoffee
             staff.txtname.Text = dgvStaff.Rows[index].Cells[1].Value.ToString();
 
             staff.Show();
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            _home.ShowHomePage();
         }
     }
 }

@@ -24,6 +24,9 @@ namespace ProjectCoffee
         dsTable_Rport ds;
         ReportDocument rd;
 
+        //Varible for move this form
+        int mouse = 0, mouX=0,mouY=0;
+
         private void Sale_Report()
         {
             try
@@ -140,6 +143,53 @@ namespace ProjectCoffee
             {
                 Sale_Report_Day();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        { 
+        }
+
+        private void btMinimam_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        //For Move This Form
+        private void pnlTaskBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouse = 1;
+            mouX = e.X;
+            mouY = e.Y;
+        }
+
+        private void pnlTaskBar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouse == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouX, MousePosition.Y - mouY);
+            }
+        }
+
+        private void pnlTaskBar_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouse = 0;
+        }
+
+        private void Maximam_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

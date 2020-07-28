@@ -56,3 +56,6 @@ D:\Cshart3cs2\ProjectCoffee\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFac
 D:\Cshart3cs2\ProjectCoffee\bin\Debug\stdole.dll
 D:\Cshart3cs2\ProjectCoffee\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.frmReport_Sale.resources
+D:\Cshart3cs2\ProjectCoffee\bin\Debug\CircularProgressBar.dll
+D:\Cshart3cs2\ProjectCoffee\bin\Debug\WinFormAnimation.dll
+D:\Cshart3cs2\ProjectCoffee\bin\Debug\CircularProgressBar.xml

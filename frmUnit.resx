@@ -117,16 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAVpJREFUOE+9
-        lFtKw0AUhsfLu7oORQRzERslyURbF9BlKPhU8MkXEcTlKF4oKGiliqtQ0IqgkkRCSejxnMmUJkMIVYIf
-        /BDO/PMxQ9OwfwX22WSwqS0E3HRE8Jlmcnl8vixrLuTmcciNNwwoodnRp700K+vlBK6+LjepIjWvvmda
-        clsxPjfWsNhXNpal7ztaTW7PQ1fAQk/ZME5ePrzlGakZEbrmoVqO9nYhrK+OZvVaOst0KAE3DqQmBWx7
-        Ghfes6WotQMwGEByc5VKMcnttZhFre2cENODZnNK6vB03FxUChB6KxBfngKRPHZFiPjiRKyp/cDR56WO
-        sW9X21ILIhsobZ8LERG3zwplafSG1JUIGxYkD3dShyfFZ5oVdrPCwiuT7L4jRHQyCpF0O4XS3JWBsQkc
-        PmcLv/xRnsghdSmVvjZE5S82Uelfb0ilH4chlX6+slT2gf07jP0AB4NsCQxqi7cAAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="gunaElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

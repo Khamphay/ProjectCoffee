@@ -69,22 +69,20 @@ namespace ProjectCoffee
                 throw;
             }
         }
-        public int Edit(string id, string name)
+        //Don't use
+        public void Edit(string id, string name)
         {
             try
             {
-                cmd = new MySqlCommand("Update tbUnit Set  Uni_Name=@name Where Uni_ID=@id,", con);
-
+                cmd = new MySqlCommand("Update tbunit Set Uni_Name=@name Where Uni_ID=@id", con);
                 cmd.Parameters.AddWithValue("id", id);
                 cmd.Parameters.AddWithValue("name", name);
                 cmd.ExecuteNonQuery();
                 ShowData();
                 ClearData();
-                return 1;
             }
             catch (Exception)
             {
-                return 0;
                 throw;
             }
         }
@@ -124,11 +122,6 @@ namespace ProjectCoffee
         }
 
 
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            _home.ShowHomePage();
-        }
-
         private void frmUnit_Load(object sender, EventArgs e)
         {
             //Set font to dgvUnit Header
@@ -151,11 +144,6 @@ namespace ProjectCoffee
             }
         }
 
-        private void btEdit_Click(object sender, EventArgs e)
-        {
-            //ShowEdit(index);
-            Edit(txtid.Text, txtname.Text);
-        }
 
         private void dgvUnit_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -167,6 +155,16 @@ namespace ProjectCoffee
             //ShowEdit(e.RowIndex);
             txtid.Text = dgvUnit.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtname.Text = dgvUnit.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void btEdit_Click(object sender, EventArgs e)
+        {
+            Edit(txtid.Text, txtname.Text);
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            _home.ShowHomePage();
         }
     }
 }

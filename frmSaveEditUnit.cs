@@ -31,10 +31,10 @@ namespace ProjectCoffee
                 }
                 else
                 {
-                    if (_unit.Edit(txtid.Text, txtname.Text) == 1)
-                    {
-                        edit = false;
-                    }
+                    //if (_unit.Edit(txtid.Text, txtname.Text) == 1)
+                    //{
+                    //    edit = false;
+                    //}
                 }
             }
             else

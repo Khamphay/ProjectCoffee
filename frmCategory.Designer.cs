@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategory));
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
             this.dgvCatg = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaSeparator2 = new Guna.UI.WinForms.GunaSeparator();
-            this.btExit = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btDel = new System.Windows.Forms.Button();
@@ -47,6 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.btBack = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatg)).BeginInit();
             this.panel1.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
@@ -75,37 +76,37 @@
             this.dgvCatg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCatg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvCatg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCatg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCatg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCatg.ColumnHeadersHeight = 40;
             this.dgvCatg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(55)))), ((int)(((byte)(86)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCatg.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCatg.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCatg.EnableHeadersVisualStyles = false;
             this.dgvCatg.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.dgvCatg.ImeMode = System.Windows.Forms.ImeMode.On;
             this.dgvCatg.Location = new System.Drawing.Point(333, 126);
             this.dgvCatg.Name = "dgvCatg";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCatg.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCatg.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCatg.RowHeadersWidth = 5;
             this.dgvCatg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvCatg.RowTemplate.Height = 40;
@@ -118,8 +119,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btBack);
             this.panel1.Controls.Add(this.gunaSeparator2);
-            this.panel1.Controls.Add(this.btExit);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -136,21 +137,6 @@
             this.gunaSeparator2.Name = "gunaSeparator2";
             this.gunaSeparator2.Size = new System.Drawing.Size(939, 1);
             this.gunaSeparator2.TabIndex = 15;
-            // 
-            // btExit
-            // 
-            this.btExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btExit.FlatAppearance.BorderSize = 0;
-            this.btExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.btExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btExit.Image = ((System.Drawing.Image)(resources.GetObject("btExit.Image")));
-            this.btExit.Location = new System.Drawing.Point(912, 3);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(24, 25);
-            this.btExit.TabIndex = 2;
-            this.btExit.UseVisualStyleBackColor = true;
-            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // txtSearch
             // 
@@ -170,6 +156,7 @@
             // 
             // btDel
             // 
+            this.btDel.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(55)))), ((int)(((byte)(86)))));
             this.btDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDel.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
             this.btDel.Location = new System.Drawing.Point(191, 254);
@@ -182,6 +169,7 @@
             // 
             // btEdit
             // 
+            this.btEdit.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(55)))), ((int)(((byte)(86)))));
             this.btEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEdit.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
             this.btEdit.Location = new System.Drawing.Point(110, 254);
@@ -194,6 +182,7 @@
             // 
             // btAdd
             // 
+            this.btAdd.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(55)))), ((int)(((byte)(86)))));
             this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAdd.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
             this.btAdd.Location = new System.Drawing.Point(29, 255);
@@ -267,6 +256,38 @@
             this.label3.TabIndex = 30;
             this.label3.Text = "ລະຫັດ";
             // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.TargetControl = this;
+            // 
+            // btBack
+            // 
+            this.btBack.Animated = true;
+            this.btBack.AnimationHoverSpeed = 2F;
+            this.btBack.AnimationSpeed = 1F;
+            this.btBack.BackColor = System.Drawing.Color.Transparent;
+            this.btBack.BaseColor = System.Drawing.Color.Transparent;
+            this.btBack.BorderColor = System.Drawing.Color.Black;
+            this.btBack.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btBack.FocusedColor = System.Drawing.Color.Empty;
+            this.btBack.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btBack.ForeColor = System.Drawing.Color.White;
+            this.btBack.Image = global::ProjectCoffee.Properties.Resources.go_back_30px;
+            this.btBack.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btBack.ImageOffsetX = 2;
+            this.btBack.ImageSize = new System.Drawing.Size(23, 23);
+            this.btBack.Location = new System.Drawing.Point(4, 4);
+            this.btBack.Name = "btBack";
+            this.btBack.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btBack.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btBack.OnHoverForeColor = System.Drawing.Color.White;
+            this.btBack.OnHoverImage = null;
+            this.btBack.OnPressedColor = System.Drawing.Color.WhiteSmoke;
+            this.btBack.Radius = 4;
+            this.btBack.Size = new System.Drawing.Size(30, 30);
+            this.btBack.TabIndex = 18;
+            this.btBack.Click += new System.EventHandler(this.btBack_Click);
+            // 
             // frmCategory
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -277,6 +298,7 @@
             this.Controls.Add(this.dgvCatg);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCategory";
             this.Text = "frmCategory";
             this.Load += new System.EventHandler(this.frmCategory_Load);
@@ -294,7 +316,6 @@
         private Guna.UI.WinForms.GunaSeparator gunaSeparator1;
         private System.Windows.Forms.DataGridView dgvCatg;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Button btDel;
         private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.Button btAdd;
@@ -306,5 +327,7 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Label label3;
+        private Guna.UI.WinForms.GunaButton btBack;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
     }
 }

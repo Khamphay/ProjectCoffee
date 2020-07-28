@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI.Animation.Animation animation1 = new Guna.UI.Animation.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStaff_Page));
             this.flPnl = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaLinePanel2 = new Guna.UI.WinForms.GunaLinePanel();
             this.dgvSale = new System.Windows.Forms.DataGridView();
@@ -44,40 +47,42 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
             this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.lbAllOrder = new System.Windows.Forms.Label();
+            this.AnimatedWin = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.pnlTaskBar = new Guna.UI.WinForms.GunaLinePanel();
+            this.Maximam = new Guna.UI.WinForms.GunaButton();
+            this.btClose = new Guna.UI.WinForms.GunaButton();
+            this.btMinimam = new Guna.UI.WinForms.GunaButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.gunaResize1 = new Guna.UI.WinForms.GunaResize(this.components);
+            this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
             this.flPnl.SuspendLayout();
             this.gunaLinePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gunaLinePanel1.SuspendLayout();
+            this.pnlTaskBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // flPnl
             // 
+            this.flPnl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flPnl.AutoScroll = true;
             this.flPnl.AutoScrollMargin = new System.Drawing.Size(2, 2);
             this.flPnl.Controls.Add(this.gunaLinePanel2);
-            this.flPnl.Controls.Add(this.panel2);
-            this.flPnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaTransition1.SetDecoration(this.flPnl, Guna.UI.Animation.DecorationType.None);
             this.flPnl.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flPnl.Location = new System.Drawing.Point(0, 50);
+            this.flPnl.Location = new System.Drawing.Point(5, 85);
             this.flPnl.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.flPnl.Name = "flPnl";
             this.flPnl.Padding = new System.Windows.Forms.Padding(20);
-            this.flPnl.Size = new System.Drawing.Size(1221, 744);
+            this.flPnl.Size = new System.Drawing.Size(1254, 545);
             this.flPnl.TabIndex = 9;
             // 
             // gunaLinePanel2
@@ -86,6 +91,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaLinePanel2.Controls.Add(this.dgvSale);
             this.gunaLinePanel2.Controls.Add(this.panel1);
+            this.gunaTransition1.SetDecoration(this.gunaLinePanel2, Guna.UI.Animation.DecorationType.None);
             this.gunaLinePanel2.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLinePanel2.LineBottom = 1;
             this.gunaLinePanel2.LineColor = System.Drawing.Color.Black;
@@ -122,6 +128,7 @@
             this.Column3,
             this.Column2,
             this.Column1});
+            this.gunaTransition1.SetDecoration(this.dgvSale, Guna.UI.Animation.DecorationType.None);
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -206,6 +213,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
+            this.gunaTransition1.SetDecoration(this.panel1, Guna.UI.Animation.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -215,95 +223,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.gunaTransition1.SetDecoration(this.label1, Guna.UI.Animation.DecorationType.None);
             this.label1.Location = new System.Drawing.Point(3, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "ລະຫັດບິນ";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(23, 69);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 0);
-            this.panel2.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1064, 140);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 26);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "ລາຄາທັງໝົດ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(989, 140);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 26);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "ລາຄາທັງໝົດ:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(845, 140);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 26);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "ຈຳນວນທັງໝົດ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(760, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 26);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "ຈຳນວນທັງໝົດ:";
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::ProjectCoffee.Properties.Resources.save;
-            this.button1.Location = new System.Drawing.Point(21, 92);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 39);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "ບັນທືກ";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 26);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ລະຫັດບິນ";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(133, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1042, 128);
-            this.dataGridView1.TabIndex = 0;
             // 
             // gunaLinePanel1
             // 
@@ -311,25 +236,28 @@
             this.gunaLinePanel1.Controls.Add(this.button2);
             this.gunaLinePanel1.Controls.Add(this.label7);
             this.gunaLinePanel1.Controls.Add(this.lbAllOrder);
+            this.gunaTransition1.SetDecoration(this.gunaLinePanel1, Guna.UI.Animation.DecorationType.None);
             this.gunaLinePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaLinePanel1.LineBottom = 1;
             this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
             this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaLinePanel1.Location = new System.Drawing.Point(0, 0);
+            this.gunaLinePanel1.Location = new System.Drawing.Point(0, 32);
             this.gunaLinePanel1.MinimumSize = new System.Drawing.Size(613, 50);
             this.gunaLinePanel1.Name = "gunaLinePanel1";
-            this.gunaLinePanel1.Size = new System.Drawing.Size(1221, 50);
+            this.gunaLinePanel1.Size = new System.Drawing.Size(1264, 50);
             this.gunaLinePanel1.TabIndex = 10;
             // 
             // button2
             // 
+            this.gunaTransition1.SetDecoration(this.button2, Guna.UI.Animation.DecorationType.None);
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(41, 7);
+            this.button2.Location = new System.Drawing.Point(41, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 37);
             this.button2.TabIndex = 3;
             this.button2.Text = "ຟອມສະແດງລາຍການກາເຟ";
+            this.toolTip1.SetToolTip(this.button2, "Coffee item");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -337,8 +265,9 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
+            this.gunaTransition1.SetDecoration(this.label7, Guna.UI.Animation.DecorationType.None);
             this.label7.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(883, 11);
+            this.label7.Location = new System.Drawing.Point(876, 10);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 28);
             this.label7.TabIndex = 2;
@@ -348,21 +277,167 @@
             // 
             this.lbAllOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbAllOrder.AutoSize = true;
+            this.gunaTransition1.SetDecoration(this.lbAllOrder, Guna.UI.Animation.DecorationType.None);
             this.lbAllOrder.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAllOrder.Location = new System.Drawing.Point(1047, 11);
+            this.lbAllOrder.Location = new System.Drawing.Point(1040, 10);
             this.lbAllOrder.Name = "lbAllOrder";
             this.lbAllOrder.Size = new System.Drawing.Size(63, 28);
             this.lbAllOrder.TabIndex = 2;
             this.lbAllOrder.Text = "0 ລາຍການ";
             // 
+            // AnimatedWin
+            // 
+            this.AnimatedWin.AnimationType = Guna.UI.WinForms.GunaAnimateWindow.AnimateWindowType.AW_CENTER;
+            this.AnimatedWin.Interval = 200;
+            this.AnimatedWin.TargetControl = this;
+            // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.TargetControl = this;
+            // 
+            // pnlTaskBar
+            // 
+            this.pnlTaskBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.pnlTaskBar.Controls.Add(this.Maximam);
+            this.pnlTaskBar.Controls.Add(this.btClose);
+            this.pnlTaskBar.Controls.Add(this.btMinimam);
+            this.gunaTransition1.SetDecoration(this.pnlTaskBar, Guna.UI.Animation.DecorationType.None);
+            this.pnlTaskBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTaskBar.LineColor = System.Drawing.Color.Black;
+            this.pnlTaskBar.LineStyle = System.Windows.Forms.BorderStyle.None;
+            this.pnlTaskBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlTaskBar.Name = "pnlTaskBar";
+            this.pnlTaskBar.Size = new System.Drawing.Size(1264, 32);
+            this.pnlTaskBar.TabIndex = 11;
+            this.pnlTaskBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gunaLinePanel3_MouseDown);
+            this.pnlTaskBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gunaLinePanel3_MouseMove);
+            this.pnlTaskBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gunaLinePanel3_MouseUp);
+            // 
+            // Maximam
+            // 
+            this.Maximam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Maximam.AnimationHoverSpeed = 0.07F;
+            this.Maximam.AnimationSpeed = 0.03F;
+            this.Maximam.BackColor = System.Drawing.Color.Transparent;
+            this.Maximam.BaseColor = System.Drawing.Color.Transparent;
+            this.Maximam.BorderColor = System.Drawing.Color.Black;
+            this.gunaTransition1.SetDecoration(this.Maximam, Guna.UI.Animation.DecorationType.None);
+            this.Maximam.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Maximam.FocusedColor = System.Drawing.Color.Empty;
+            this.Maximam.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Maximam.ForeColor = System.Drawing.Color.White;
+            this.Maximam.Image = global::ProjectCoffee.Properties.Resources.restore_window;
+            this.Maximam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Maximam.ImageSize = new System.Drawing.Size(23, 23);
+            this.Maximam.Location = new System.Drawing.Point(1191, 4);
+            this.Maximam.Name = "Maximam";
+            this.Maximam.OnHoverBaseColor = System.Drawing.Color.White;
+            this.Maximam.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.Maximam.OnHoverForeColor = System.Drawing.Color.White;
+            this.Maximam.OnHoverImage = null;
+            this.Maximam.OnPressedColor = System.Drawing.Color.Black;
+            this.Maximam.Radius = 4;
+            this.Maximam.Size = new System.Drawing.Size(25, 25);
+            this.Maximam.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.Maximam, "Maximize");
+            this.Maximam.Click += new System.EventHandler(this.Maximam_Click);
+            // 
+            // btClose
+            // 
+            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btClose.AnimationHoverSpeed = 0.07F;
+            this.btClose.AnimationSpeed = 0.03F;
+            this.btClose.BackColor = System.Drawing.Color.Transparent;
+            this.btClose.BaseColor = System.Drawing.Color.Transparent;
+            this.btClose.BorderColor = System.Drawing.Color.Black;
+            this.gunaTransition1.SetDecoration(this.btClose, Guna.UI.Animation.DecorationType.None);
+            this.btClose.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btClose.FocusedColor = System.Drawing.Color.Empty;
+            this.btClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btClose.ForeColor = System.Drawing.Color.White;
+            this.btClose.Image = global::ProjectCoffee.Properties.Resources.cancel;
+            this.btClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btClose.ImageSize = new System.Drawing.Size(20, 20);
+            this.btClose.Location = new System.Drawing.Point(1232, 4);
+            this.btClose.Name = "btClose";
+            this.btClose.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btClose.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btClose.OnHoverForeColor = System.Drawing.Color.White;
+            this.btClose.OnHoverImage = null;
+            this.btClose.OnPressedColor = System.Drawing.Color.Black;
+            this.btClose.Radius = 4;
+            this.btClose.Size = new System.Drawing.Size(25, 25);
+            this.btClose.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.btClose, "Close");
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
+            // btMinimam
+            // 
+            this.btMinimam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btMinimam.AnimationHoverSpeed = 0.07F;
+            this.btMinimam.AnimationSpeed = 0.03F;
+            this.btMinimam.BackColor = System.Drawing.Color.Transparent;
+            this.btMinimam.BaseColor = System.Drawing.Color.Transparent;
+            this.btMinimam.BorderColor = System.Drawing.Color.Black;
+            this.gunaTransition1.SetDecoration(this.btMinimam, Guna.UI.Animation.DecorationType.None);
+            this.btMinimam.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btMinimam.FocusedColor = System.Drawing.Color.Empty;
+            this.btMinimam.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btMinimam.ForeColor = System.Drawing.Color.White;
+            this.btMinimam.Image = global::ProjectCoffee.Properties.Resources.minus;
+            this.btMinimam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btMinimam.ImageSize = new System.Drawing.Size(20, 20);
+            this.btMinimam.Location = new System.Drawing.Point(1150, 4);
+            this.btMinimam.Name = "btMinimam";
+            this.btMinimam.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btMinimam.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btMinimam.OnHoverForeColor = System.Drawing.Color.White;
+            this.btMinimam.OnHoverImage = null;
+            this.btMinimam.OnPressedColor = System.Drawing.Color.Black;
+            this.btMinimam.Radius = 4;
+            this.btMinimam.Size = new System.Drawing.Size(25, 25);
+            this.btMinimam.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.btMinimam, "Minimize");
+            this.btMinimam.Click += new System.EventHandler(this.btMinimam_Click);
+            // 
+            // gunaResize1
+            // 
+            this.gunaResize1.TargetForm = this;
+            // 
+            // gunaTransition1
+            // 
+            this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.Scale;
+            this.gunaTransition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.gunaTransition1.DefaultAnimation = animation1;
+            // 
             // frmStaff_Page
             // 
+            this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(1221, 799);
+            this.ClientSize = new System.Drawing.Size(1264, 637);
             this.Controls.Add(this.flPnl);
             this.Controls.Add(this.gunaLinePanel1);
+            this.Controls.Add(this.pnlTaskBar);
+            this.gunaTransition1.SetDecoration(this, Guna.UI.Animation.DecorationType.None);
             this.Font = new System.Drawing.Font("Lao_Ketmany2", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Margin = new System.Windows.Forms.Padding(6, 11, 6, 11);
             this.Name = "frmStaff_Page";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
@@ -374,11 +449,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gunaLinePanel1.ResumeLayout(false);
             this.gunaLinePanel1.PerformLayout();
+            this.pnlTaskBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -388,16 +461,8 @@
         private Guna.UI.WinForms.GunaLinePanel gunaLinePanel1;
         private Guna.UI.WinForms.GunaLinePanel gunaLinePanel2;
         private System.Windows.Forms.DataGridView dgvSale;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbAllOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
@@ -408,5 +473,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Button button2;
+        public Guna.UI.WinForms.GunaAnimateWindow AnimatedWin;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
+        private Guna.UI.WinForms.GunaButton btClose;
+        private Guna.UI.WinForms.GunaButton btMinimam;
+        private Guna.UI.WinForms.GunaButton Maximam;
+        private Guna.UI.WinForms.GunaLinePanel pnlTaskBar;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private Guna.UI.WinForms.GunaResize gunaResize1;
+        private Guna.UI.WinForms.GunaTransition gunaTransition1;
     }
 }

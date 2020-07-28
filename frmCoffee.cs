@@ -139,11 +139,6 @@ namespace ProjectCoffee
             }
         }
 
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            _home.ShowHomePage();
-        }
-
         private void frmCoffee_Load(object sender, EventArgs e)
         {
             //Set font to dgvCoffee Header
@@ -208,6 +203,11 @@ namespace ProjectCoffee
             {
                 Delete(dgvCoffee.Rows[idx].Cells[0].Value.ToString());
             }
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            _home.ShowHomePage();
         }
     }
 }

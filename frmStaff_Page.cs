@@ -1,4 +1,6 @@
-﻿using Guna.UI.WinForms;
+﻿using Guna.UI.Animation;
+using Guna.UI.WinForms;
+using Microsoft.VisualBasic.ApplicationServices;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -14,9 +16,12 @@ namespace ProjectCoffee
 {
     public partial class frmStaff_Page : Form
     {
-        public frmStaff_Page()
+        HomePage home;
+        public frmStaff_Page(HomePage control)
         {
             InitializeComponent();
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            home = control;
         }
 
         MySqlConnection con = MyConnect.getConnted();
@@ -26,16 +31,25 @@ namespace ProjectCoffee
 
         frmCustomerPage customerPage;
 
+        //Varible
+        int mouse = 0, mouX=0, mouY=0;
+        
+
+
         //Componet
         DataGridView dgv;
         GunaLinePanel Pnl;
         Label lbBill_ID, lbQtyTotal, lbPriceTotal, lbQtyName, lbPriceName, lbListCount;
         Button btSave;
 
+        //Close Cafe List Sale in FlowPanel
         private void Completed_Sale(Control p)
         {
+            gunaTransition1.HideSync(p, true, Animation.VertSlide);
             p.Dispose();
-            lbAllOrder.Text = (flPnl.Controls.Count - 2).ToString() + " ລາຍການ";
+            lbAllOrder.Text = (flPnl.Controls.Count - 1).ToString() + " ລາຍການ";
+            home.ShowSumPrice();
+
         }
         private void SaveData(string objname)
         {
@@ -110,8 +124,25 @@ namespace ProjectCoffee
             }
         }
 
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            if (flPnl.Controls.Count > 1)
+            {
+                DialogResult result = MessageBox.Show("Are you sure to close?", "Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
         //Call By frmCustomer_Page Form
         public List<MyModel> item;
+
         public void ShowData()
         {
             if (item != null)
@@ -143,7 +174,7 @@ namespace ProjectCoffee
                     btSave.Text = "ບັນທືກ";
                     btSave.Image = Properties.Resources.save;
                     btSave.TextImageRelation = TextImageRelation.ImageBeforeText;
-
+                    toolTip1.SetToolTip(btSave, "Save");
                     //Set Event to btSave
                     btSave.Click += new EventHandler(this.btSave_Click);
                 }
@@ -212,8 +243,8 @@ namespace ProjectCoffee
                         dgv.RowTemplate.Height = 30;
                         dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                         dgv.DefaultCellStyle.BackColor = Color.FromArgb(216, 216, 216);
-                        dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(178, 150, 205);
-                        dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
+                        dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(87, 95, 105);
+                        dgv.DefaultCellStyle.SelectionForeColor = Color.White;
                         dgv.AllowUserToAddRows = false;
                         dgv.AllowUserToDeleteRows = false;
                         dgv.AllowUserToResizeRows = false;
@@ -293,7 +324,8 @@ namespace ProjectCoffee
                 //Add Panel "Pnl" to 'flPnl' and Show to display
                 flPnl.Controls.Add(Pnl);
             }
-            lbAllOrder.Text = (flPnl.Controls.Count - 2).ToString() + " ລາຍການ";
+
+            lbAllOrder.Text = (flPnl.Controls.Count - 1).ToString() + " ລາຍການ";
         }
 
         private void frmStaff_Page_FormClosing(object sender, FormClosingEventArgs e)
@@ -307,6 +339,7 @@ namespace ProjectCoffee
         private void button2_Click(object sender, EventArgs e)
         {
             customerPage = new frmCustomerPage(this);
+            customerPage.AnimatedWinFrm.Start();
             customerPage.Show();
         }
 
@@ -318,6 +351,43 @@ namespace ProjectCoffee
             Button save = sender as Button;
             string objName = save.Name.ToString().Substring(6); //The first name of "btSave" or 'save' is btSave
             SaveData(objName);
+        }
+
+        //These bellow Method use for move thus form
+        private void gunaLinePanel3_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouse = 1;
+            mouX = e.X;
+            mouY = e.Y;
+        }
+        private void gunaLinePanel3_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouse == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouX, MousePosition.Y - mouY);
+            }
+        }
+         private void gunaLinePanel3_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouse = 0;
+        }
+
+        //
+        private void Maximam_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btMinimam_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

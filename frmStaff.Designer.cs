@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStaff));
             this.dgvStaff = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaSeparator2 = new Guna.UI.WinForms.GunaSeparator();
-            this.btExit = new System.Windows.Forms.Button();
             this.btDel = new System.Windows.Forms.Button();
             this.btEdit = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
+            this.btBack = new Guna.UI.WinForms.GunaButton();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +73,7 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(55)))), ((int)(((byte)(86)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle2;
@@ -102,8 +103,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btBack);
             this.panel1.Controls.Add(this.gunaSeparator2);
-            this.panel1.Controls.Add(this.btExit);
             this.panel1.Controls.Add(this.btDel);
             this.panel1.Controls.Add(this.btEdit);
             this.panel1.Controls.Add(this.btAdd);
@@ -123,21 +124,6 @@
             this.gunaSeparator2.Name = "gunaSeparator2";
             this.gunaSeparator2.Size = new System.Drawing.Size(939, 1);
             this.gunaSeparator2.TabIndex = 16;
-            // 
-            // btExit
-            // 
-            this.btExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btExit.FlatAppearance.BorderSize = 0;
-            this.btExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.btExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btExit.Image = ((System.Drawing.Image)(resources.GetObject("btExit.Image")));
-            this.btExit.Location = new System.Drawing.Point(912, 3);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(24, 25);
-            this.btExit.TabIndex = 2;
-            this.btExit.UseVisualStyleBackColor = true;
-            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // btDel
             // 
@@ -198,6 +184,38 @@
             this.gunaSeparator1.Size = new System.Drawing.Size(898, 1);
             this.gunaSeparator1.TabIndex = 5;
             // 
+            // btBack
+            // 
+            this.btBack.Animated = true;
+            this.btBack.AnimationHoverSpeed = 2F;
+            this.btBack.AnimationSpeed = 1F;
+            this.btBack.BackColor = System.Drawing.Color.Transparent;
+            this.btBack.BaseColor = System.Drawing.Color.Transparent;
+            this.btBack.BorderColor = System.Drawing.Color.Black;
+            this.btBack.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btBack.FocusedColor = System.Drawing.Color.Empty;
+            this.btBack.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btBack.ForeColor = System.Drawing.Color.White;
+            this.btBack.Image = global::ProjectCoffee.Properties.Resources.go_back_30px;
+            this.btBack.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btBack.ImageOffsetX = 2;
+            this.btBack.ImageSize = new System.Drawing.Size(23, 23);
+            this.btBack.Location = new System.Drawing.Point(4, 4);
+            this.btBack.Name = "btBack";
+            this.btBack.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btBack.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btBack.OnHoverForeColor = System.Drawing.Color.White;
+            this.btBack.OnHoverImage = null;
+            this.btBack.OnPressedColor = System.Drawing.Color.WhiteSmoke;
+            this.btBack.Radius = 4;
+            this.btBack.Size = new System.Drawing.Size(30, 30);
+            this.btBack.TabIndex = 18;
+            this.btBack.Click += new System.EventHandler(this.btBack_Click);
+            // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.TargetControl = this;
+            // 
             // frmStaff
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -207,6 +225,7 @@
             this.Controls.Add(this.gunaSeparator1);
             this.Controls.Add(this.dgvStaff);
             this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStaff";
             this.Text = "frmStaff";
             this.Load += new System.EventHandler(this.frmStaff_Load);
@@ -225,8 +244,9 @@
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btExit;
         private Guna.UI.WinForms.GunaSeparator gunaSeparator2;
         private Guna.UI.WinForms.GunaSeparator gunaSeparator1;
+        private Guna.UI.WinForms.GunaButton btBack;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
     }
 }

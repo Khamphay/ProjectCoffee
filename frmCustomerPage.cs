@@ -19,6 +19,7 @@ namespace ProjectCoffee
         public frmCustomerPage(frmStaff_Page sale)
         {
             InitializeComponent();
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             _sale = sale;
         }
 
@@ -47,6 +48,10 @@ namespace ProjectCoffee
         double price = 0.0, priceTotalPer_Item = 0.0, PriceAll_Item=0.0;
         string[] data = new string[6];
 
+        //For Move From
+        int mouse = 0, mouX = 0, mouY = 0;
+
+
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             Build_ShowAndSearch_Item(txtSearch.Text);
@@ -56,6 +61,17 @@ namespace ProjectCoffee
         {
             ClearData();
         }
+
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure to close?", "Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
 
         private void ClearData()
         {
@@ -127,6 +143,7 @@ namespace ProjectCoffee
             }
            
         }
+
         private void MaxBill_ID()
         {
             try
@@ -804,5 +821,43 @@ namespace ProjectCoffee
                 MessageBox.Show("Pleace choose item, and try again", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        //These bellow Method use for Move this form
+        private void gunaLinePanel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouse = 1;
+            mouX = e.X;
+            mouY = e.Y;
+        }
+        private void gunaLinePanel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouse == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouX, MousePosition.Y - mouY);
+            }
+        }
+        private void gunaLinePanel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouse = 0;
+        }
+
+        //
+        private void Maximam_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btMinimam_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
     }
 }

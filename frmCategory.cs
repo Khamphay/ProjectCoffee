@@ -74,7 +74,7 @@ namespace ProjectCoffee
         {
             try
             {
-                cmd = new MySqlCommand("Update tbcategory Set  Catg_Name=@name Where Catg_ID=@id,", con);
+                cmd = new MySqlCommand("Update tbcategory Set  Catg_Name=@name Where Catg_ID=@id", con);
 
                 cmd.Parameters.AddWithValue("id", id);
                 cmd.Parameters.AddWithValue("name", name);
@@ -126,11 +126,6 @@ namespace ProjectCoffee
             index = -1;
         }
 
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            _home.ShowHomePage();
-        }
-
         private void frmCategory_Load(object sender, EventArgs e)
         {
             dgvCatg.ColumnHeadersDefaultCellStyle.Font = new Font("Lao_Ketmany2", 12F, FontStyle.Bold);
@@ -165,6 +160,11 @@ namespace ProjectCoffee
         private void btDel_Click(object sender, EventArgs e)
         {
             Delete(dgvCatg.Rows[index].Cells[0].Value.ToString());
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            _home.ShowHomePage();
         }
     }
 }
