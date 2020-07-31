@@ -60,3 +60,4 @@ D:\Cshart3cs2\ProjectCoffee\bin\Debug\CircularProgressBar.dll
 D:\Cshart3cs2\ProjectCoffee\bin\Debug\WinFormAnimation.dll
 D:\Cshart3cs2\ProjectCoffee\bin\Debug\CircularProgressBar.xml
 D:\Cshart3cs2\ProjectCoffee\bin\Debug\Message.dll
+D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.frmPrintBill.resources
