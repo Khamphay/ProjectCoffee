@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Message;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,6 +54,7 @@ namespace ProjectCoffee
                 {
                     if (_staff.Save(data) == 1)
                     {
+                        MyMessageBox.ShowMssg("ບັນທືກຂໍ້ມູນສຳເລັດແລ້ວ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ClearData();
                     }
                 }
@@ -60,6 +62,7 @@ namespace ProjectCoffee
                 {
                     if (_staff.Edit(data) == 1)
                     {
+                        MyMessageBox.ShowMssg("ແກ້ໄຂຂໍ້ມູນສຳເລັດແລ້ວ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         edit = false;
                         ClearData();
                     }

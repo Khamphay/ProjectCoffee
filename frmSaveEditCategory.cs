@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Message;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,13 +26,17 @@ namespace ProjectCoffee
         {
             if (edit == false)
             {
-                _category.Save(txtid.Text, txtname.Text);
+                if(_category.Save(txtid.Text, txtname.Text) == 1)
+                {
+                    MyMessageBox.ShowMssg("ບັນທືກຂໍ້ມູນສຳເລັດແລ້ວ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
                 if (_category.Edit(txtid.Text, txtname.Text) == 1)
                 {
                     edit = false;
+                    MyMessageBox.ShowMssg("ແກ້ໄຂຂໍ້ມູນສຳເລັດແລ້ວ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

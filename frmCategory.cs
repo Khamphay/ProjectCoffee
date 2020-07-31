@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Message;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,10 +48,10 @@ namespace ProjectCoffee
             }
             catch (Exception ex)
             {
-                throw;
+                MyMessageBox.ShowMssg("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void Save(string id, string name)
+        public int Save(string id, string name)
         {
             try
             {
@@ -63,11 +64,12 @@ namespace ProjectCoffee
                     ShowData();
                     ClearData();
                 }
+                return 1;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດບັນທືກຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
             }
         }
         public int Edit(string id, string name)
@@ -83,10 +85,10 @@ namespace ProjectCoffee
                 ClearData();
                 return 1;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດແກ້ໄຂຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: "+ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
-                throw;
             }
         }
         public void ShowEdit(int ind)
@@ -106,17 +108,21 @@ namespace ProjectCoffee
         {
             try
             {
-                cmd = new MySqlCommand("Delete From tbcategory Where Catg_ID=@id", con);
-                cmd.Parameters.AddWithValue("id", id);
-                cmd.ExecuteNonQuery() ;
-                ShowData();
-                ClearData();
+                DialogResult result= MyMessageBox.ShowMssg("ແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກ ຫຼື ບໍ່?", "ຄຳເຕືອນ", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    cmd = new MySqlCommand("Delete From tbcategory Where Catg_ID=@id", con);
+                    cmd.Parameters.AddWithValue("id", id);
+                    cmd.ExecuteNonQuery();
+                    ShowData();
+                    ClearData();
+                }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດລົບຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ClearData()

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Message;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,7 +47,7 @@ namespace ProjectCoffee
             }
             catch (Exception ex)
             {
-                throw;
+                MyMessageBox.ShowMssg("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void Save(string id, string name)
@@ -63,10 +64,9 @@ namespace ProjectCoffee
                     ClearData();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດບັນທືກຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         //Don't use
@@ -81,9 +81,9 @@ namespace ProjectCoffee
                 ShowData();
                 ClearData();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດແກ້ໄຂຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void ShowEdit(int ind)
@@ -109,10 +109,9 @@ namespace ProjectCoffee
                 ShowData();
                 ClearData();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດລົບຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ClearData()

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Message;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,7 +49,7 @@ namespace ProjectCoffee
             }
             catch (Exception ex)
             {
-                throw;
+                MyMessageBox.ShowMssg("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public int Save(string[] data, MemoryStream memory)
@@ -69,10 +70,10 @@ namespace ProjectCoffee
                 }
                 return 1;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດບັນທືກຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
-                throw;
             }
         }
         public int Edit(string[] data, MemoryStream memory)
@@ -93,10 +94,10 @@ namespace ProjectCoffee
                 idx = -1;
                 return 1;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດແກ້ໄຂຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
-                throw;
             }
         }
         public void ShowEdit(int index)
@@ -132,10 +133,9 @@ namespace ProjectCoffee
                 idx = -1;
                 ShowData();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດລົບຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -179,10 +179,9 @@ namespace ProjectCoffee
                     picCoffee.Image = null;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MyMessageBox.ShowMssg("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI.WinForms;
+using Message;
 using MySql.Data.MySqlClient;
 
 namespace ProjectCoffee
@@ -65,7 +66,7 @@ namespace ProjectCoffee
 
         private void btClose_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure to close?", "Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            DialogResult result = MyMessageBox.ShowMssg("ແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກ ຫຼື ບໍ່?", "ຄຳເຕືອນ", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                 this.Close();
@@ -176,9 +177,9 @@ namespace ProjectCoffee
                     lbBill.Text = "SB00001/" + DateTime.Now.ToString("ddMMyy");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MyMessageBox.ShowMssg("ເກີດບັນຫາໃນການສະແດງລະຫັດບິນ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -236,15 +237,15 @@ namespace ProjectCoffee
                     {
                         _sale.item=list;
                         _sale.ShowData();
-                        MessageBox.Show("Completed", "Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MyMessageBox.ShowMssg("ບັນທືກຂໍ້ມູນສຳເລັດແລ້ວ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ClearData();
                         MaxBill_ID();
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດບັນທືກຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -306,7 +307,7 @@ namespace ProjectCoffee
                     lbcofName = new Label();
                     {
                         lbcofName.Name = "lbName" + i;
-                        lbcofName.Location = new Point(5, 122);
+                        lbcofName.Location = new Point(0, 122);
                         lbcofName.Text = "ລາຍການ: " + table.Rows[i][1];
                         lbcofName.AutoSize = true;
                     }
@@ -335,7 +336,7 @@ namespace ProjectCoffee
                     {
                         lbQtyName.Name = "lbQty" + 1;
                         lbQtyName.Size = new Size(35, 32);
-                        lbQtyName.Location = new Point(156, 47);
+                        lbQtyName.Location = new Point(156, 44);
                         lbQtyName.Text = "ຈຳນວນ:";
                         lbQtyName.AutoSize = true;
                     }
@@ -393,14 +394,15 @@ namespace ProjectCoffee
                         lbType.Size = new Size(48, 22);
                         lbType.Location = new Point(156, 88);
                         lbType.Text = "ປະເພດ:";
+                        lbType.AutoSize = true;
                     }
 
                     //Combox Type
                     cbType = new ComboBox();
                     {
                         cbType.Name = "cbtype" + i;
-                        cbType.Size = new Size(75, 30);
-                        cbType.Location = new Point(215, 84);
+                        cbType.Size = new Size(75, 20);
+                        cbType.Location = new Point(222, 84);
                         cbType.BackColor = Color.FromArgb(240, 240, 240);
 
                         //Load Category And //Set item to cbType
@@ -421,8 +423,8 @@ namespace ProjectCoffee
                     cbUnit = new ComboBox();
                     {
                         cbUnit.Name = "cbUnit" + i;
-                        cbUnit.Size = new Size(70, 20);
-                        cbUnit.Location = new Point(220, 147);
+                        cbUnit.Size = new Size(75, 20);
+                        cbUnit.Location = new Point(222, 147);
                         cbUnit.BringToFront();
                         cbUnit.BackColor = Color.FromArgb(240, 240, 240);
 
@@ -433,7 +435,7 @@ namespace ProjectCoffee
                     //Total Price
                     lbTotalPriceName = new Label();
                     {
-                        lbTotalPriceName.Location = new Point(5, 154);
+                        lbTotalPriceName.Location = new Point(0, 154);
                         lbTotalPriceName.Text = "ລາຄາລວມ:";
                         lbTotalPriceName.AutoSize = true;
                     }
@@ -572,9 +574,9 @@ namespace ProjectCoffee
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MyMessageBox.ShowMssg("ເກີດບັນຫາໃນການຊື້ກາເຟ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -818,7 +820,7 @@ namespace ProjectCoffee
             }
             else
             {
-                MessageBox.Show("Pleace choose item, and try again", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MyMessageBox.ShowMssg("ກະລຸນາເລືອກລາຍການກາເຟ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

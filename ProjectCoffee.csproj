@@ -44,6 +44,10 @@
     <Reference Include="Guna.UI">
       <HintPath>..\CShard_3cs2_Lad_P2_Salary\CShard_3cs2_Lad_P2_Salary\bin\Debug\Guna.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Message, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Message.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -125,6 +129,12 @@
     </Compile>
     <Compile Include="frmCustomerPage.Designer.cs">
       <DependentUpon>frmCustomerPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintBill.Designer.cs">
+      <DependentUpon>frmPrintBill.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReport_Sale.cs">
       <SubType>Form</SubType>
@@ -212,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCustomerPage.resx">
       <DependentUpon>frmCustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintBill.resx">
+      <DependentUpon>frmPrintBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReport_Sale.resx">
       <DependentUpon>frmReport_Sale.cs</DependentUpon>

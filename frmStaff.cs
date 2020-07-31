@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Message;
 using MySql.Data.MySqlClient;
 
 namespace ProjectCoffee
@@ -69,10 +70,10 @@ namespace ProjectCoffee
                 }
                 return 1;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດບັນທືກຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
-                throw;
             }
         }
         public int Edit(string[] data)
@@ -95,10 +96,10 @@ namespace ProjectCoffee
                 index = -1;
                 return 1;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດແກ້ໄຂຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
-                throw;
             }
         }
         public void ShowEdit(int ind)
@@ -140,10 +141,9 @@ namespace ProjectCoffee
                 ShowData();
                 index = -1;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດລົບຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Guna.UI.WinForms;
 using Guna.UI.Animation;
 using Microsoft.VisualBasic.Devices;
+using Message;
 
 namespace ProjectCoffee
 {
@@ -156,7 +157,7 @@ namespace ProjectCoffee
 
         private void btClose_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure?", "Exit Program", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            DialogResult result = MyMessageBox.ShowMssg("ແນ່ໃຈທີ່ຈະອອກຈາກໂປຣແກຣມ ຫຼື ບໍ່?", "ປີດໂປຣແກຣມ", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                // gunaTransition1.HideSync(this, true, Animation.Scale);

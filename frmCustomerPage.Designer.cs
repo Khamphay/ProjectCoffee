@@ -316,9 +316,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flPnl.AutoScroll = true;
-            this.flPnl.Location = new System.Drawing.Point(8, 112);
+            this.flPnl.Location = new System.Drawing.Point(7, 108);
             this.flPnl.Name = "flPnl";
-            this.flPnl.Size = new System.Drawing.Size(1239, 519);
+            this.flPnl.Size = new System.Drawing.Size(1239, 521);
             this.flPnl.TabIndex = 8;
             // 
             // gunaResize1

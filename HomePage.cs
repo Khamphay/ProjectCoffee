@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI.Animation;
 using MySql.Data.MySqlClient;
+using Message;
 
 namespace ProjectCoffee
 {
@@ -33,9 +34,9 @@ namespace ProjectCoffee
 
         public void ShowSumPrice()
         {
-            //Today
+            try
             {
-                try
+                //Today
                 {
                     table = new DataTable();
                     da = new MySqlDataAdapter("SELECT SUM(Qty) as Qty, SUM(Total) as SalePrice FROM vw_salereport Where BDate='" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "' Group By BDate", con);
@@ -51,19 +52,11 @@ namespace ProjectCoffee
                         lbTodey.Text = "0.00";
                     }
                 }
-                catch (Exception)
-                {
 
-                    throw;
-                }
-            }
-
-            //This Month
-            {
-                try
+                //This Month
                 {
                     table = new DataTable();
-                    da = new MySqlDataAdapter("SELECT SUM(Qty) as Qty, SUM(Total) as SalePrice FROM vw_salereport Where Month(BDate)="+DateTime.Now.Month+" Group By Month(BDate)", con);
+                    da = new MySqlDataAdapter("SELECT SUM(Qty) as Qty, SUM(Total) as SalePrice FROM vw_salereport Where Month(BDate)=" + DateTime.Now.Month + " Group By Month(BDate)", con);
                     da.Fill(table);
                     if (table.Rows.Count > 0)
                     {
@@ -76,19 +69,11 @@ namespace ProjectCoffee
                         lbThisMonth.Text = "0.00";
                     }
                 }
-                catch (Exception)
-                {
 
-                    throw;
-                }
-            }
-
-            //This Year
-            {
-                try
+                //This Year
                 {
                     table = new DataTable();
-                    da = new MySqlDataAdapter("SELECT SUM(Qty) as Qty, SUM(Total) as SalePrice FROM vw_salereport Where Year(BDate)="+DateTime.Now.Year+" Group By Year(BDate)", con);
+                    da = new MySqlDataAdapter("SELECT SUM(Qty) as Qty, SUM(Total) as SalePrice FROM vw_salereport Where Year(BDate)=" + DateTime.Now.Year + " Group By Year(BDate)", con);
                     da.Fill(table);
                     if (table.Rows.Count > 0)
                     {
@@ -101,11 +86,11 @@ namespace ProjectCoffee
                         lbYear.Text = "0.00";
                     }
                 }
-                catch (Exception)
-                {
+            }
+            catch (Exception)
+            {
 
-                    throw;
-                }
+                MyMessageBox.ShowMssg("ມີບັນຫາໃນການເຊື່ອມຕໍ່ຖານຂໍ້ມູນ", "ການເຊື່ອມຕໍ່ຖານຂໍ້ມູນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

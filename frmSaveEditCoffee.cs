@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Message;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,9 +49,9 @@ namespace ProjectCoffee
                 }
                 cbCatg.SelectedIndex = 0;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MyMessageBox.ShowMssg("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນປະເພດ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void LoadUnit()
@@ -66,9 +67,9 @@ namespace ProjectCoffee
                 }
                 cbUnit.SelectedIndex = 0;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MyMessageBox.ShowMssg("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນຫົວໜ່ວຍ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ChooseImage()
@@ -110,6 +111,7 @@ namespace ProjectCoffee
                 {
                    if( _coffee.Save(data, stream) == 1)
                     {
+                        MyMessageBox.ShowMssg("ບັນທືກຂໍ້ມູນສຳເລັດແລ້ວ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ClearData();
                     }
                 }
@@ -117,6 +119,7 @@ namespace ProjectCoffee
                 {
                     if (_coffee.Edit(data, stream)==1)
                     {
+                        MyMessageBox.ShowMssg("ແກ້ໄຂຂໍ້ມູນສຳເລັດແລ້ວ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         edit = false;
                         ClearData();
                     }
@@ -141,10 +144,9 @@ namespace ProjectCoffee
                 da.Fill(table);
                 unit_id = table.Rows[0][0].ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MyMessageBox.ShowMssg("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -168,10 +170,9 @@ namespace ProjectCoffee
 
                 catg_id = table.Rows[0][0].ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MyMessageBox.ShowMssg("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

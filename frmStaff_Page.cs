@@ -1,5 +1,6 @@
 ﻿using Guna.UI.Animation;
 using Guna.UI.WinForms;
+using Message;
 using Microsoft.VisualBasic.ApplicationServices;
 using MySql.Data.MySqlClient;
 using System;
@@ -46,6 +47,7 @@ namespace ProjectCoffee
         private void Completed_Sale(Control p)
         {
             gunaTransition1.HideSync(p, true, Animation.VertSlide);
+            MyMessageBox.ShowMssg("ບັນທືກຂໍ້ມູນສຳເລັດແລ້ວ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             p.Dispose();
             lbAllOrder.Text = (flPnl.Controls.Count - 1).ToString() + " ລາຍການ";
             home.ShowSumPrice();
@@ -118,9 +120,9 @@ namespace ProjectCoffee
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MyMessageBox.ShowMssg("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -128,7 +130,7 @@ namespace ProjectCoffee
         {
             if (flPnl.Controls.Count > 1)
             {
-                DialogResult result = MessageBox.Show("Are you sure to close?", "Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                DialogResult result = MyMessageBox.ShowMssg("ແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກ ຫຼື ບໍ່?", "ຄຳເຕືອນ", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
                     this.Close();
