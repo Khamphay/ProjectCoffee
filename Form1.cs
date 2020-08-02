@@ -151,7 +151,6 @@ namespace ProjectCoffee
                     timer1.Stop();
                     slider = false;
                 }
-
             }
         }
 
@@ -204,8 +203,6 @@ namespace ProjectCoffee
         {
             AnimatedMenu.Start();
         }
-
-
 
         //
         private void Maximam_Click(object sender, EventArgs e)

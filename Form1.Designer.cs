@@ -44,7 +44,6 @@
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.lbCom_Name = new System.Windows.Forms.Label();
             this.pnDesktop = new System.Windows.Forms.Panel();
-            this.AnimatedMenu = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
             this.pnlTaskBar = new Guna.UI.WinForms.GunaLinePanel();
             this.Maximam = new Guna.UI.WinForms.GunaButton();
             this.btClose = new Guna.UI.WinForms.GunaButton();
@@ -54,6 +53,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.gunaResize1 = new Guna.UI.WinForms.GunaResize(this.components);
             this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
+            this.AnimatedMenu = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
             this.pnlManu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.pnlTaskBar.SuspendLayout();
@@ -294,12 +294,6 @@
             this.pnDesktop.Size = new System.Drawing.Size(930, 605);
             this.pnDesktop.TabIndex = 0;
             // 
-            // AnimatedMenu
-            // 
-            this.AnimatedMenu.AnimationType = Guna.UI.WinForms.GunaAnimateWindow.AnimateWindowType.AW_CENTER;
-            this.AnimatedMenu.Interval = 300;
-            this.AnimatedMenu.TargetControl = this;
-            // 
             // pnlTaskBar
             // 
             this.pnlTaskBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
@@ -439,6 +433,12 @@
             animation1.TransparencyCoeff = 0F;
             this.gunaTransition1.DefaultAnimation = animation1;
             // 
+            // AnimatedMenu
+            // 
+            this.AnimatedMenu.AnimationType = Guna.UI.WinForms.GunaAnimateWindow.AnimateWindowType.AW_CENTER;
+            this.AnimatedMenu.Interval = 200;
+            this.AnimatedMenu.TargetControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -469,7 +469,6 @@
         private Guna.UI.WinForms.GunaSeparator line1;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
         private System.Windows.Forms.Label lbCom_Name;
-        private Guna.UI.WinForms.GunaAnimateWindow AnimatedMenu;
         private Guna.UI.WinForms.GunaButton btAnimate;
         private Guna.UI.WinForms.GunaLinePanel pnlTaskBar;
         private Guna.UI.WinForms.GunaButton Maximam;
@@ -487,6 +486,7 @@
         private System.Windows.Forms.Button btStaff;
         private Guna.UI.WinForms.GunaResize gunaResize1;
         private Guna.UI.WinForms.GunaTransition gunaTransition1;
+        private Guna.UI.WinForms.GunaAnimateWindow AnimatedMenu;
     }
 }
 
