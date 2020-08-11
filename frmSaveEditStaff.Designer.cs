@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,18 +47,24 @@
             this.txtdis = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtpro = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdbFemale = new System.Windows.Forms.RadioButton();
             this.rdbMale = new System.Windows.Forms.RadioButton();
             this.btCancel = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.pnlTaskBar = new Guna.UI.WinForms.GunaLinePanel();
+            this.lbCaption = new System.Windows.Forms.Label();
+            this.btClose = new Guna.UI.WinForms.GunaButton();
+            this.btMinimam = new Guna.UI.WinForms.GunaButton();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
+            this.pnlTaskBar.SuspendLayout();
+            this.gunaGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 26);
+            this.label1.Location = new System.Drawing.Point(27, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 28);
             this.label1.TabIndex = 0;
@@ -65,7 +72,7 @@
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(27, 57);
+            this.txtid.Location = new System.Drawing.Point(27, 81);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(184, 36);
             this.txtid.TabIndex = 0;
@@ -74,7 +81,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 104);
+            this.label2.Location = new System.Drawing.Point(27, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 28);
             this.label2.TabIndex = 0;
@@ -82,7 +89,7 @@
             // 
             // txtname
             // 
-            this.txtname.Location = new System.Drawing.Point(27, 135);
+            this.txtname.Location = new System.Drawing.Point(27, 159);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(184, 36);
             this.txtname.TabIndex = 1;
@@ -91,7 +98,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 183);
+            this.label3.Location = new System.Drawing.Point(27, 207);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 28);
             this.label3.TabIndex = 0;
@@ -99,7 +106,7 @@
             // 
             // txtsurename
             // 
-            this.txtsurename.Location = new System.Drawing.Point(27, 214);
+            this.txtsurename.Location = new System.Drawing.Point(27, 238);
             this.txtsurename.Name = "txtsurename";
             this.txtsurename.Size = new System.Drawing.Size(184, 36);
             this.txtsurename.TabIndex = 2;
@@ -108,7 +115,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(459, 26);
+            this.label4.Location = new System.Drawing.Point(459, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 28);
             this.label4.TabIndex = 0;
@@ -116,7 +123,7 @@
             // 
             // txtvill
             // 
-            this.txtvill.Location = new System.Drawing.Point(459, 57);
+            this.txtvill.Location = new System.Drawing.Point(459, 81);
             this.txtvill.Name = "txtvill";
             this.txtvill.Size = new System.Drawing.Size(184, 36);
             this.txtvill.TabIndex = 6;
@@ -125,7 +132,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(245, 26);
+            this.label5.Location = new System.Drawing.Point(245, 50);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 28);
             this.label5.TabIndex = 0;
@@ -133,7 +140,7 @@
             // 
             // txttel
             // 
-            this.txttel.Location = new System.Drawing.Point(245, 57);
+            this.txttel.Location = new System.Drawing.Point(245, 81);
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(184, 36);
             this.txttel.TabIndex = 3;
@@ -142,7 +149,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(245, 104);
+            this.label6.Location = new System.Drawing.Point(245, 128);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 28);
             this.label6.TabIndex = 0;
@@ -150,7 +157,7 @@
             // 
             // txtcard
             // 
-            this.txtcard.Location = new System.Drawing.Point(245, 135);
+            this.txtcard.Location = new System.Drawing.Point(245, 159);
             this.txtcard.Name = "txtcard";
             this.txtcard.Size = new System.Drawing.Size(184, 36);
             this.txtcard.TabIndex = 4;
@@ -159,7 +166,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(245, 183);
+            this.label7.Location = new System.Drawing.Point(245, 207);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 28);
             this.label7.TabIndex = 0;
@@ -167,7 +174,7 @@
             // 
             // txtemail
             // 
-            this.txtemail.Location = new System.Drawing.Point(245, 214);
+            this.txtemail.Location = new System.Drawing.Point(245, 238);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(184, 36);
             this.txtemail.TabIndex = 5;
@@ -176,7 +183,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(459, 104);
+            this.label8.Location = new System.Drawing.Point(459, 128);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 28);
             this.label8.TabIndex = 0;
@@ -184,7 +191,7 @@
             // 
             // txtdis
             // 
-            this.txtdis.Location = new System.Drawing.Point(459, 135);
+            this.txtdis.Location = new System.Drawing.Point(459, 159);
             this.txtdis.Name = "txtdis";
             this.txtdis.Size = new System.Drawing.Size(184, 36);
             this.txtdis.TabIndex = 7;
@@ -193,7 +200,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(459, 183);
+            this.label9.Location = new System.Drawing.Point(459, 207);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(39, 28);
             this.label9.TabIndex = 0;
@@ -201,27 +208,15 @@
             // 
             // txtpro
             // 
-            this.txtpro.Location = new System.Drawing.Point(459, 214);
+            this.txtpro.Location = new System.Drawing.Point(459, 238);
             this.txtpro.Name = "txtpro";
             this.txtpro.Size = new System.Drawing.Size(184, 36);
             this.txtpro.TabIndex = 8;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rdbFemale);
-            this.groupBox1.Controls.Add(this.rdbMale);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Location = new System.Drawing.Point(27, 256);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(184, 67);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ເພດ";
-            // 
             // rdbFemale
             // 
             this.rdbFemale.AutoSize = true;
-            this.rdbFemale.Location = new System.Drawing.Point(106, 29);
+            this.rdbFemale.Location = new System.Drawing.Point(113, 28);
             this.rdbFemale.Name = "rdbFemale";
             this.rdbFemale.Size = new System.Drawing.Size(43, 32);
             this.rdbFemale.TabIndex = 3;
@@ -232,7 +227,7 @@
             // 
             this.rdbMale.AutoSize = true;
             this.rdbMale.Checked = true;
-            this.rdbMale.Location = new System.Drawing.Point(29, 29);
+            this.rdbMale.Location = new System.Drawing.Point(36, 28);
             this.rdbMale.Name = "rdbMale";
             this.rdbMale.Size = new System.Drawing.Size(49, 32);
             this.rdbMale.TabIndex = 3;
@@ -243,7 +238,7 @@
             // btCancel
             // 
             this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCancel.Location = new System.Drawing.Point(350, 338);
+            this.btCancel.Location = new System.Drawing.Point(357, 367);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(63, 36);
             this.btCancel.TabIndex = 3;
@@ -254,7 +249,7 @@
             // btSave
             // 
             this.btSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSave.Location = new System.Drawing.Point(260, 338);
+            this.btSave.Location = new System.Drawing.Point(267, 367);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(63, 36);
             this.btSave.TabIndex = 4;
@@ -262,14 +257,121 @@
             this.btSave.UseVisualStyleBackColor = true;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
+            // pnlTaskBar
+            // 
+            this.pnlTaskBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.pnlTaskBar.Controls.Add(this.lbCaption);
+            this.pnlTaskBar.Controls.Add(this.btClose);
+            this.pnlTaskBar.Controls.Add(this.btMinimam);
+            this.pnlTaskBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTaskBar.LineColor = System.Drawing.Color.Black;
+            this.pnlTaskBar.LineStyle = System.Windows.Forms.BorderStyle.None;
+            this.pnlTaskBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlTaskBar.Name = "pnlTaskBar";
+            this.pnlTaskBar.Size = new System.Drawing.Size(680, 32);
+            this.pnlTaskBar.TabIndex = 20;
+            this.pnlTaskBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTaskBar_MouseDown);
+            this.pnlTaskBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTaskBar_MouseMove);
+            this.pnlTaskBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlTaskBar_MouseUp);
+            // 
+            // lbCaption
+            // 
+            this.lbCaption.AutoSize = true;
+            this.lbCaption.ForeColor = System.Drawing.Color.White;
+            this.lbCaption.Location = new System.Drawing.Point(3, 4);
+            this.lbCaption.Name = "lbCaption";
+            this.lbCaption.Size = new System.Drawing.Size(43, 28);
+            this.lbCaption.TabIndex = 21;
+            this.lbCaption.Text = "Save";
+            // 
+            // btClose
+            // 
+            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btClose.AnimationHoverSpeed = 0.07F;
+            this.btClose.AnimationSpeed = 0.03F;
+            this.btClose.BackColor = System.Drawing.Color.Transparent;
+            this.btClose.BaseColor = System.Drawing.Color.Transparent;
+            this.btClose.BorderColor = System.Drawing.Color.Black;
+            this.btClose.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btClose.FocusedColor = System.Drawing.Color.Empty;
+            this.btClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btClose.ForeColor = System.Drawing.Color.White;
+            this.btClose.Image = global::ProjectCoffee.Properties.Resources.cancel;
+            this.btClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btClose.ImageSize = new System.Drawing.Size(20, 20);
+            this.btClose.Location = new System.Drawing.Point(648, 4);
+            this.btClose.Name = "btClose";
+            this.btClose.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btClose.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btClose.OnHoverForeColor = System.Drawing.Color.White;
+            this.btClose.OnHoverImage = null;
+            this.btClose.OnPressedColor = System.Drawing.Color.Black;
+            this.btClose.Radius = 4;
+            this.btClose.Size = new System.Drawing.Size(25, 25);
+            this.btClose.TabIndex = 15;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
+            // btMinimam
+            // 
+            this.btMinimam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btMinimam.AnimationHoverSpeed = 0.07F;
+            this.btMinimam.AnimationSpeed = 0.03F;
+            this.btMinimam.BackColor = System.Drawing.Color.Transparent;
+            this.btMinimam.BaseColor = System.Drawing.Color.Transparent;
+            this.btMinimam.BorderColor = System.Drawing.Color.Black;
+            this.btMinimam.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btMinimam.FocusedColor = System.Drawing.Color.Empty;
+            this.btMinimam.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btMinimam.ForeColor = System.Drawing.Color.White;
+            this.btMinimam.Image = global::ProjectCoffee.Properties.Resources.minus;
+            this.btMinimam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btMinimam.ImageSize = new System.Drawing.Size(20, 20);
+            this.btMinimam.Location = new System.Drawing.Point(605, 4);
+            this.btMinimam.Name = "btMinimam";
+            this.btMinimam.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btMinimam.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btMinimam.OnHoverForeColor = System.Drawing.Color.White;
+            this.btMinimam.OnHoverImage = null;
+            this.btMinimam.OnPressedColor = System.Drawing.Color.Black;
+            this.btMinimam.Radius = 4;
+            this.btMinimam.Size = new System.Drawing.Size(25, 25);
+            this.btMinimam.TabIndex = 15;
+            this.btMinimam.Click += new System.EventHandler(this.btMinimam_Click);
+            // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.TargetControl = this;
+            // 
+            // gunaGroupBox1
+            // 
+            this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGroupBox1.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gunaGroupBox1.BorderSize = 1;
+            this.gunaGroupBox1.Controls.Add(this.rdbFemale);
+            this.gunaGroupBox1.Controls.Add(this.rdbMale);
+            this.gunaGroupBox1.LineBottom = 1;
+            this.gunaGroupBox1.LineColor = System.Drawing.Color.White;
+            this.gunaGroupBox1.LineLeft = 1;
+            this.gunaGroupBox1.LineRight = 1;
+            this.gunaGroupBox1.LineTop = 1;
+            this.gunaGroupBox1.Location = new System.Drawing.Point(27, 280);
+            this.gunaGroupBox1.Name = "gunaGroupBox1";
+            this.gunaGroupBox1.Radius = 4;
+            this.gunaGroupBox1.Size = new System.Drawing.Size(184, 67);
+            this.gunaGroupBox1.TabIndex = 21;
+            this.gunaGroupBox1.Text = "ເພດ";
+            this.gunaGroupBox1.TextLocation = new System.Drawing.Point(4, -5);
+            // 
             // frmSaveEditStaff
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(664, 402);
+            this.ClientSize = new System.Drawing.Size(680, 441);
+            this.Controls.Add(this.gunaGroupBox1);
+            this.Controls.Add(this.pnlTaskBar);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btSave);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtemail);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtcard);
@@ -289,13 +391,17 @@
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(680, 441);
             this.MinimumSize = new System.Drawing.Size(680, 441);
             this.Name = "frmSaveEditStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSaveEditStaff";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.TopMost = true;
+            this.pnlTaskBar.ResumeLayout(false);
+            this.pnlTaskBar.PerformLayout();
+            this.gunaGroupBox1.ResumeLayout(false);
+            this.gunaGroupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,7 +418,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.Button btSave;
         public System.Windows.Forms.TextBox txtid;
@@ -326,5 +431,11 @@
         public System.Windows.Forms.TextBox txtpro;
         public System.Windows.Forms.RadioButton rdbFemale;
         public System.Windows.Forms.RadioButton rdbMale;
+        private Guna.UI.WinForms.GunaLinePanel pnlTaskBar;
+        private Guna.UI.WinForms.GunaButton btClose;
+        private Guna.UI.WinForms.GunaButton btMinimam;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
+        private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
+        public System.Windows.Forms.Label lbCaption;
     }
 }

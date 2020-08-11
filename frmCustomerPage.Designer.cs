@@ -50,8 +50,13 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.flPnl = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaResize1 = new Guna.UI.WinForms.GunaResize(this.components);
+            this.tbBillBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsTable_Rport = new ProjectCoffee.dsTable_Rport();
+            this.label6 = new System.Windows.Forms.Label();
             this.gunaLinePanel2.SuspendLayout();
             this.pnlTaskBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbBillBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsTable_Rport)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaLinePanel2
@@ -160,13 +165,11 @@
             // 
             this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancel.Image = global::ProjectCoffee.Properties.Resources.delete;
-            this.btCancel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btCancel.Location = new System.Drawing.Point(314, 19);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(89, 39);
             this.btCancel.TabIndex = 2;
             this.btCancel.Text = "ຍົກເລີກ";
-            this.btCancel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTip1.SetToolTip(this.btCancel, "Cancel");
             this.btCancel.UseVisualStyleBackColor = true;
@@ -176,13 +179,11 @@
             // 
             this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAdd.Image = global::ProjectCoffee.Properties.Resources.save;
-            this.btAdd.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btAdd.Location = new System.Drawing.Point(213, 19);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(89, 39);
             this.btAdd.TabIndex = 2;
             this.btAdd.Text = "ສັ່ງຊື້";
-            this.btAdd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTip1.SetToolTip(this.btAdd, "Buy");
             this.btAdd.UseVisualStyleBackColor = true;
@@ -208,6 +209,7 @@
             // pnlTaskBar
             // 
             this.pnlTaskBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.pnlTaskBar.Controls.Add(this.label6);
             this.pnlTaskBar.Controls.Add(this.Maximam);
             this.pnlTaskBar.Controls.Add(this.btMinimam);
             this.pnlTaskBar.Controls.Add(this.btClose);
@@ -325,6 +327,26 @@
             // 
             this.gunaResize1.TargetForm = this;
             // 
+            // tbBillBindingSource
+            // 
+            this.tbBillBindingSource.DataMember = "tbBill";
+            this.tbBillBindingSource.DataSource = this.dsTable_Rport;
+            // 
+            // dsTable_Rport
+            // 
+            this.dsTable_Rport.DataSetName = "dsTable_Rport";
+            this.dsTable_Rport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(3, 3);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 28);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Choose item";
+            // 
             // frmCustomerPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -345,6 +367,9 @@
             this.gunaLinePanel2.ResumeLayout(false);
             this.gunaLinePanel2.PerformLayout();
             this.pnlTaskBar.ResumeLayout(false);
+            this.pnlTaskBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbBillBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsTable_Rport)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -371,5 +396,8 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.FlowLayoutPanel flPnl;
         private Guna.UI.WinForms.GunaResize gunaResize1;
+        private System.Windows.Forms.BindingSource tbBillBindingSource;
+        private dsTable_Rport dsTable_Rport;
+        private System.Windows.Forms.Label label6;
     }
 }

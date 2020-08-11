@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Guna.UI.Animation;
 using MySql.Data.MySqlClient;
 using Message;
+using System.Diagnostics;
 
 namespace ProjectCoffee
 {
@@ -59,7 +60,7 @@ namespace ProjectCoffee
                 //Total Today
                 {
                     table = new DataTable();
-                    da = new MySqlDataAdapter(sql1 + "Where BDate = '" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "' GROUP BY BDate, Coff_Name;", con);
+                    da = new MySqlDataAdapter(sql1 + "Where BDate = '" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "' GROUP BY BDate, Coff_Name ORDER BY Sum(Qty), SUM(Total);", con);
                     da.Fill(table);
                     if (table.Rows.Count > 0)
                     {
@@ -72,7 +73,8 @@ namespace ProjectCoffee
                 //For Chart
                 {
                     chartItems.Series["Price"].Points.Clear();
-                    chartItems.Series["Price"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineRange;
+                    chartItems.Series["Price"].Color = Color.FromArgb(236, 141, 0);
+                    // chartItems.Series["Price"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineRange;
                     listVitem.Items.Clear();
                     table = new DataTable();
                     da = new MySqlDataAdapter(sql2 + "Where BDate = '" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "' GROUP BY BDate, Coff_Name;", con);
@@ -107,7 +109,7 @@ namespace ProjectCoffee
             //Total This Month
             {
                 table = new DataTable();
-                da = new MySqlDataAdapter(sql1 + "Where Month(BDate)=" + DateTime.Now.Month + " Group By Month(BDate);", con);
+                da = new MySqlDataAdapter(sql1 + "Where Month(BDate)=" + DateTime.Now.Month + " Group By Month(BDate) ORDER BY Sum(Qty), SUM(Total);", con);
                 da.Fill(table);
                 if (table.Rows.Count > 0)
                 {
@@ -119,7 +121,8 @@ namespace ProjectCoffee
                 //For chart
                 {
                     chartItems.Series["Price"].Points.Clear();
-                    chartItems.Series["Price"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+                    chartItems.Series["Price"].Color = Color.FromArgb(108, 167, 255);
+                   // chartItems.Series["Price"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
                     listVitem.Items.Clear();
                     table = new DataTable();
                     da = new MySqlDataAdapter(sql2 + " Where Month(BDate)=" + DateTime.Now.Month + " Group By Month(BDate), Coff_Name;", con);
@@ -213,27 +216,30 @@ namespace ProjectCoffee
 
             listVitem.View = View.Details;
             listVitem.FullRowSelect = true;
-            ShowThisMonth();
-            ShowToday();
-            ShowThisYear();
+            if (con!=null)
+            {
+                ShowThisMonth();
+                ShowToday();
+                ShowThisYear();
+            }
+            else
+            {
+                DialogResult result= MyMessageBox.ShowMssg($"ບໍ່ສາມາດເຊື່ອມຕໍ່ຖານຂໍ້ມູນ. ກະລຸນາເຮັດຕາມຂັ້ນຕອນລຸ່ມນີ້: {System.Environment.NewLine} 1. ກົດ Yes ເພື່ອກວດສອບການເຊື່ມຕໍ່.  {System.Environment.NewLine} 2. ກົດ No ເພື່ອຍົກເລີກ.", "ການເຊື່ອມຕໍ່ຖານຂໍ້ມູນ", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                
+                if (result == DialogResult.Yes)
+                {
+                    ProcessStartInfo process = new ProcessStartInfo();
+                    process.FileName = @"C:\xampp\xampp-control.exe";
+                    Process.Start(process);
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
         }
 
-        private void picFacebook_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.facebook.com/perrycountycafe/");
-        }
-
-        private void picInstragram_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.instagram.com/cafebuur/");
-        }
-
-        private void picIatam_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/Khamphay");
-        }
-
-       
+        
         private void pnlDay_MouseDown_1(object sender, MouseEventArgs e)
         {
             pnlDay.BaseColor = Color.FromArgb(91, 79, 106);
@@ -245,13 +251,11 @@ namespace ProjectCoffee
             pnlAll.BaseColor = Color.FromArgb(81, 16, 136);
             pnlAll.ForeColor = Color.White;
 
-            ShowToday();
-            pnlDesbordTwo.Width = 924;
+            gunaTransition1.HideSync(pnlMain, true, Animation.Scale);
             pnlDesbordThisYear.Height = 0;
-            
-            //gunaTransition1.ShowSync(pnlDesbordToday, true, Animation.ScaleAndHorizSlide);
-            //gunaTransition1.HideSync(pnlDesbordThisMonth, true, Animation.ScaleAndHorizSlide);
-            //gunaTransition1.HideSync(pnlDesbordThisYear, true, Animation.ScaleAndHorizSlide);
+            ShowToday();
+            pnlDesbordTwo.Width = 930;
+            gunaTransition1.ShowSync(pnlMain, true, Animation.Scale);
         }
         private void pnlMonth_MouseDown(object sender, MouseEventArgs e)
         {
@@ -264,9 +268,12 @@ namespace ProjectCoffee
             pnlAll.BaseColor = Color.FromArgb(81, 16, 136);
             pnlAll.ForeColor = Color.White;
 
-            ShowThisMonth();
-            pnlDesbordTwo.Width = 924;
+            gunaTransition1.HideSync(pnlMain, true, Animation.Scale);
             pnlDesbordThisYear.Height = 0;
+            ShowThisMonth();
+            pnlDesbordTwo.Width = 930;
+            gunaTransition1.ShowSync(pnlMain, true, Animation.Scale);
+
         }
 
         private void pnlAll_MouseDown(object sender, MouseEventArgs e)
@@ -280,9 +287,11 @@ namespace ProjectCoffee
             pnlAll.BaseColor = Color.FromArgb(91, 79, 106);
             pnlAll.ForeColor = Color.White;
 
-            ShowThisYear();
+            gunaTransition1.HideSync(pnlMain, true, Animation.Scale);
             pnlDesbordTwo.Width = 0;
-            pnlDesbordThisYear.Height= 478;
+            ShowThisYear();
+            pnlDesbordThisYear.Height= 516;
+            gunaTransition1.ShowSync(pnlMain, true, Animation.Scale);
         }
     }
 }

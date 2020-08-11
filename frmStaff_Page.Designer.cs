@@ -60,6 +60,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gunaResize1 = new Guna.UI.WinForms.GunaResize(this.components);
             this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.flPnl.SuspendLayout();
             this.gunaLinePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).BeginInit();
@@ -250,7 +251,6 @@
             // button2
             // 
             this.gunaTransition1.SetDecoration(this.button2, Guna.UI.Animation.DecorationType.None);
-            this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(41, 5);
             this.button2.Name = "button2";
@@ -298,6 +298,7 @@
             // pnlTaskBar
             // 
             this.pnlTaskBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.pnlTaskBar.Controls.Add(this.label4);
             this.pnlTaskBar.Controls.Add(this.Maximam);
             this.pnlTaskBar.Controls.Add(this.btClose);
             this.pnlTaskBar.Controls.Add(this.btMinimam);
@@ -425,6 +426,17 @@
             animation1.TransparencyCoeff = 0F;
             this.gunaTransition1.DefaultAnimation = animation1;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.gunaTransition1.SetDecoration(this.label4, Guna.UI.Animation.DecorationType.None);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(3, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 26);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Sale";
+            // 
             // frmStaff_Page
             // 
             this.AllowDrop = true;
@@ -452,6 +464,7 @@
             this.gunaLinePanel1.ResumeLayout(false);
             this.gunaLinePanel1.PerformLayout();
             this.pnlTaskBar.ResumeLayout(false);
+            this.pnlTaskBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -482,5 +495,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private Guna.UI.WinForms.GunaResize gunaResize1;
         private Guna.UI.WinForms.GunaTransition gunaTransition1;
+        private System.Windows.Forms.Label label4;
     }
 }

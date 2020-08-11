@@ -20,10 +20,13 @@ namespace ProjectCoffee
             _staff = staff;
         }
         public bool edit = false;
+        bool mouse = false;
+        int mouX = 0, mouY = 0;
 
         private void ClearData()
         {
             txtid.Clear();
+            txtid.Enabled=true;
             txtname.Clear();
             txtsurename.Clear();
             txtcard.Clear();
@@ -81,6 +84,36 @@ namespace ProjectCoffee
         private void btCancel_Click(object sender, EventArgs e)
         {
             ClearData();
+        }
+
+        private void btMinimam_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pnlTaskBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouse = true;
+            mouX = e.X;
+            mouY = e.Y;
+        }
+
+        private void pnlTaskBar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouse == true)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouX, MousePosition.Y - mouY);
+            }
+        }
+
+        private void pnlTaskBar_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouse = false;
         }
     }
 }

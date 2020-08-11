@@ -33,73 +33,15 @@ namespace ProjectCoffee.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=Khamphay;persistsecurityinfo=True;database=dbcafe")]
-        public string dbcafeConnectionString1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool topMost {
             get {
-                return ((string)(this["dbcafeConnectionString1"]));
+                return ((bool)(this["topMost"]));
             }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=Khamphay;persistsecurityinfo=True;database=dbcafe")]
-        public string dbcafeConnectionString2 {
-            get {
-                return ((string)(this["dbcafeConnectionString2"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=Khamphay;persistsecurityinfo=True;database=dbcafe")]
-        public string dbcafeConnectionString3 {
-            get {
-                return ((string)(this["dbcafeConnectionString3"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=Khamphay;persistsecurityinfo=True;database=dbcafe")]
-        public string dbcafeConnectionString4 {
-            get {
-                return ((string)(this["dbcafeConnectionString4"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=Khamphay;persistsecurityinfo=True;database=dbcafe")]
-        public string dbcafeConnectionString5 {
-            get {
-                return ((string)(this["dbcafeConnectionString5"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=Khamphay;persistsecurityinfo=True;database=dbcafe")]
-        public string dbcafeConnectionString6 {
-            get {
-                return ((string)(this["dbcafeConnectionString6"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=Khamphay;persistsecurityinfo=True;database=dbcafe")]
-        public string dbcafeConnectionString7 {
-            get {
-                return ((string)(this["dbcafeConnectionString7"]));
+            set {
+                this["topMost"] = value;
             }
         }
     }

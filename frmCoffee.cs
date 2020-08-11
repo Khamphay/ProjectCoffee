@@ -31,6 +31,8 @@ namespace ProjectCoffee
         string[] col = { "ລະຫັດ", "ຊື່ກາເຟ", "ລາຄານຳເຂົ້າ", "ລາຄາຂາຍ", "ຫົວໜ່ວຍ", "ປະເພດ"};
         int idx;
 
+        frmSaveEditCoffee coffee;
+
         private void ShowData()
         {
             try
@@ -104,34 +106,42 @@ namespace ProjectCoffee
         {
             if (index >= 0)
             {
-                frmSaveEditCoffee editcoffee = new frmSaveEditCoffee(this);
+                if (coffee != null)
+                {
+                    coffee.Close();
+                }
+                coffee = new frmSaveEditCoffee(this);
 
-                editcoffee.edit = true;
-                editcoffee.txtid.Enabled = false;
-                editcoffee.txtid.Text = dgvCoffee.Rows[index].Cells[0].Value.ToString();
-                editcoffee.txtname.Text = dgvCoffee.Rows[index].Cells[1].Value.ToString();
-                editcoffee.txtImprice.Text = dgvCoffee.Rows[index].Cells[2].Value.ToString();
-                editcoffee.txtSaleprice.Text = dgvCoffee.Rows[index].Cells[3].Value.ToString();
-                editcoffee.cbUnit.SelectedItem = dgvCoffee.Rows[index].Cells[4].Value.ToString();
-                editcoffee.cbCatg.SelectedItem = dgvCoffee.Rows[index].Cells[5].Value.ToString();
+                coffee.edit = true;
+                coffee.txtid.Enabled = false;
+                coffee.txtid.Text = dgvCoffee.Rows[index].Cells[0].Value.ToString();
+                coffee.txtname.Text = dgvCoffee.Rows[index].Cells[1].Value.ToString();
+                coffee.txtImprice.Text = dgvCoffee.Rows[index].Cells[2].Value.ToString();
+                coffee.txtSaleprice.Text = dgvCoffee.Rows[index].Cells[3].Value.ToString();
+                coffee.cbUnit.SelectedItem = dgvCoffee.Rows[index].Cells[4].Value.ToString();
+                coffee.cbCatg.SelectedItem = dgvCoffee.Rows[index].Cells[5].Value.ToString();
 
                 if (picCoffee.Image != null)
                 {
-                    editcoffee.picCoffee.Image = picCoffee.Image;
+                    coffee.picCoffee.Image = picCoffee.Image;
                 }
-
-                editcoffee.Show();
+                coffee.lbCaption.Text = "Edit item";
+                coffee.Show();
             }
         }
         public void Delete(string id)
         {
             try
             {
-                cmd = new MySqlCommand("Delete From tbcoffee Where Coff_ID=@id", con);
-                cmd.Parameters.AddWithValue("id", id);
-                cmd.ExecuteNonQuery();
-                idx = -1;
-                ShowData();
+                DialogResult result = MyMessageBox.ShowMssg("ແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກ ຫຼື ບໍ່?", "ຄຳເຕືອນ", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    cmd = new MySqlCommand("Delete From tbcoffee Where Coff_ID=@id", con);
+                    cmd.Parameters.AddWithValue("id", id);
+                    cmd.ExecuteNonQuery();
+                    idx = -1;
+                    ShowData();
+                }
             }
             catch (Exception ex)
             {
@@ -148,8 +158,13 @@ namespace ProjectCoffee
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            frmSaveEditCoffee add = new frmSaveEditCoffee(this);
-            add.ShowDialog();
+            if (coffee != null)
+            {
+                coffee.Close();
+            }
+            coffee = new frmSaveEditCoffee(this);
+            coffee.lbCaption.Text = "New item";
+            coffee.Show();
         }
 
         private void dgvCoffee_CellClick(object sender, DataGridViewCellEventArgs e)

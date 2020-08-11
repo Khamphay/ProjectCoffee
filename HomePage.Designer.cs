@@ -29,28 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            Guna.UI.Animation.Animation animation3 = new Guna.UI.Animation.Animation();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            Guna.UI.Animation.Animation animation2 = new Guna.UI.Animation.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title9 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.picTweeter = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.picInstragram = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.picIatam = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.picFacebook = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
             this.pnlAll = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaTransfarantPictureBox3 = new Guna.UI.WinForms.GunaTransfarantPictureBox();
@@ -70,30 +66,25 @@
             this.lbTodey = new System.Windows.Forms.Label();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlDesbordTwo = new System.Windows.Forms.Panel();
             this.gunaLinePanel3 = new Guna.UI.WinForms.GunaLinePanel();
             this.listVitem = new System.Windows.Forms.ListView();
             this.gunaLinePanel2 = new Guna.UI.WinForms.GunaLinePanel();
             this.chartItems = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.pnBottom = new Guna.UI.WinForms.GunaShadowPanel();
             this.pnlDesbordThisYear = new System.Windows.Forms.Panel();
-            this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
-            this.gunaLinePanel4 = new Guna.UI.WinForms.GunaLinePanel();
-            this.chartThisYear = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label4 = new System.Windows.Forms.Label();
             this.gunaLinePanel5 = new Guna.UI.WinForms.GunaLinePanel();
             this.pieThisMonth = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.gunaTransfarantPictureBox5 = new Guna.UI.WinForms.GunaTransfarantPictureBox();
             this.gunaLinePanel6 = new Guna.UI.WinForms.GunaLinePanel();
             this.pieQtyY = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label4 = new System.Windows.Forms.Label();
-            this.gunaTransfarantPictureBox5 = new Guna.UI.WinForms.GunaTransfarantPictureBox();
             this.gunaTransfarantPictureBox4 = new Guna.UI.WinForms.GunaTransfarantPictureBox();
-            this.lbQtyY = new System.Windows.Forms.Label();
+            this.gunaLinePanel4 = new Guna.UI.WinForms.GunaLinePanel();
+            this.chartThisYear = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lbPriceY = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picTweeter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInstragram)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picIatam)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFacebook)).BeginInit();
+            this.lbQtyY = new System.Windows.Forms.Label();
+            this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
             this.gunaLinePanel1.SuspendLayout();
             this.pnlAll.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaTransfarantPictureBox3)).BeginInit();
@@ -104,89 +95,21 @@
             this.pnlDay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaTransfarantPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlMain.SuspendLayout();
             this.pnlDesbordTwo.SuspendLayout();
             this.gunaLinePanel3.SuspendLayout();
             this.gunaLinePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartItems)).BeginInit();
-            this.pnBottom.SuspendLayout();
             this.pnlDesbordThisYear.SuspendLayout();
-            this.gunaLinePanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartThisYear)).BeginInit();
             this.gunaLinePanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pieThisMonth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaTransfarantPictureBox5)).BeginInit();
             this.gunaLinePanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pieQtyY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaTransfarantPictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaTransfarantPictureBox4)).BeginInit();
+            this.gunaLinePanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartThisYear)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picTweeter
-            // 
-            this.picTweeter.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picTweeter.BackColor = System.Drawing.Color.Transparent;
-            this.picTweeter.BaseColor = System.Drawing.Color.White;
-            this.gunaTransition1.SetDecoration(this.picTweeter, Guna.UI.Animation.DecorationType.None);
-            this.picTweeter.Image = ((System.Drawing.Image)(resources.GetObject("picTweeter.Image")));
-            this.picTweeter.Location = new System.Drawing.Point(421, 3);
-            this.picTweeter.Name = "picTweeter";
-            this.picTweeter.Size = new System.Drawing.Size(23, 23);
-            this.picTweeter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTweeter.TabIndex = 1;
-            this.picTweeter.TabStop = false;
-            this.toolTip1.SetToolTip(this.picTweeter, "Twitter");
-            this.picTweeter.UseTransfarantBackground = false;
-            // 
-            // picInstragram
-            // 
-            this.picInstragram.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picInstragram.BackColor = System.Drawing.Color.Transparent;
-            this.picInstragram.BaseColor = System.Drawing.Color.White;
-            this.gunaTransition1.SetDecoration(this.picInstragram, Guna.UI.Animation.DecorationType.None);
-            this.picInstragram.Image = ((System.Drawing.Image)(resources.GetObject("picInstragram.Image")));
-            this.picInstragram.Location = new System.Drawing.Point(486, 3);
-            this.picInstragram.Name = "picInstragram";
-            this.picInstragram.Size = new System.Drawing.Size(23, 23);
-            this.picInstragram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picInstragram.TabIndex = 1;
-            this.picInstragram.TabStop = false;
-            this.toolTip1.SetToolTip(this.picInstragram, "Instragrame");
-            this.picInstragram.UseTransfarantBackground = false;
-            this.picInstragram.Click += new System.EventHandler(this.picInstragram_Click);
-            // 
-            // picIatam
-            // 
-            this.picIatam.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picIatam.BackColor = System.Drawing.Color.Transparent;
-            this.picIatam.BaseColor = System.Drawing.Color.White;
-            this.gunaTransition1.SetDecoration(this.picIatam, Guna.UI.Animation.DecorationType.None);
-            this.picIatam.Image = ((System.Drawing.Image)(resources.GetObject("picIatam.Image")));
-            this.picIatam.Location = new System.Drawing.Point(553, 3);
-            this.picIatam.Name = "picIatam";
-            this.picIatam.Size = new System.Drawing.Size(23, 23);
-            this.picIatam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picIatam.TabIndex = 1;
-            this.picIatam.TabStop = false;
-            this.toolTip1.SetToolTip(this.picIatam, "GitHub");
-            this.picIatam.UseTransfarantBackground = false;
-            this.picIatam.Click += new System.EventHandler(this.picIatam_Click);
-            // 
-            // picFacebook
-            // 
-            this.picFacebook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picFacebook.BackColor = System.Drawing.Color.Transparent;
-            this.picFacebook.BaseColor = System.Drawing.Color.White;
-            this.gunaTransition1.SetDecoration(this.picFacebook, Guna.UI.Animation.DecorationType.None);
-            this.picFacebook.Image = ((System.Drawing.Image)(resources.GetObject("picFacebook.Image")));
-            this.picFacebook.Location = new System.Drawing.Point(350, 3);
-            this.picFacebook.Name = "picFacebook";
-            this.picFacebook.Size = new System.Drawing.Size(23, 23);
-            this.picFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFacebook.TabIndex = 1;
-            this.picFacebook.TabStop = false;
-            this.toolTip1.SetToolTip(this.picFacebook, "Facbook");
-            this.picFacebook.UseTransfarantBackground = false;
-            this.picFacebook.Click += new System.EventHandler(this.picFacebook_Click);
             // 
             // gunaLinePanel1
             // 
@@ -459,18 +382,17 @@
             this.label1.Text = "Today";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlDay_MouseDown_1);
             // 
-            // panel1
+            // pnlMain
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.pnlDesbordTwo);
-            this.panel1.Controls.Add(this.pnBottom);
-            this.panel1.Controls.Add(this.pnlDesbordThisYear);
-            this.gunaTransition1.SetDecoration(this.panel1, Guna.UI.Animation.DecorationType.None);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 86);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(930, 519);
-            this.panel1.TabIndex = 6;
+            this.pnlMain.AutoScroll = true;
+            this.pnlMain.Controls.Add(this.pnlDesbordTwo);
+            this.pnlMain.Controls.Add(this.pnlDesbordThisYear);
+            this.gunaTransition1.SetDecoration(this.pnlMain, Guna.UI.Animation.DecorationType.None);
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(0, 86);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(930, 519);
+            this.pnlMain.TabIndex = 6;
             // 
             // pnlDesbordTwo
             // 
@@ -479,9 +401,9 @@
             this.pnlDesbordTwo.Controls.Add(this.gunaLinePanel3);
             this.pnlDesbordTwo.Controls.Add(this.gunaLinePanel2);
             this.gunaTransition1.SetDecoration(this.pnlDesbordTwo, Guna.UI.Animation.DecorationType.None);
-            this.pnlDesbordTwo.Location = new System.Drawing.Point(0, 6);
+            this.pnlDesbordTwo.Location = new System.Drawing.Point(0, 3);
             this.pnlDesbordTwo.Name = "pnlDesbordTwo";
-            this.pnlDesbordTwo.Size = new System.Drawing.Size(930, 478);
+            this.pnlDesbordTwo.Size = new System.Drawing.Size(930, 516);
             this.pnlDesbordTwo.TabIndex = 2;
             // 
             // gunaLinePanel3
@@ -494,10 +416,10 @@
             this.gunaLinePanel3.LineRight = 1;
             this.gunaLinePanel3.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaLinePanel3.LineTop = 1;
-            this.gunaLinePanel3.Location = new System.Drawing.Point(9, 279);
+            this.gunaLinePanel3.Location = new System.Drawing.Point(9, 288);
             this.gunaLinePanel3.Name = "gunaLinePanel3";
             this.gunaLinePanel3.Padding = new System.Windows.Forms.Padding(2);
-            this.gunaLinePanel3.Size = new System.Drawing.Size(914, 199);
+            this.gunaLinePanel3.Size = new System.Drawing.Size(914, 220);
             this.gunaLinePanel3.TabIndex = 3;
             // 
             // listVitem
@@ -512,7 +434,7 @@
             this.listVitem.Location = new System.Drawing.Point(2, 2);
             this.listVitem.MultiSelect = false;
             this.listVitem.Name = "listVitem";
-            this.listVitem.Size = new System.Drawing.Size(910, 195);
+            this.listVitem.Size = new System.Drawing.Size(910, 216);
             this.listVitem.TabIndex = 1;
             this.listVitem.UseCompatibleStateImageBehavior = false;
             // 
@@ -526,10 +448,10 @@
             this.gunaLinePanel2.LineRight = 1;
             this.gunaLinePanel2.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaLinePanel2.LineTop = 1;
-            this.gunaLinePanel2.Location = new System.Drawing.Point(7, 9);
+            this.gunaLinePanel2.Location = new System.Drawing.Point(7, 5);
             this.gunaLinePanel2.Name = "gunaLinePanel2";
             this.gunaLinePanel2.Padding = new System.Windows.Forms.Padding(2);
-            this.gunaLinePanel2.Size = new System.Drawing.Size(916, 264);
+            this.gunaLinePanel2.Size = new System.Drawing.Size(916, 277);
             this.gunaLinePanel2.TabIndex = 2;
             // 
             // chartItems
@@ -540,102 +462,230 @@
             this.chartItems.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartItems.BorderlineWidth = 0;
             this.chartItems.BorderSkin.BorderColor = System.Drawing.Color.Transparent;
-            chartArea9.BorderColor = System.Drawing.Color.Silver;
-            chartArea9.Name = "ChartArea1";
-            chartArea9.ShadowColor = System.Drawing.Color.Silver;
-            this.chartItems.ChartAreas.Add(chartArea9);
+            chartArea5.BorderColor = System.Drawing.Color.Silver;
+            chartArea5.Name = "ChartArea1";
+            chartArea5.ShadowColor = System.Drawing.Color.Silver;
+            this.chartItems.ChartAreas.Add(chartArea5);
             this.gunaTransition1.SetDecoration(this.chartItems, Guna.UI.Animation.DecorationType.None);
             this.chartItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend9.BackColor = System.Drawing.Color.Transparent;
-            legend9.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            legend9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            legend9.Font = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend9.HeaderSeparatorColor = System.Drawing.Color.Gray;
-            legend9.IsTextAutoFit = false;
-            legend9.ItemColumnSeparatorColor = System.Drawing.Color.LightGray;
-            legend9.Name = "Legend1";
-            legend9.TitleFont = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend9.TitleSeparatorColor = System.Drawing.Color.Silver;
-            this.chartItems.Legends.Add(legend9);
+            legend5.BackColor = System.Drawing.Color.Transparent;
+            legend5.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            legend5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            legend5.Font = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend5.HeaderSeparatorColor = System.Drawing.Color.Gray;
+            legend5.IsTextAutoFit = false;
+            legend5.ItemColumnSeparatorColor = System.Drawing.Color.LightGray;
+            legend5.Name = "Legend1";
+            legend5.TitleFont = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend5.TitleSeparatorColor = System.Drawing.Color.Silver;
+            this.chartItems.Legends.Add(legend5);
             this.chartItems.Location = new System.Drawing.Point(2, 2);
             this.chartItems.Name = "chartItems";
             this.chartItems.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(141)))), ((int)(((byte)(0)))));
-            series9.Font = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series9.IsValueShownAsLabel = true;
-            series9.Legend = "Legend1";
-            series9.MarkerBorderWidth = 10;
-            series9.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(11)))), ((int)(((byte)(40)))));
-            series9.MarkerSize = 4;
-            series9.MarkerStep = 4;
-            series9.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series9.Name = "Price";
-            series9.ShadowColor = System.Drawing.Color.Silver;
-            this.chartItems.Series.Add(series9);
-            this.chartItems.Size = new System.Drawing.Size(912, 260);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(141)))), ((int)(((byte)(0)))));
+            series5.Font = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series5.IsValueShownAsLabel = true;
+            series5.LabelFormat = "#,###.##";
+            series5.Legend = "Legend1";
+            series5.MarkerBorderWidth = 10;
+            series5.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(11)))), ((int)(((byte)(40)))));
+            series5.MarkerSize = 4;
+            series5.MarkerStep = 4;
+            series5.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series5.Name = "Price";
+            series5.ShadowColor = System.Drawing.Color.Silver;
+            this.chartItems.Series.Add(series5);
+            this.chartItems.Size = new System.Drawing.Size(912, 273);
             this.chartItems.TabIndex = 0;
             this.chartItems.Text = "Sale";
             this.chartItems.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault;
-            // 
-            // pnBottom
-            // 
-            this.pnBottom.BackColor = System.Drawing.Color.Transparent;
-            this.pnBottom.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.pnBottom.Controls.Add(this.picTweeter);
-            this.pnBottom.Controls.Add(this.picInstragram);
-            this.pnBottom.Controls.Add(this.picIatam);
-            this.pnBottom.Controls.Add(this.picFacebook);
-            this.gunaTransition1.SetDecoration(this.pnBottom, Guna.UI.Animation.DecorationType.None);
-            this.pnBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnBottom.EdgeWidth = 10;
-            this.pnBottom.ForeColor = System.Drawing.Color.White;
-            this.pnBottom.Location = new System.Drawing.Point(0, 491);
-            this.pnBottom.Name = "pnBottom";
-            this.pnBottom.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.pnBottom.ShadowShift = 0;
-            this.pnBottom.Size = new System.Drawing.Size(930, 28);
-            this.pnBottom.TabIndex = 1;
             // 
             // pnlDesbordThisYear
             // 
             this.pnlDesbordThisYear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlDesbordThisYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.pnlDesbordThisYear.Controls.Add(this.label4);
-            this.pnlDesbordThisYear.Controls.Add(this.gunaTransfarantPictureBox5);
-            this.pnlDesbordThisYear.Controls.Add(this.gunaTransfarantPictureBox4);
-            this.pnlDesbordThisYear.Controls.Add(this.lbQtyY);
-            this.pnlDesbordThisYear.Controls.Add(this.lbPriceY);
-            this.pnlDesbordThisYear.Controls.Add(this.gunaLinePanel6);
             this.pnlDesbordThisYear.Controls.Add(this.gunaLinePanel5);
+            this.pnlDesbordThisYear.Controls.Add(this.gunaTransfarantPictureBox5);
+            this.pnlDesbordThisYear.Controls.Add(this.gunaLinePanel6);
+            this.pnlDesbordThisYear.Controls.Add(this.gunaTransfarantPictureBox4);
             this.pnlDesbordThisYear.Controls.Add(this.gunaLinePanel4);
+            this.pnlDesbordThisYear.Controls.Add(this.lbPriceY);
+            this.pnlDesbordThisYear.Controls.Add(this.lbQtyY);
             this.gunaTransition1.SetDecoration(this.pnlDesbordThisYear, Guna.UI.Animation.DecorationType.None);
-            this.pnlDesbordThisYear.Location = new System.Drawing.Point(0, 6);
+            this.pnlDesbordThisYear.Location = new System.Drawing.Point(0, 15);
             this.pnlDesbordThisYear.Name = "pnlDesbordThisYear";
             this.pnlDesbordThisYear.Size = new System.Drawing.Size(930, 0);
             this.pnlDesbordThisYear.TabIndex = 4;
             // 
-            // gunaTransition1
+            // label4
             // 
-            this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.Scale;
-            this.gunaTransition1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.gunaTransition1.DefaultAnimation = animation3;
+            this.label4.AutoSize = true;
+            this.gunaTransition1.SetDecoration(this.label4, Guna.UI.Animation.DecorationType.None);
+            this.label4.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(691, 311);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(202, 31);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "The best sale of this year";
+            // 
+            // gunaLinePanel5
+            // 
+            this.gunaLinePanel5.Controls.Add(this.pieThisMonth);
+            this.gunaTransition1.SetDecoration(this.gunaLinePanel5, Guna.UI.Animation.DecorationType.None);
+            this.gunaLinePanel5.LineBottom = 1;
+            this.gunaLinePanel5.LineColor = System.Drawing.Color.Black;
+            this.gunaLinePanel5.LineLeft = 1;
+            this.gunaLinePanel5.LineRight = 1;
+            this.gunaLinePanel5.LineStyle = System.Windows.Forms.BorderStyle.None;
+            this.gunaLinePanel5.LineTop = 1;
+            this.gunaLinePanel5.Location = new System.Drawing.Point(3, 311);
+            this.gunaLinePanel5.Name = "gunaLinePanel5";
+            this.gunaLinePanel5.Padding = new System.Windows.Forms.Padding(1);
+            this.gunaLinePanel5.Size = new System.Drawing.Size(342, 179);
+            this.gunaLinePanel5.TabIndex = 8;
+            // 
+            // pieThisMonth
+            // 
+            this.pieThisMonth.BackColor = System.Drawing.Color.Transparent;
+            chartArea6.Area3DStyle.Enable3D = true;
+            chartArea6.Area3DStyle.IsClustered = true;
+            chartArea6.Area3DStyle.IsRightAngleAxes = false;
+            chartArea6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            chartArea6.BackImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            chartArea6.BorderColor = System.Drawing.Color.Silver;
+            chartArea6.Name = "ChartArea1";
+            chartArea6.ShadowColor = System.Drawing.Color.Silver;
+            this.pieThisMonth.ChartAreas.Add(chartArea6);
+            this.gunaTransition1.SetDecoration(this.pieThisMonth, Guna.UI.Animation.DecorationType.None);
+            this.pieThisMonth.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            legend6.Font = new System.Drawing.Font("Lao_Ketmany2", 8F);
+            legend6.HeaderSeparatorColor = System.Drawing.Color.Gray;
+            legend6.IsTextAutoFit = false;
+            legend6.ItemColumnSeparatorColor = System.Drawing.Color.LightGray;
+            legend6.Name = "Legend1";
+            legend6.TitleFont = new System.Drawing.Font("Lao_Ketmany2", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pieThisMonth.Legends.Add(legend6);
+            this.pieThisMonth.Location = new System.Drawing.Point(1, 1);
+            this.pieThisMonth.Name = "pieThisMonth";
+            series6.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(141)))), ((int)(((byte)(0)))));
+            series6.Font = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series6.IsValueShownAsLabel = true;
+            series6.LabelAngle = 1;
+            series6.LabelFormat = "#,###.##";
+            series6.Legend = "Legend1";
+            series6.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            series6.MarkerSize = 4;
+            series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series6.Name = "Month";
+            series6.ShadowColor = System.Drawing.Color.Silver;
+            this.pieThisMonth.Series.Add(series6);
+            this.pieThisMonth.Size = new System.Drawing.Size(340, 177);
+            this.pieThisMonth.TabIndex = 7;
+            this.pieThisMonth.Text = "Sale";
+            title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title4.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "Title1";
+            title4.Text = "Prices in any month";
+            this.pieThisMonth.Titles.Add(title4);
+            // 
+            // gunaTransfarantPictureBox5
+            // 
+            this.gunaTransfarantPictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaTransfarantPictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTransfarantPictureBox5.BaseColor = System.Drawing.Color.Black;
+            this.gunaTransition1.SetDecoration(this.gunaTransfarantPictureBox5, Guna.UI.Animation.DecorationType.None);
+            this.gunaTransfarantPictureBox5.Image = global::ProjectCoffee.Properties.Resources.cafe;
+            this.gunaTransfarantPictureBox5.Location = new System.Drawing.Point(697, 345);
+            this.gunaTransfarantPictureBox5.Name = "gunaTransfarantPictureBox5";
+            this.gunaTransfarantPictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.gunaTransfarantPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaTransfarantPictureBox5.TabIndex = 18;
+            this.gunaTransfarantPictureBox5.TabStop = false;
+            // 
+            // gunaLinePanel6
+            // 
+            this.gunaLinePanel6.Controls.Add(this.pieQtyY);
+            this.gunaTransition1.SetDecoration(this.gunaLinePanel6, Guna.UI.Animation.DecorationType.None);
+            this.gunaLinePanel6.LineBottom = 1;
+            this.gunaLinePanel6.LineColor = System.Drawing.Color.Black;
+            this.gunaLinePanel6.LineLeft = 1;
+            this.gunaLinePanel6.LineRight = 1;
+            this.gunaLinePanel6.LineStyle = System.Windows.Forms.BorderStyle.None;
+            this.gunaLinePanel6.LineTop = 1;
+            this.gunaLinePanel6.Location = new System.Drawing.Point(352, 311);
+            this.gunaLinePanel6.Name = "gunaLinePanel6";
+            this.gunaLinePanel6.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.gunaLinePanel6.Size = new System.Drawing.Size(333, 179);
+            this.gunaLinePanel6.TabIndex = 9;
+            // 
+            // pieQtyY
+            // 
+            this.pieQtyY.BackColor = System.Drawing.Color.Transparent;
+            chartArea7.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea7.Area3DStyle.Enable3D = true;
+            chartArea7.Area3DStyle.Inclination = 10;
+            chartArea7.Area3DStyle.IsClustered = true;
+            chartArea7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            chartArea7.BorderColor = System.Drawing.Color.Silver;
+            chartArea7.Name = "ChartArea1";
+            chartArea7.ShadowColor = System.Drawing.Color.Silver;
+            this.pieQtyY.ChartAreas.Add(chartArea7);
+            this.gunaTransition1.SetDecoration(this.pieQtyY, Guna.UI.Animation.DecorationType.None);
+            this.pieQtyY.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            legend7.Font = new System.Drawing.Font("Lao_Ketmany2", 8F);
+            legend7.HeaderSeparatorColor = System.Drawing.Color.Gray;
+            legend7.IsTextAutoFit = false;
+            legend7.ItemColumnSeparatorColor = System.Drawing.Color.LightGray;
+            legend7.Name = "Legend1";
+            legend7.TitleFont = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pieQtyY.Legends.Add(legend7);
+            this.pieQtyY.Location = new System.Drawing.Point(1, 0);
+            this.pieQtyY.Name = "pieQtyY";
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(141)))), ((int)(((byte)(0)))));
+            series7.Font = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series7.IsValueShownAsLabel = true;
+            series7.LabelAngle = 1;
+            series7.LabelFormat = "#,###.##";
+            series7.Legend = "Legend1";
+            series7.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            series7.MarkerSize = 4;
+            series7.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series7.Name = "Qty";
+            series7.ShadowColor = System.Drawing.Color.DarkGray;
+            series7.ShadowOffset = 10;
+            this.pieQtyY.Series.Add(series7);
+            this.pieQtyY.Size = new System.Drawing.Size(332, 179);
+            this.pieQtyY.TabIndex = 7;
+            this.pieQtyY.Text = "Sale";
+            title5.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title5.Font = new System.Drawing.Font("Alice5 95", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title5.Name = "Title1";
+            title5.Text = "Quetity";
+            this.pieQtyY.Titles.Add(title5);
+            // 
+            // gunaTransfarantPictureBox4
+            // 
+            this.gunaTransfarantPictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaTransfarantPictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTransfarantPictureBox4.BaseColor = System.Drawing.Color.Black;
+            this.gunaTransition1.SetDecoration(this.gunaTransfarantPictureBox4, Guna.UI.Animation.DecorationType.None);
+            this.gunaTransfarantPictureBox4.Image = global::ProjectCoffee.Properties.Resources.us_dollar_127px3;
+            this.gunaTransfarantPictureBox4.Location = new System.Drawing.Point(697, 391);
+            this.gunaTransfarantPictureBox4.Name = "gunaTransfarantPictureBox4";
+            this.gunaTransfarantPictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.gunaTransfarantPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaTransfarantPictureBox4.TabIndex = 19;
+            this.gunaTransfarantPictureBox4.TabStop = false;
             // 
             // gunaLinePanel4
             // 
@@ -650,234 +700,63 @@
             this.gunaLinePanel4.Location = new System.Drawing.Point(3, 7);
             this.gunaLinePanel4.Name = "gunaLinePanel4";
             this.gunaLinePanel4.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.gunaLinePanel4.Size = new System.Drawing.Size(641, 301);
+            this.gunaLinePanel4.Size = new System.Drawing.Size(918, 301);
             this.gunaLinePanel4.TabIndex = 7;
             // 
             // chartThisYear
             // 
             this.chartThisYear.BackColor = System.Drawing.Color.Transparent;
-            chartArea10.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
-            chartArea10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            chartArea10.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            chartArea10.BorderColor = System.Drawing.Color.Silver;
-            chartArea10.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea10.CursorX.Interval = 0D;
-            chartArea10.Name = "ChartArea1";
-            chartArea10.ShadowColor = System.Drawing.Color.Silver;
-            chartArea10.ShadowOffset = 1;
-            this.chartThisYear.ChartAreas.Add(chartArea10);
+            this.chartThisYear.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Top;
+            chartArea8.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            chartArea8.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            chartArea8.BorderColor = System.Drawing.Color.Silver;
+            chartArea8.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea8.CursorX.Interval = 0D;
+            chartArea8.Name = "ChartArea1";
+            chartArea8.ShadowColor = System.Drawing.Color.Silver;
+            chartArea8.ShadowOffset = 1;
+            this.chartThisYear.ChartAreas.Add(chartArea8);
             this.gunaTransition1.SetDecoration(this.chartThisYear, Guna.UI.Animation.DecorationType.None);
             this.chartThisYear.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend10.AutoFitMinFontSize = 5;
-            legend10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            legend10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            legend10.Font = new System.Drawing.Font("Lao_Ketmany2", 8F);
-            legend10.HeaderSeparatorColor = System.Drawing.Color.Gray;
-            legend10.InterlacedRowsColor = System.Drawing.Color.Transparent;
-            legend10.ItemColumnSeparatorColor = System.Drawing.Color.LightGray;
-            legend10.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
-            legend10.Name = "Legend1";
-            legend10.TitleFont = new System.Drawing.Font("Lao_Ketmany2", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend10.TitleSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
-            this.chartThisYear.Legends.Add(legend10);
+            legend8.AutoFitMinFontSize = 5;
+            legend8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            legend8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            legend8.Font = new System.Drawing.Font("Lao_Ketmany2", 8F);
+            legend8.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.GradientLine;
+            legend8.HeaderSeparatorColor = System.Drawing.Color.Gray;
+            legend8.InterlacedRowsColor = System.Drawing.Color.Transparent;
+            legend8.IsTextAutoFit = false;
+            legend8.ItemColumnSeparatorColor = System.Drawing.Color.LightGray;
+            legend8.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
+            legend8.Name = "Legend1";
+            legend8.TitleFont = new System.Drawing.Font("Lao_Ketmany2", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend8.TitleSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
+            this.chartThisYear.Legends.Add(legend8);
             this.chartThisYear.Location = new System.Drawing.Point(1, 0);
             this.chartThisYear.Name = "chartThisYear";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(136)))));
-            series10.Font = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series10.IsValueShownAsLabel = true;
-            series10.LabelBorderWidth = 0;
-            series10.Legend = "Legend1";
-            series10.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            series10.MarkerSize = 4;
-            series10.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series10.Name = "Price";
-            series10.ShadowColor = System.Drawing.Color.Silver;
-            this.chartThisYear.Series.Add(series10);
-            this.chartThisYear.Size = new System.Drawing.Size(640, 301);
+            this.chartThisYear.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(16)))), ((int)(((byte)(136)))));
+            series8.Font = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series8.IsValueShownAsLabel = true;
+            series8.LabelBorderWidth = 0;
+            series8.LabelFormat = "#,###.##";
+            series8.Legend = "Legend1";
+            series8.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            series8.MarkerSize = 4;
+            series8.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series8.Name = "Price";
+            series8.ShadowColor = System.Drawing.Color.Silver;
+            this.chartThisYear.Series.Add(series8);
+            this.chartThisYear.Size = new System.Drawing.Size(917, 301);
             this.chartThisYear.TabIndex = 12;
             this.chartThisYear.Text = "Sale";
-            title7.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title7.Name = "Title1";
-            title7.Text = "Prices per month";
-            this.chartThisYear.Titles.Add(title7);
-            // 
-            // gunaLinePanel5
-            // 
-            this.gunaLinePanel5.Controls.Add(this.pieThisMonth);
-            this.gunaTransition1.SetDecoration(this.gunaLinePanel5, Guna.UI.Animation.DecorationType.None);
-            this.gunaLinePanel5.LineBottom = 1;
-            this.gunaLinePanel5.LineColor = System.Drawing.Color.Black;
-            this.gunaLinePanel5.LineLeft = 1;
-            this.gunaLinePanel5.LineRight = 1;
-            this.gunaLinePanel5.LineStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaLinePanel5.LineTop = 1;
-            this.gunaLinePanel5.Location = new System.Drawing.Point(650, 7);
-            this.gunaLinePanel5.Name = "gunaLinePanel5";
-            this.gunaLinePanel5.Padding = new System.Windows.Forms.Padding(1);
-            this.gunaLinePanel5.Size = new System.Drawing.Size(277, 303);
-            this.gunaLinePanel5.TabIndex = 8;
-            // 
-            // pieThisMonth
-            // 
-            this.pieThisMonth.BackColor = System.Drawing.Color.Transparent;
-            chartArea11.Area3DStyle.Enable3D = true;
-            chartArea11.Area3DStyle.IsClustered = true;
-            chartArea11.Area3DStyle.IsRightAngleAxes = false;
-            chartArea11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            chartArea11.BackImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            chartArea11.BorderColor = System.Drawing.Color.Silver;
-            chartArea11.Name = "ChartArea1";
-            chartArea11.ShadowColor = System.Drawing.Color.Silver;
-            this.pieThisMonth.ChartAreas.Add(chartArea11);
-            this.gunaTransition1.SetDecoration(this.pieThisMonth, Guna.UI.Animation.DecorationType.None);
-            this.pieThisMonth.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            legend11.Font = new System.Drawing.Font("Lao_Ketmany2", 8F);
-            legend11.HeaderSeparatorColor = System.Drawing.Color.Gray;
-            legend11.ItemColumnSeparatorColor = System.Drawing.Color.LightGray;
-            legend11.Name = "Legend1";
-            legend11.TitleFont = new System.Drawing.Font("Lao_Ketmany2", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pieThisMonth.Legends.Add(legend11);
-            this.pieThisMonth.Location = new System.Drawing.Point(1, 1);
-            this.pieThisMonth.Name = "pieThisMonth";
-            series11.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(141)))), ((int)(((byte)(0)))));
-            series11.Font = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series11.IsValueShownAsLabel = true;
-            series11.LabelAngle = 1;
-            series11.Legend = "Legend1";
-            series11.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            series11.MarkerSize = 4;
-            series11.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series11.Name = "Month";
-            series11.ShadowColor = System.Drawing.Color.Silver;
-            this.pieThisMonth.Series.Add(series11);
-            this.pieThisMonth.Size = new System.Drawing.Size(275, 301);
-            this.pieThisMonth.TabIndex = 7;
-            this.pieThisMonth.Text = "Sale";
-            title8.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title8.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title8.Name = "Title1";
-            title8.Text = "Prices in any month";
-            this.pieThisMonth.Titles.Add(title8);
-            // 
-            // gunaLinePanel6
-            // 
-            this.gunaLinePanel6.Controls.Add(this.pieQtyY);
-            this.gunaTransition1.SetDecoration(this.gunaLinePanel6, Guna.UI.Animation.DecorationType.None);
-            this.gunaLinePanel6.LineBottom = 1;
-            this.gunaLinePanel6.LineColor = System.Drawing.Color.Black;
-            this.gunaLinePanel6.LineLeft = 1;
-            this.gunaLinePanel6.LineRight = 1;
-            this.gunaLinePanel6.LineStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaLinePanel6.LineTop = 1;
-            this.gunaLinePanel6.Location = new System.Drawing.Point(650, 312);
-            this.gunaLinePanel6.Name = "gunaLinePanel6";
-            this.gunaLinePanel6.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.gunaLinePanel6.Size = new System.Drawing.Size(277, 164);
-            this.gunaLinePanel6.TabIndex = 9;
-            // 
-            // pieQtyY
-            // 
-            this.pieQtyY.BackColor = System.Drawing.Color.Transparent;
-            chartArea12.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
-            chartArea12.Area3DStyle.Enable3D = true;
-            chartArea12.Area3DStyle.Inclination = 10;
-            chartArea12.Area3DStyle.IsClustered = true;
-            chartArea12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            chartArea12.BorderColor = System.Drawing.Color.Silver;
-            chartArea12.Name = "ChartArea1";
-            chartArea12.ShadowColor = System.Drawing.Color.Silver;
-            this.pieQtyY.ChartAreas.Add(chartArea12);
-            this.gunaTransition1.SetDecoration(this.pieQtyY, Guna.UI.Animation.DecorationType.None);
-            this.pieQtyY.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            legend12.Font = new System.Drawing.Font("Lao_Ketmany2", 8F);
-            legend12.HeaderSeparatorColor = System.Drawing.Color.Gray;
-            legend12.ItemColumnSeparatorColor = System.Drawing.Color.LightGray;
-            legend12.Name = "Legend1";
-            legend12.TitleFont = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pieQtyY.Legends.Add(legend12);
-            this.pieQtyY.Location = new System.Drawing.Point(1, 0);
-            this.pieQtyY.Name = "pieQtyY";
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(141)))), ((int)(((byte)(0)))));
-            series12.Font = new System.Drawing.Font("Lao_Ketmany2", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series12.IsValueShownAsLabel = true;
-            series12.LabelAngle = 1;
-            series12.Legend = "Legend1";
-            series12.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            series12.MarkerSize = 4;
-            series12.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series12.Name = "Qty";
-            series12.ShadowColor = System.Drawing.Color.DarkGray;
-            series12.ShadowOffset = 10;
-            this.pieQtyY.Series.Add(series12);
-            this.pieQtyY.Size = new System.Drawing.Size(276, 164);
-            this.pieQtyY.TabIndex = 7;
-            this.pieQtyY.Text = "Sale";
-            title9.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title9.Font = new System.Drawing.Font("Alice5 95", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title9.Name = "Title1";
-            title9.Text = "Quetity";
-            this.pieQtyY.Titles.Add(title9);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.gunaTransition1.SetDecoration(this.label4, Guna.UI.Animation.DecorationType.None);
-            this.label4.Font = new System.Drawing.Font("Alice5 95", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(121, 335);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(376, 44);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "The month is best sale of this year";
-            // 
-            // gunaTransfarantPictureBox5
-            // 
-            this.gunaTransfarantPictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaTransfarantPictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTransfarantPictureBox5.BaseColor = System.Drawing.Color.Black;
-            this.gunaTransition1.SetDecoration(this.gunaTransfarantPictureBox5, Guna.UI.Animation.DecorationType.None);
-            this.gunaTransfarantPictureBox5.Image = global::ProjectCoffee.Properties.Resources.cafe;
-            this.gunaTransfarantPictureBox5.Location = new System.Drawing.Point(177, 394);
-            this.gunaTransfarantPictureBox5.Name = "gunaTransfarantPictureBox5";
-            this.gunaTransfarantPictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.gunaTransfarantPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaTransfarantPictureBox5.TabIndex = 18;
-            this.gunaTransfarantPictureBox5.TabStop = false;
-            // 
-            // gunaTransfarantPictureBox4
-            // 
-            this.gunaTransfarantPictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaTransfarantPictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTransfarantPictureBox4.BaseColor = System.Drawing.Color.Black;
-            this.gunaTransition1.SetDecoration(this.gunaTransfarantPictureBox4, Guna.UI.Animation.DecorationType.None);
-            this.gunaTransfarantPictureBox4.Image = global::ProjectCoffee.Properties.Resources.us_dollar_127px3;
-            this.gunaTransfarantPictureBox4.Location = new System.Drawing.Point(318, 392);
-            this.gunaTransfarantPictureBox4.Name = "gunaTransfarantPictureBox4";
-            this.gunaTransfarantPictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.gunaTransfarantPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaTransfarantPictureBox4.TabIndex = 19;
-            this.gunaTransfarantPictureBox4.TabStop = false;
-            // 
-            // lbQtyY
-            // 
-            this.lbQtyY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbQtyY.AutoSize = true;
-            this.gunaTransition1.SetDecoration(this.lbQtyY, Guna.UI.Animation.DecorationType.None);
-            this.lbQtyY.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQtyY.ForeColor = System.Drawing.Color.Black;
-            this.lbQtyY.Location = new System.Drawing.Point(209, 396);
-            this.lbQtyY.Name = "lbQtyY";
-            this.lbQtyY.Size = new System.Drawing.Size(28, 28);
-            this.lbQtyY.TabIndex = 20;
-            this.lbQtyY.Text = "40";
+            title6.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title6.Name = "Title1";
+            title6.Text = "Prices per month";
+            this.chartThisYear.Titles.Add(title6);
             // 
             // lbPriceY
             // 
@@ -886,28 +765,58 @@
             this.gunaTransition1.SetDecoration(this.lbPriceY, Guna.UI.Animation.DecorationType.None);
             this.lbPriceY.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPriceY.ForeColor = System.Drawing.Color.Black;
-            this.lbPriceY.Location = new System.Drawing.Point(353, 394);
+            this.lbPriceY.Location = new System.Drawing.Point(742, 392);
             this.lbPriceY.Name = "lbPriceY";
             this.lbPriceY.Size = new System.Drawing.Size(84, 28);
             this.lbPriceY.TabIndex = 21;
             this.lbPriceY.Text = "130,000.00";
+            // 
+            // lbQtyY
+            // 
+            this.lbQtyY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbQtyY.AutoSize = true;
+            this.gunaTransition1.SetDecoration(this.lbQtyY, Guna.UI.Animation.DecorationType.None);
+            this.lbQtyY.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQtyY.ForeColor = System.Drawing.Color.Black;
+            this.lbQtyY.Location = new System.Drawing.Point(742, 346);
+            this.lbQtyY.Name = "lbQtyY";
+            this.lbQtyY.Size = new System.Drawing.Size(28, 28);
+            this.lbQtyY.TabIndex = 20;
+            this.lbQtyY.Text = "40";
+            // 
+            // gunaTransition1
+            // 
+            this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.Scale;
+            this.gunaTransition1.Cursor = null;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.gunaTransition1.DefaultAnimation = animation2;
             // 
             // HomePage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.gunaLinePanel1);
             this.gunaTransition1.SetDecoration(this, Guna.UI.Animation.DecorationType.None);
             this.Font = new System.Drawing.Font("Alice5 95", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "HomePage";
             this.Size = new System.Drawing.Size(930, 605);
             this.Load += new System.EventHandler(this.HomePage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picTweeter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInstragram)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picIatam)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFacebook)).EndInit();
             this.gunaLinePanel1.ResumeLayout(false);
             this.pnlAll.ResumeLayout(false);
             this.pnlAll.PerformLayout();
@@ -921,41 +830,35 @@
             this.pnlDay.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaTransfarantPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.pnlMain.ResumeLayout(false);
             this.pnlDesbordTwo.ResumeLayout(false);
             this.gunaLinePanel3.ResumeLayout(false);
             this.gunaLinePanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartItems)).EndInit();
-            this.pnBottom.ResumeLayout(false);
             this.pnlDesbordThisYear.ResumeLayout(false);
             this.pnlDesbordThisYear.PerformLayout();
-            this.gunaLinePanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartThisYear)).EndInit();
             this.gunaLinePanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pieThisMonth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaTransfarantPictureBox5)).EndInit();
             this.gunaLinePanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pieQtyY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaTransfarantPictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaTransfarantPictureBox4)).EndInit();
+            this.gunaLinePanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartThisYear)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI.WinForms.GunaCirclePictureBox picInstragram;
-        private Guna.UI.WinForms.GunaCirclePictureBox picIatam;
-        private Guna.UI.WinForms.GunaCirclePictureBox picTweeter;
-        private Guna.UI.WinForms.GunaCirclePictureBox picFacebook;
         private System.Windows.Forms.ToolTip toolTip1;
         private Guna.UI.WinForms.GunaLinePanel gunaLinePanel1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private Guna.UI.WinForms.GunaShadowPanel pnlDay;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
         private Guna.UI.WinForms.GunaShadowPanel pnlAll;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox3;
-        private Guna.UI.WinForms.GunaShadowPanel pnBottom;
         private System.Windows.Forms.Panel pnlDesbordTwo;
         private Guna.UI.WinForms.GunaTransition gunaTransition1;
         private System.Windows.Forms.Label lbYear;

@@ -34,8 +34,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gunaDateTimePicker2 = new Guna.UI.WinForms.GunaDateTimePicker();
-            this.gunaDateTimePicker1 = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.dEnd = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.dSt = new Guna.UI.WinForms.GunaDateTimePicker();
             this.rdbReportDate = new Guna.UI.WinForms.GunaRadioButton();
             this.rdbReportMonth = new Guna.UI.WinForms.GunaRadioButton();
             this.rdbReportThisYear = new Guna.UI.WinForms.GunaRadioButton();
@@ -49,6 +49,7 @@
             this.btMinimam = new Guna.UI.WinForms.GunaButton();
             this.AnimateWinForm = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             this.pnlTaskBar.SuspendLayout();
@@ -73,8 +74,8 @@
             this.gunaGroupBox1.Controls.Add(this.button1);
             this.gunaGroupBox1.Controls.Add(this.label2);
             this.gunaGroupBox1.Controls.Add(this.label1);
-            this.gunaGroupBox1.Controls.Add(this.gunaDateTimePicker2);
-            this.gunaGroupBox1.Controls.Add(this.gunaDateTimePicker1);
+            this.gunaGroupBox1.Controls.Add(this.dEnd);
+            this.gunaGroupBox1.Controls.Add(this.dSt);
             this.gunaGroupBox1.Controls.Add(this.rdbReportDate);
             this.gunaGroupBox1.Controls.Add(this.rdbReportMonth);
             this.gunaGroupBox1.Controls.Add(this.rdbReportThisYear);
@@ -122,59 +123,59 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "ວັນທີ່ສິນສຸດ";
             // 
-            // gunaDateTimePicker2
+            // dEnd
             // 
-            this.gunaDateTimePicker2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaDateTimePicker2.BaseColor = System.Drawing.Color.White;
-            this.gunaDateTimePicker2.BorderColor = System.Drawing.Color.Transparent;
-            this.gunaDateTimePicker2.BorderSize = 0;
-            this.gunaDateTimePicker2.CustomFormat = null;
-            this.gunaDateTimePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.gunaDateTimePicker2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaDateTimePicker2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDateTimePicker2.ForeColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.gunaDateTimePicker2.Location = new System.Drawing.Point(14, 391);
-            this.gunaDateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.gunaDateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.gunaDateTimePicker2.Name = "gunaDateTimePicker2";
-            this.gunaDateTimePicker2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaDateTimePicker2.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.gunaDateTimePicker2.OnHoverForeColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker2.OnPressedDepth = 3;
-            this.gunaDateTimePicker2.Radius = 2;
-            this.gunaDateTimePicker2.Size = new System.Drawing.Size(267, 36);
-            this.gunaDateTimePicker2.TabIndex = 1;
-            this.gunaDateTimePicker2.Text = "17-07-2020";
-            this.gunaDateTimePicker2.Value = new System.DateTime(2020, 7, 17, 18, 4, 42, 39);
+            this.dEnd.BackColor = System.Drawing.Color.Transparent;
+            this.dEnd.BaseColor = System.Drawing.Color.White;
+            this.dEnd.BorderColor = System.Drawing.Color.Transparent;
+            this.dEnd.BorderSize = 0;
+            this.dEnd.CustomFormat = null;
+            this.dEnd.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dEnd.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dEnd.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dEnd.ForeColor = System.Drawing.Color.Black;
+            this.dEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dEnd.Location = new System.Drawing.Point(14, 391);
+            this.dEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dEnd.Name = "dEnd";
+            this.dEnd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dEnd.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.dEnd.OnHoverForeColor = System.Drawing.Color.Black;
+            this.dEnd.OnPressedColor = System.Drawing.Color.Black;
+            this.dEnd.OnPressedDepth = 3;
+            this.dEnd.Radius = 2;
+            this.dEnd.Size = new System.Drawing.Size(267, 36);
+            this.dEnd.TabIndex = 1;
+            this.dEnd.Text = "10-08-2020";
+            this.dEnd.Value = new System.DateTime(2020, 8, 10, 0, 0, 0, 0);
             // 
-            // gunaDateTimePicker1
+            // dSt
             // 
-            this.gunaDateTimePicker1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaDateTimePicker1.BaseColor = System.Drawing.Color.White;
-            this.gunaDateTimePicker1.BorderColor = System.Drawing.Color.Transparent;
-            this.gunaDateTimePicker1.BorderSize = 0;
-            this.gunaDateTimePicker1.CustomFormat = null;
-            this.gunaDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.gunaDateTimePicker1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaDateTimePicker1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaDateTimePicker1.ForeColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.gunaDateTimePicker1.Location = new System.Drawing.Point(14, 299);
-            this.gunaDateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.gunaDateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.gunaDateTimePicker1.Name = "gunaDateTimePicker1";
-            this.gunaDateTimePicker1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaDateTimePicker1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.gunaDateTimePicker1.OnHoverForeColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker1.OnPressedDepth = 3;
-            this.gunaDateTimePicker1.Radius = 2;
-            this.gunaDateTimePicker1.Size = new System.Drawing.Size(267, 36);
-            this.gunaDateTimePicker1.TabIndex = 1;
-            this.gunaDateTimePicker1.Text = "17-07-2020";
-            this.gunaDateTimePicker1.Value = new System.DateTime(2020, 7, 17, 18, 9, 41, 568);
+            this.dSt.BackColor = System.Drawing.Color.Transparent;
+            this.dSt.BaseColor = System.Drawing.Color.White;
+            this.dSt.BorderColor = System.Drawing.Color.Transparent;
+            this.dSt.BorderSize = 0;
+            this.dSt.CustomFormat = null;
+            this.dSt.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dSt.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dSt.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dSt.ForeColor = System.Drawing.Color.Black;
+            this.dSt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dSt.Location = new System.Drawing.Point(14, 299);
+            this.dSt.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dSt.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dSt.Name = "dSt";
+            this.dSt.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dSt.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.dSt.OnHoverForeColor = System.Drawing.Color.Black;
+            this.dSt.OnPressedColor = System.Drawing.Color.Black;
+            this.dSt.OnPressedDepth = 3;
+            this.dSt.Radius = 2;
+            this.dSt.Size = new System.Drawing.Size(267, 36);
+            this.dSt.TabIndex = 1;
+            this.dSt.Text = "10-08-2020";
+            this.dSt.Value = new System.DateTime(2020, 8, 10, 0, 0, 0, 0);
             // 
             // rdbReportDate
             // 
@@ -258,6 +259,7 @@
             // pnlTaskBar
             // 
             this.pnlTaskBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.pnlTaskBar.Controls.Add(this.label4);
             this.pnlTaskBar.Controls.Add(this.Maximam);
             this.pnlTaskBar.Controls.Add(this.btClose);
             this.pnlTaskBar.Controls.Add(this.btMinimam);
@@ -362,6 +364,16 @@
             this.AnimateWinForm.Interval = 200;
             this.AnimateWinForm.TargetControl = this;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(3, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 28);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Report saling";
+            // 
             // frmReport_Sale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 28F);
@@ -383,6 +395,7 @@
             this.gunaGroupBox1.ResumeLayout(false);
             this.gunaGroupBox1.PerformLayout();
             this.pnlTaskBar.ResumeLayout(false);
+            this.pnlTaskBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -399,8 +412,8 @@
         private Guna.UI.WinForms.GunaRadioButton rdbReportDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePicker2;
-        private Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePicker1;
+        private Guna.UI.WinForms.GunaDateTimePicker dEnd;
+        private Guna.UI.WinForms.GunaDateTimePicker dSt;
         private System.Windows.Forms.Button button1;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private Guna.UI.WinForms.GunaLinePanel pnlTaskBar;
@@ -409,5 +422,6 @@
         private Guna.UI.WinForms.GunaButton btMinimam;
         public Guna.UI.WinForms.GunaAnimateWindow AnimateWinForm;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label4;
     }
 }

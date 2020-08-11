@@ -29,14 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.tbBillBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsTable_Rport = new ProjectCoffee.dsTable_Rport();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaResize1 = new Guna.UI.WinForms.GunaResize(this.components);
             this.pnlTaskBar = new Guna.UI.WinForms.GunaLinePanel();
             this.Maximam = new Guna.UI.WinForms.GunaButton();
             this.btMinimam = new Guna.UI.WinForms.GunaButton();
             this.btClose = new Guna.UI.WinForms.GunaButton();
+            this.gunaResize2 = new Guna.UI.WinForms.GunaResize(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.tbBillBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsTable_Rport)).BeginInit();
             this.pnlTaskBar.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // tbBillBindingSource
+            // 
+            this.tbBillBindingSource.DataMember = "tbBill";
+            this.tbBillBindingSource.DataSource = this.dsTable_Rport;
+            // 
+            // dsTable_Rport
+            // 
+            this.dsTable_Rport.DataSetName = "dsTable_Rport";
+            this.dsTable_Rport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gunaElipse1
             // 
@@ -57,7 +74,7 @@
             this.pnlTaskBar.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.pnlTaskBar.Location = new System.Drawing.Point(0, 0);
             this.pnlTaskBar.Name = "pnlTaskBar";
-            this.pnlTaskBar.Size = new System.Drawing.Size(607, 32);
+            this.pnlTaskBar.Size = new System.Drawing.Size(686, 32);
             this.pnlTaskBar.TabIndex = 8;
             this.pnlTaskBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTaskBar_MouseDown);
             this.pnlTaskBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTaskBar_MouseMove);
@@ -78,7 +95,7 @@
             this.Maximam.Image = global::ProjectCoffee.Properties.Resources.restore_window;
             this.Maximam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Maximam.ImageSize = new System.Drawing.Size(23, 23);
-            this.Maximam.Location = new System.Drawing.Point(535, 4);
+            this.Maximam.Location = new System.Drawing.Point(614, 4);
             this.Maximam.Name = "Maximam";
             this.Maximam.OnHoverBaseColor = System.Drawing.Color.White;
             this.Maximam.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -105,7 +122,7 @@
             this.btMinimam.Image = global::ProjectCoffee.Properties.Resources.minus;
             this.btMinimam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btMinimam.ImageSize = new System.Drawing.Size(20, 20);
-            this.btMinimam.Location = new System.Drawing.Point(494, 4);
+            this.btMinimam.Location = new System.Drawing.Point(573, 4);
             this.btMinimam.Name = "btMinimam";
             this.btMinimam.OnHoverBaseColor = System.Drawing.Color.White;
             this.btMinimam.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -132,7 +149,7 @@
             this.btClose.Image = global::ProjectCoffee.Properties.Resources.cancel;
             this.btClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btClose.ImageSize = new System.Drawing.Size(20, 20);
-            this.btClose.Location = new System.Drawing.Point(575, 3);
+            this.btClose.Location = new System.Drawing.Point(654, 3);
             this.btClose.Name = "btClose";
             this.btClose.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btClose.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -144,16 +161,39 @@
             this.btClose.TabIndex = 16;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
+            // gunaResize2
+            // 
+            this.gunaResize2.TargetForm = this;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.tbBillBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjectCoffee.rdBillSale.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(3, 34);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(678, 508);
+            this.reportViewer1.TabIndex = 9;
+            // 
             // frmPrintBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(607, 547);
+            this.ClientSize = new System.Drawing.Size(686, 547);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.pnlTaskBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPrintBill";
             this.Text = "frmPrintBill";
+            this.Load += new System.EventHandler(this.frmPrintBill_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tbBillBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsTable_Rport)).EndInit();
             this.pnlTaskBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -167,5 +207,9 @@
         private Guna.UI.WinForms.GunaButton Maximam;
         private Guna.UI.WinForms.GunaButton btMinimam;
         private Guna.UI.WinForms.GunaButton btClose;
+        private Guna.UI.WinForms.GunaResize gunaResize2;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource tbBillBindingSource;
+        private dsTable_Rport dsTable_Rport;
     }
 }

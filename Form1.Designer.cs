@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI.Animation.Animation animation1 = new Guna.UI.Animation.Animation();
+            Guna.UI.Animation.Animation animation3 = new Guna.UI.Animation.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnlManu = new System.Windows.Forms.Panel();
             this.btAnimate = new Guna.UI.WinForms.GunaButton();
@@ -54,6 +54,7 @@
             this.gunaResize1 = new Guna.UI.WinForms.GunaResize(this.components);
             this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
             this.AnimatedMenu = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
+            this.btLogout = new Guna.UI.WinForms.GunaButton();
             this.pnlManu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.pnlTaskBar.SuspendLayout();
@@ -103,8 +104,7 @@
             this.btAnimate.OnHoverForeColor = System.Drawing.Color.White;
             this.btAnimate.OnHoverImage = null;
             this.btAnimate.OnPressedColor = System.Drawing.Color.White;
-            this.btAnimate.Radius = 4;
-            this.btAnimate.Size = new System.Drawing.Size(114, 45);
+            this.btAnimate.Size = new System.Drawing.Size(215, 45);
             this.btAnimate.TabIndex = 0;
             this.btAnimate.Text = "Menu";
             this.toolTip1.SetToolTip(this.btAnimate, "Menu");
@@ -299,6 +299,7 @@
             this.pnlTaskBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
             this.pnlTaskBar.Controls.Add(this.Maximam);
             this.pnlTaskBar.Controls.Add(this.btClose);
+            this.pnlTaskBar.Controls.Add(this.btLogout);
             this.pnlTaskBar.Controls.Add(this.btMinimam);
             this.gunaTransition1.SetDecoration(this.pnlTaskBar, Guna.UI.Animation.DecorationType.None);
             this.pnlTaskBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -416,28 +417,56 @@
             // 
             this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.Scale;
             this.gunaTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.gunaTransition1.DefaultAnimation = animation1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.gunaTransition1.DefaultAnimation = animation3;
             // 
             // AnimatedMenu
             // 
             this.AnimatedMenu.AnimationType = Guna.UI.WinForms.GunaAnimateWindow.AnimateWindowType.AW_CENTER;
             this.AnimatedMenu.Interval = 200;
             this.AnimatedMenu.TargetControl = this;
+            // 
+            // btLogout
+            // 
+            this.btLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLogout.AnimationHoverSpeed = 0.07F;
+            this.btLogout.AnimationSpeed = 0.03F;
+            this.btLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btLogout.BaseColor = System.Drawing.Color.Transparent;
+            this.btLogout.BorderColor = System.Drawing.Color.Black;
+            this.gunaTransition1.SetDecoration(this.btLogout, Guna.UI.Animation.DecorationType.None);
+            this.btLogout.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btLogout.FocusedColor = System.Drawing.Color.Empty;
+            this.btLogout.Font = new System.Drawing.Font("Lao_SomPong", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLogout.ForeColor = System.Drawing.Color.White;
+            this.btLogout.Image = global::ProjectCoffee.Properties.Resources.minus;
+            this.btLogout.ImageSize = new System.Drawing.Size(20, 20);
+            this.btLogout.Location = new System.Drawing.Point(6, 4);
+            this.btLogout.Name = "btLogout";
+            this.btLogout.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(79)))), ((int)(((byte)(106)))));
+            this.btLogout.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btLogout.OnHoverForeColor = System.Drawing.Color.White;
+            this.btLogout.OnHoverImage = null;
+            this.btLogout.OnPressedColor = System.Drawing.Color.Black;
+            this.btLogout.Radius = 4;
+            this.btLogout.Size = new System.Drawing.Size(96, 25);
+            this.btLogout.TabIndex = 15;
+            this.btLogout.Text = "Log out";
+            this.toolTip1.SetToolTip(this.btLogout, "Log out");
             // 
             // Form1
             // 
@@ -487,6 +516,7 @@
         private Guna.UI.WinForms.GunaResize gunaResize1;
         private Guna.UI.WinForms.GunaTransition gunaTransition1;
         private Guna.UI.WinForms.GunaAnimateWindow AnimatedMenu;
+        private Guna.UI.WinForms.GunaButton btLogout;
     }
 }
 

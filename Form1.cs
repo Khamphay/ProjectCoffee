@@ -99,7 +99,7 @@ namespace ProjectCoffee
                     btUnit.Size = new Size(221, 55);
                     btSale.Size = new Size(221, 55);
                     btReport.Size = new Size(221, 55);
-                    btAnimate.Size = new Size(114, 45);
+                    btAnimate.Size = new Size(215, 45);
                     line1.Width = 222;
                     line2.Width = 222;
 

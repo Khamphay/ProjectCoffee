@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI.WinForms;
 using Message;
+using Microsoft.Reporting.WinForms;
 using MySql.Data.MySqlClient;
 
 namespace ProjectCoffee
@@ -22,6 +23,18 @@ namespace ProjectCoffee
             InitializeComponent();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             _sale = sale;
+
+            frmPrintBill.tbill = new DataTable();
+            frmPrintBill.tbill.TableName = "tbBill";
+            frmPrintBill.tbill.Columns.Add("cof_name",typeof(string));
+            frmPrintBill.tbill.Columns.Add("unit", typeof(string));
+            frmPrintBill.tbill.Columns.Add("catg", typeof(string));
+            frmPrintBill.tbill.Columns.Add("qty_item", typeof(int));
+            frmPrintBill.tbill.Columns.Add("price", typeof(decimal));
+            frmPrintBill.tbill.Columns.Add("price_qty", typeof(decimal));
+            frmPrintBill.tbill.Columns.Add("bill_id", typeof(string));
+            frmPrintBill.tbill.Columns.Add("all_qty", typeof(int));
+            frmPrintBill.tbill.Columns.Add("all_price", typeof(decimal));
         }
 
         //MySql
@@ -30,7 +43,9 @@ namespace ProjectCoffee
         MySqlCommand cmd;
         MySqlDataReader dr;
         DataTable table, tableLoad;
-
+        dsTable_Rport ds = new dsTable_Rport();
+        DataRow row;
+        frmPrintBill bill;
         List<MyModel> list;
         //Image
         MemoryStream memory;
@@ -52,7 +67,6 @@ namespace ProjectCoffee
         //For Move From
         int mouse = 0, mouX = 0, mouY = 0;
 
-
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             Build_ShowAndSearch_Item(txtSearch.Text);
@@ -63,16 +77,29 @@ namespace ProjectCoffee
             ClearData();
         }
 
-
         private void btClose_Click(object sender, EventArgs e)
         {
-            DialogResult result = MyMessageBox.ShowMssg("ແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກ ຫຼື ບໍ່?", "ຄຳເຕືອນ", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
+            //DialogResult result = MyMessageBox.ShowMssg("ແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກ ຫຼື ບໍ່?", "ຄຳເຕືອນ", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            //if (result == DialogResult.Yes)
+            //{
                 this.Close();
-            }
+            //}
         }
 
+        private void PrintBill()
+        {
+            try
+            {
+                //LocalReport localReport = new LocalReport();
+                //tbBillBindingSource.DataSource = frmPrintBill.tbill;
+                //localReport.ReportPath = @"D:\Cshart3cs2\ProjectCoffee\rdBillSale.rdlc";
+                //Export(localReport);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
         private void ClearData()
         {
@@ -237,7 +264,10 @@ namespace ProjectCoffee
                     {
                         _sale.item=list;
                         _sale.ShowData();
-                        MyMessageBox.ShowMssg("ບັນທືກຂໍ້ມູນສຳເລັດແລ້ວ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        bill = new frmPrintBill();
+                        bill.ShowDialog();
+
                         ClearData();
                         MaxBill_ID();
                     }
@@ -561,6 +591,11 @@ namespace ProjectCoffee
                                 getAllQty = int.Parse(lbQtyTotal_display.Text),
                                 getAllPrice = double.Parse(lbPrice_Total_display.Text.Substring(0, lbPrice_Total_display.Text.IndexOf(" ")))
                             });
+
+                            //Set data to "tbBill" in DataSet 'dsTable_report' for use print bill
+                            frmPrintBill.tbill.Rows.Add(data[0], data[1], data[2], int.Parse(data[3]),decimal.Parse(data[4].Substring(0,data[4].IndexOf(" "))),decimal.Parse(data[5].Substring(0, data[5].IndexOf(" "))), lbBill.Text, int.Parse(lbQtyTotal_display.Text), decimal.Parse(lbPrice_Total_display.Text.Substring(0, lbPrice_Total_display.Text.IndexOf(" "))));
+
+                           // MessageBox.Show(ds.tbBill.Rows[0][0].ToString());
                             //set data to null
                             {
                                 data[0] = null;

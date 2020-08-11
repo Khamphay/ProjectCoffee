@@ -106,6 +106,25 @@ namespace ProjectCoffee
                 throw;
             }
         }
+         private void Sale_ReportByDate()
+        {
+            try
+            {
+                da = new MySqlDataAdapter("SELECT Coff_ID, Coff_Name, Catg_Name, Uni_Name, SUM(Qty) as Qty, SUM(Total) as SalePrice, BDate FROM vw_salereport  Where BDate Between '" + dSt.Value.Date.ToString("yyyy-MM-dd")+ "' And '"+ dSt.Value.Date.ToString("yyyy-MM-dd") + "' Group By BDate, Coff_ID, Coff_Name", con);
+                ds = new dsTable_Rport();
+                da.Fill(ds, "Sale_PerDay");
+                rd = new ReportDocument();
+                rd.Load(@"D:\Cshart3cs2\ProjectCoffee\crReport_PerDay.rpt");
+                rd.SetDataSource(ds);
+                crystalReportViewer1.ReportSource = rd;
+                crystalReportViewer1.Refresh();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
 
         private void frmReport_Sale_Load(object sender, EventArgs e)
@@ -146,7 +165,8 @@ namespace ProjectCoffee
         }
 
         private void button1_Click(object sender, EventArgs e)
-        { 
+        {
+           Sale_ReportByDate();
         }
 
         private void btMinimam_Click(object sender, EventArgs e)

@@ -31,7 +31,7 @@ namespace ProjectCoffee
         DataTable table;
 
         frmCustomerPage customerPage;
-
+        frmCancaletor calculator;
         //Varible
         int mouse = 0, mouX=0, mouY=0;
         
@@ -41,19 +41,19 @@ namespace ProjectCoffee
         DataGridView dgv;
         GunaLinePanel Pnl;
         Label lbBill_ID, lbQtyTotal, lbPriceTotal, lbQtyName, lbPriceName, lbListCount;
-        Button btSave;
+        Button btSave, btCalculator;
 
         //Close Cafe List Sale in FlowPanel
         private void Completed_Sale(Control p)
         {
             gunaTransition1.HideSync(p, true, Animation.VertSlide);
-            MyMessageBox.ShowMssg("ບັນທືກຂໍ້ມູນສຳເລັດແລ້ວ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           // MyMessageBox.ShowMssg("ບັນທືກຂໍ້ມູນສຳເລັດແລ້ວ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             p.Dispose();
             lbAllOrder.Text = (flPnl.Controls.Count - 1).ToString() + " ລາຍການ";
             home.ShowSumPrice();
 
         }
-        private void SaveData(string objname)
+        public void SaveData(string objname)
         {
             bool complete = false;
             string bill = "";
@@ -164,6 +164,21 @@ namespace ProjectCoffee
                     lbBill_ID.Location = new Point(4, 4);
                     lbBill_ID.AutoSize = true;
 
+                }
+
+                //Button "btCanculate"
+                btCalculator = new Button();
+                {
+                    btCalculator.FlatStyle = FlatStyle.Flat;
+                    btCalculator.FlatAppearance.BorderSize = 1;
+                    btCalculator.Location = new Point(21, 42);
+                    btCalculator.Size = new Size(84, 39);
+                    btCalculator.Text = "ຄິດໄລ່";
+                    btCalculator.Image = Properties.Resources.calculator;
+                    btCalculator.TextImageRelation = TextImageRelation.ImageBeforeText;
+                    toolTip1.SetToolTip(btCalculator, "Calculate Money");
+                    //Set Event to btSave
+                    btCalculator.Click += new EventHandler(this.btCanculate_Click);
                 }
 
                 //Button "btSave"
@@ -283,6 +298,7 @@ namespace ProjectCoffee
                     Pnl.Controls.Add(dgv);
                     Pnl.Controls.Add(lbBill_ID);
                     Pnl.Controls.Add(btSave);
+                    Pnl.Controls.Add(btCalculator);
                     Pnl.Controls.Add(lbListCount);
                     Pnl.Controls.Add(lbQtyName);
                     Pnl.Controls.Add(lbQtyTotal);
@@ -315,10 +331,10 @@ namespace ProjectCoffee
                 //ການລຸດຊື່ລຸ່ມນີ້ມີຄວາມສຳຄັນຕໍ່ການອ້າງເວລາທີເກີດ ການກະໃດໜື່ງ (Event)
                 {
                     Pnl.Name = "pnl" + lbBill_ID.Text;
-                    btSave.Name = "btSave" + lbBill_ID.Text;
                     lbBill_ID.Name = "lbBill" + lbBill_ID.Text;
                     dgv.Name = "dgv" + lbBill_ID.Text;
                     btSave.Name = "btSave" + lbBill_ID.Text;
+                    btCalculator.Name = "btCalc" + lbBill_ID.Text;
                     lbQtyTotal.Name = "lbQty" + lbBill_ID.Text;
                     lbPriceTotal.Name = "lbPrice" + lbBill_ID.Text;
                 }
@@ -345,7 +361,36 @@ namespace ProjectCoffee
             customerPage.Show();
         }
 
-       
+
+        //Canculate Money
+        private void btCanculate_Click(object sender, EventArgs e)
+        {
+            double PriceTotal = 0.0;
+            Button calcul = sender as Button;
+            string objName = calcul.Name.ToString().Substring(6);
+            foreach(Control p in flPnl.Controls)
+            {
+                if (p.GetType() == typeof(GunaLinePanel) && p.Name== "pnl" + objName)
+                {
+                    foreach(Control lb in p.Controls)
+                    {
+                        if(lb.GetType()==typeof(Label) && lb.Name== "lbPrice" + objName)
+                        {
+                            PriceTotal = double.Parse(lb.Text.Substring(0,lb.Text.IndexOf(" ")));
+                        }
+                    }
+                }
+            }
+
+
+            if (calculator != null)
+            {
+                calculator.Close();
+            }
+            calculator = new frmCancaletor(this, objName, PriceTotal);
+            calculator.Show();
+        }
+
         //Whent btSave.Click (ເປັນຟັງຊັນທີ່ຂ້ອຍສ້າງຂ້າງ )
         private void btSave_Click(object sender, EventArgs e)
         {
@@ -355,6 +400,7 @@ namespace ProjectCoffee
             SaveData(objName);
         }
 
+        
         //These bellow Method use for move thus form
         private void gunaLinePanel3_MouseDown(object sender, MouseEventArgs e)
         {

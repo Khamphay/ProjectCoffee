@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,11 +18,28 @@ namespace ProjectCoffee
         {
             InitializeComponent();
         }
-
         bool mouse = false;
         int mouX =0, mouY=0;
+        public static DataTable tbill;
 
+        private void PrintBill()
+        {
+            try
+            {
+                //reportViewer1.Reset();
+                //reportViewer1.LocalReport.ReportPath = @"D:\Cshart3cs2\ProjectCoffee\rpBillSale.rdlc";
+                //ReportDataSource reportDataSource = new ReportDataSource("dsTable_Rport", tbill);
+                //reportViewer1.LocalReport.DataSources.Clear();
+                //reportViewer1.LocalReport.DataSources.Add(reportDataSource);
 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        
         private void btMinimam_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -45,7 +64,7 @@ namespace ProjectCoffee
 
         private void pnlTaskBar_MouseDown(object sender, MouseEventArgs e)
         {
-            mouse = false;
+            mouse = true;
             mouX = e.X;
             mouY = e.Y;
         }
@@ -56,6 +75,12 @@ namespace ProjectCoffee
             {
                 this.SetDesktopLocation(MousePosition.X - mouX, MousePosition.Y - mouY);
             }
+        }
+
+        private void frmPrintBill_Load(object sender, EventArgs e)
+        {
+            this.tbBillBindingSource.DataSource = tbill;
+            this.reportViewer1.RefreshReport();
         }
 
         private void pnlTaskBar_MouseUp(object sender, MouseEventArgs e)

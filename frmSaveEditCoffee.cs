@@ -36,6 +36,8 @@ namespace ProjectCoffee
         string path = "";
         public bool edit = false;
         string unit_id, catg_id;
+        bool mouse = false;
+        int mouX = 0, mouY = 0;
 
         private void LoadCatg()
         {
@@ -87,6 +89,7 @@ namespace ProjectCoffee
         private void ClearData()
         {
             txtid.Clear();
+            txtid.Enabled=true;
             txtname.Clear();
             txtImprice.Clear();
             txtSaleprice.Clear();
@@ -158,6 +161,36 @@ namespace ProjectCoffee
         private void btCancel_Click(object sender, EventArgs e)
         {
             ClearData();
+        }
+
+        private void btMinimam_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pnlTaskBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouse = true;
+            mouX = e.X;
+            mouY = e.Y;
+        }
+
+        private void pnlTaskBar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouse == true)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouX, MousePosition.Y - mouY);
+            }
+        }
+
+        private void pnlTaskBar_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouse = false;
         }
 
         private void cbCatg_SelectedIndexChanged(object sender, EventArgs e)
