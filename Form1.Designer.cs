@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI.Animation.Animation animation3 = new Guna.UI.Animation.Animation();
+            Guna.UI.Animation.Animation animation14 = new Guna.UI.Animation.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnlManu = new System.Windows.Forms.Panel();
+            this.lbCom_Name = new System.Windows.Forms.Label();
             this.btAnimate = new Guna.UI.WinForms.GunaButton();
             this.line2 = new Guna.UI.WinForms.GunaSeparator();
             this.line1 = new Guna.UI.WinForms.GunaSeparator();
@@ -42,11 +43,11 @@
             this.btCoff = new System.Windows.Forms.Button();
             this.btStaff = new System.Windows.Forms.Button();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.lbCom_Name = new System.Windows.Forms.Label();
             this.pnDesktop = new System.Windows.Forms.Panel();
             this.pnlTaskBar = new Guna.UI.WinForms.GunaLinePanel();
             this.Maximam = new Guna.UI.WinForms.GunaButton();
             this.btClose = new Guna.UI.WinForms.GunaButton();
+            this.btLogout = new Guna.UI.WinForms.GunaButton();
             this.btMinimam = new Guna.UI.WinForms.GunaButton();
             this.gunaElipseForm = new Guna.UI.WinForms.GunaElipse(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -54,7 +55,6 @@
             this.gunaResize1 = new Guna.UI.WinForms.GunaResize(this.components);
             this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
             this.AnimatedMenu = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
-            this.btLogout = new Guna.UI.WinForms.GunaButton();
             this.pnlManu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.pnlTaskBar.SuspendLayout();
@@ -62,7 +62,10 @@
             // 
             // pnlManu
             // 
+            this.pnlManu.AutoScroll = true;
+            this.pnlManu.AutoScrollMinSize = new System.Drawing.Size(0, 45);
             this.pnlManu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.pnlManu.Controls.Add(this.lbCom_Name);
             this.pnlManu.Controls.Add(this.btAnimate);
             this.pnlManu.Controls.Add(this.line2);
             this.pnlManu.Controls.Add(this.line1);
@@ -73,7 +76,6 @@
             this.pnlManu.Controls.Add(this.btCoff);
             this.pnlManu.Controls.Add(this.btStaff);
             this.pnlManu.Controls.Add(this.gunaCirclePictureBox1);
-            this.pnlManu.Controls.Add(this.lbCom_Name);
             this.gunaTransition1.SetDecoration(this.pnlManu, Guna.UI.Animation.DecorationType.None);
             this.pnlManu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlManu.ForeColor = System.Drawing.Color.White;
@@ -81,6 +83,18 @@
             this.pnlManu.Name = "pnlManu";
             this.pnlManu.Size = new System.Drawing.Size(221, 605);
             this.pnlManu.TabIndex = 0;
+            // 
+            // lbCom_Name
+            // 
+            this.lbCom_Name.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbCom_Name.AutoSize = true;
+            this.gunaTransition1.SetDecoration(this.lbCom_Name, Guna.UI.Animation.DecorationType.None);
+            this.lbCom_Name.Font = new System.Drawing.Font("Alice5 95", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCom_Name.Location = new System.Drawing.Point(25, 68);
+            this.lbCom_Name.Name = "lbCom_Name";
+            this.lbCom_Name.Size = new System.Drawing.Size(176, 34);
+            this.lbCom_Name.TabIndex = 0;
+            this.lbCom_Name.Text = "Cafe Of My Dream";
             // 
             // btAnimate
             // 
@@ -97,7 +111,7 @@
             this.btAnimate.ForeColor = System.Drawing.Color.White;
             this.btAnimate.Image = global::ProjectCoffee.Properties.Resources.menu_vertical1;
             this.btAnimate.ImageSize = new System.Drawing.Size(30, 30);
-            this.btAnimate.Location = new System.Drawing.Point(3, 79);
+            this.btAnimate.Location = new System.Drawing.Point(3, 115);
             this.btAnimate.Name = "btAnimate";
             this.btAnimate.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(79)))), ((int)(((byte)(106)))));
             this.btAnimate.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -116,7 +130,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaTransition1.SetDecoration(this.line2, Guna.UI.Animation.DecorationType.None);
             this.line2.LineColor = System.Drawing.Color.Silver;
-            this.line2.Location = new System.Drawing.Point(2, 126);
+            this.line2.Location = new System.Drawing.Point(2, 162);
             this.line2.Name = "line2";
             this.line2.Size = new System.Drawing.Size(222, 10);
             this.line2.TabIndex = 3;
@@ -127,7 +141,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaTransition1.SetDecoration(this.line1, Guna.UI.Animation.DecorationType.None);
             this.line1.LineColor = System.Drawing.Color.Silver;
-            this.line1.Location = new System.Drawing.Point(2, 66);
+            this.line1.Location = new System.Drawing.Point(2, 102);
             this.line1.Name = "line1";
             this.line1.Size = new System.Drawing.Size(222, 10);
             this.line1.TabIndex = 3;
@@ -141,7 +155,7 @@
             this.btReport.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btReport.Image = global::ProjectCoffee.Properties.Resources.report;
             this.btReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btReport.Location = new System.Drawing.Point(4, 467);
+            this.btReport.Location = new System.Drawing.Point(4, 503);
             this.btReport.Name = "btReport";
             this.btReport.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btReport.Size = new System.Drawing.Size(217, 55);
@@ -162,7 +176,7 @@
             this.btSale.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSale.Image = global::ProjectCoffee.Properties.Resources.sale_30px;
             this.btSale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSale.Location = new System.Drawing.Point(4, 402);
+            this.btSale.Location = new System.Drawing.Point(4, 438);
             this.btSale.Name = "btSale";
             this.btSale.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btSale.Size = new System.Drawing.Size(217, 55);
@@ -183,7 +197,7 @@
             this.btCatg.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCatg.Image = global::ProjectCoffee.Properties.Resources.icons8_sugar_cube_30;
             this.btCatg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCatg.Location = new System.Drawing.Point(4, 337);
+            this.btCatg.Location = new System.Drawing.Point(4, 373);
             this.btCatg.Name = "btCatg";
             this.btCatg.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btCatg.Size = new System.Drawing.Size(217, 55);
@@ -204,7 +218,7 @@
             this.btUnit.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btUnit.Image = ((System.Drawing.Image)(resources.GetObject("btUnit.Image")));
             this.btUnit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btUnit.Location = new System.Drawing.Point(4, 272);
+            this.btUnit.Location = new System.Drawing.Point(4, 308);
             this.btUnit.Name = "btUnit";
             this.btUnit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btUnit.Size = new System.Drawing.Size(217, 55);
@@ -225,7 +239,7 @@
             this.btCoff.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCoff.Image = global::ProjectCoffee.Properties.Resources.icons8_tableware_30;
             this.btCoff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCoff.Location = new System.Drawing.Point(4, 207);
+            this.btCoff.Location = new System.Drawing.Point(4, 243);
             this.btCoff.Name = "btCoff";
             this.btCoff.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btCoff.Size = new System.Drawing.Size(217, 55);
@@ -246,7 +260,7 @@
             this.btStaff.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btStaff.Image = ((System.Drawing.Image)(resources.GetObject("btStaff.Image")));
             this.btStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btStaff.Location = new System.Drawing.Point(4, 142);
+            this.btStaff.Location = new System.Drawing.Point(4, 178);
             this.btStaff.Name = "btStaff";
             this.btStaff.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btStaff.Size = new System.Drawing.Size(217, 55);
@@ -260,27 +274,17 @@
             // 
             // gunaCirclePictureBox1
             // 
+            this.gunaCirclePictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaTransition1.SetDecoration(this.gunaCirclePictureBox1, Guna.UI.Animation.DecorationType.None);
             this.gunaCirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaCirclePictureBox1.Image")));
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(1, 7);
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(80, 5);
             this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(66, 60);
             this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaCirclePictureBox1.TabIndex = 1;
             this.gunaCirclePictureBox1.TabStop = false;
             this.gunaCirclePictureBox1.UseTransfarantBackground = false;
-            // 
-            // lbCom_Name
-            // 
-            this.lbCom_Name.AutoSize = true;
-            this.gunaTransition1.SetDecoration(this.lbCom_Name, Guna.UI.Animation.DecorationType.None);
-            this.lbCom_Name.Font = new System.Drawing.Font("Alice5 95", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCom_Name.Location = new System.Drawing.Point(62, 22);
-            this.lbCom_Name.Name = "lbCom_Name";
-            this.lbCom_Name.Size = new System.Drawing.Size(158, 31);
-            this.lbCom_Name.TabIndex = 0;
-            this.lbCom_Name.Text = "Cafe Of My Dream";
             // 
             // pnDesktop
             // 
@@ -371,6 +375,35 @@
             this.toolTip1.SetToolTip(this.btClose, "Close");
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
+            // btLogout
+            // 
+            this.btLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLogout.AnimationHoverSpeed = 0.07F;
+            this.btLogout.AnimationSpeed = 0.03F;
+            this.btLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btLogout.BaseColor = System.Drawing.Color.Transparent;
+            this.btLogout.BorderColor = System.Drawing.Color.Black;
+            this.gunaTransition1.SetDecoration(this.btLogout, Guna.UI.Animation.DecorationType.None);
+            this.btLogout.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btLogout.FocusedColor = System.Drawing.Color.Empty;
+            this.btLogout.Font = new System.Drawing.Font("Lao_SomPong", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLogout.ForeColor = System.Drawing.Color.White;
+            this.btLogout.Image = global::ProjectCoffee.Properties.Resources.minus;
+            this.btLogout.ImageSize = new System.Drawing.Size(20, 20);
+            this.btLogout.Location = new System.Drawing.Point(6, 4);
+            this.btLogout.Name = "btLogout";
+            this.btLogout.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(79)))), ((int)(((byte)(106)))));
+            this.btLogout.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btLogout.OnHoverForeColor = System.Drawing.Color.White;
+            this.btLogout.OnHoverImage = null;
+            this.btLogout.OnPressedColor = System.Drawing.Color.Black;
+            this.btLogout.Radius = 4;
+            this.btLogout.Size = new System.Drawing.Size(96, 25);
+            this.btLogout.TabIndex = 15;
+            this.btLogout.Text = "Log out";
+            this.toolTip1.SetToolTip(this.btLogout, "Log out");
+            this.btLogout.Click += new System.EventHandler(this.btLogout_Click);
+            // 
             // btMinimam
             // 
             this.btMinimam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -417,56 +450,28 @@
             // 
             this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.Scale;
             this.gunaTransition1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.gunaTransition1.DefaultAnimation = animation3;
+            animation14.AnimateOnlyDifferences = true;
+            animation14.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation14.BlindCoeff")));
+            animation14.LeafCoeff = 0F;
+            animation14.MaxTime = 1F;
+            animation14.MinTime = 0F;
+            animation14.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation14.MosaicCoeff")));
+            animation14.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation14.MosaicShift")));
+            animation14.MosaicSize = 0;
+            animation14.Padding = new System.Windows.Forms.Padding(0);
+            animation14.RotateCoeff = 0F;
+            animation14.RotateLimit = 0F;
+            animation14.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation14.ScaleCoeff")));
+            animation14.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation14.SlideCoeff")));
+            animation14.TimeCoeff = 0F;
+            animation14.TransparencyCoeff = 0F;
+            this.gunaTransition1.DefaultAnimation = animation14;
             // 
             // AnimatedMenu
             // 
             this.AnimatedMenu.AnimationType = Guna.UI.WinForms.GunaAnimateWindow.AnimateWindowType.AW_CENTER;
             this.AnimatedMenu.Interval = 200;
             this.AnimatedMenu.TargetControl = this;
-            // 
-            // btLogout
-            // 
-            this.btLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btLogout.AnimationHoverSpeed = 0.07F;
-            this.btLogout.AnimationSpeed = 0.03F;
-            this.btLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btLogout.BaseColor = System.Drawing.Color.Transparent;
-            this.btLogout.BorderColor = System.Drawing.Color.Black;
-            this.gunaTransition1.SetDecoration(this.btLogout, Guna.UI.Animation.DecorationType.None);
-            this.btLogout.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btLogout.FocusedColor = System.Drawing.Color.Empty;
-            this.btLogout.Font = new System.Drawing.Font("Lao_SomPong", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogout.ForeColor = System.Drawing.Color.White;
-            this.btLogout.Image = global::ProjectCoffee.Properties.Resources.minus;
-            this.btLogout.ImageSize = new System.Drawing.Size(20, 20);
-            this.btLogout.Location = new System.Drawing.Point(6, 4);
-            this.btLogout.Name = "btLogout";
-            this.btLogout.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(79)))), ((int)(((byte)(106)))));
-            this.btLogout.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btLogout.OnHoverForeColor = System.Drawing.Color.White;
-            this.btLogout.OnHoverImage = null;
-            this.btLogout.OnPressedColor = System.Drawing.Color.Black;
-            this.btLogout.Radius = 4;
-            this.btLogout.Size = new System.Drawing.Size(96, 25);
-            this.btLogout.TabIndex = 15;
-            this.btLogout.Text = "Log out";
-            this.toolTip1.SetToolTip(this.btLogout, "Log out");
             // 
             // Form1
             // 
@@ -479,6 +484,7 @@
             this.gunaTransition1.SetDecoration(this, Guna.UI.Animation.DecorationType.None);
             this.Font = new System.Drawing.Font("Alice5 95", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

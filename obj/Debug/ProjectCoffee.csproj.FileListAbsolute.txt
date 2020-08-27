@@ -1,7 +1,6 @@
 D:\Cshart3cs2\ProjectCoffee\bin\Debug\ProjectCoffee.exe.config
 D:\Cshart3cs2\ProjectCoffee\bin\Debug\ProjectCoffee.exe
 D:\Cshart3cs2\ProjectCoffee\bin\Debug\ProjectCoffee.pdb
-D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.csprojAssemblyReference.cache
 D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.Form1.resources
 D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.Properties.Resources.resources
 D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.csproj.GenerateResource.cache
@@ -57,7 +56,6 @@ D:\Cshart3cs2\ProjectCoffee\bin\Debug\stdole.dll
 D:\Cshart3cs2\ProjectCoffee\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.frmReport_Sale.resources
 D:\Cshart3cs2\ProjectCoffee\bin\Debug\WinFormAnimation.dll
-D:\Cshart3cs2\ProjectCoffee\bin\Debug\Message.dll
 D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.frmPrintBill.resources
 D:\Cshart3cs2\ProjectCoffee\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 D:\Cshart3cs2\ProjectCoffee\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
@@ -121,3 +119,5 @@ D:\Cshart3cs2\ProjectCoffee\obj\Debug\RdlCompile.compiled
 D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.frmCancaletor.resources
 D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.frmLogin.resources
 D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.frmNewUser.resources
+D:\Cshart3cs2\ProjectCoffee\bin\Debug\Message.dll
+D:\Cshart3cs2\ProjectCoffee\obj\Debug\ProjectCoffee.csprojAssemblyReference.cache

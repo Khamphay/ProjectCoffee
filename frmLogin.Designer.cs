@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.pnlTaskBar = new Guna.UI.WinForms.GunaLinePanel();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btClose = new Guna.UI.WinForms.GunaButton();
             this.btMinimam = new Guna.UI.WinForms.GunaButton();
@@ -51,6 +52,7 @@
             this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaCirclePictureBox3 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.pnlTaskBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTweeter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInstragram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIatam)).BeginInit();
@@ -67,6 +69,7 @@
             // pnlTaskBar
             // 
             this.pnlTaskBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.pnlTaskBar.Controls.Add(this.gunaPictureBox1);
             this.pnlTaskBar.Controls.Add(this.label4);
             this.pnlTaskBar.Controls.Add(this.btClose);
             this.pnlTaskBar.Controls.Add(this.btMinimam);
@@ -81,11 +84,22 @@
             this.pnlTaskBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTaskBar_MouseMove);
             this.pnlTaskBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlTaskBar_MouseUp);
             // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
+            this.gunaPictureBox1.Location = new System.Drawing.Point(4, 1);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox1.TabIndex = 18;
+            this.gunaPictureBox1.TabStop = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 1);
+            this.label4.Location = new System.Drawing.Point(42, 2);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 28);
             this.label4.TabIndex = 19;
@@ -294,7 +308,7 @@
             // btLogin
             // 
             this.btLogin.Font = new System.Drawing.Font("Lao_SomPong", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogin.Location = new System.Drawing.Point(143, 334);
+            this.btLogin.Location = new System.Drawing.Point(133, 341);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(75, 38);
             this.btLogin.TabIndex = 3;
@@ -305,18 +319,19 @@
             // btCancel
             // 
             this.btCancel.Font = new System.Drawing.Font("Lao_SomPong", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCancel.Location = new System.Drawing.Point(259, 334);
+            this.btCancel.Location = new System.Drawing.Point(243, 341);
             this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(75, 38);
+            this.btCancel.Size = new System.Drawing.Size(91, 38);
             this.btCancel.TabIndex = 4;
             this.btCancel.Text = "Cancel";
             this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // gunaCirclePictureBox2
             // 
             this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaCirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaCirclePictureBox2.Image")));
-            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(77, 191);
+            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(76, 191);
             this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
             this.gunaCirclePictureBox2.Size = new System.Drawing.Size(36, 36);
             this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -328,7 +343,7 @@
             // 
             this.gunaCirclePictureBox3.BaseColor = System.Drawing.Color.White;
             this.gunaCirclePictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("gunaCirclePictureBox3.Image")));
-            this.gunaCirclePictureBox3.Location = new System.Drawing.Point(77, 279);
+            this.gunaCirclePictureBox3.Location = new System.Drawing.Point(76, 279);
             this.gunaCirclePictureBox3.Name = "gunaCirclePictureBox3";
             this.gunaCirclePictureBox3.Size = new System.Drawing.Size(36, 36);
             this.gunaCirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -359,11 +374,13 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.pnlTaskBar.ResumeLayout(false);
             this.pnlTaskBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTweeter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInstragram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIatam)).EndInit();
@@ -398,5 +415,6 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox2;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox3;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }

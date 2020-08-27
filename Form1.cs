@@ -12,6 +12,7 @@ using Guna.UI.WinForms;
 using Guna.UI.Animation;
 using Microsoft.VisualBasic.Devices;
 using Message;
+using Microsoft.VisualBasic.Logging;
 
 namespace ProjectCoffee
 {
@@ -93,17 +94,17 @@ namespace ProjectCoffee
                 pnlManu.Width += 40;
                 if (pnlManu.Width >= 221)
                 {
-                    btStaff.Size = new Size(221, 55);
-                    btCatg.Size = new Size(221, 55);
-                    btCoff.Size = new Size(221, 55);
-                    btUnit.Size = new Size(221, 55);
-                    btSale.Size = new Size(221, 55);
-                    btReport.Size = new Size(221, 55);
-                    btAnimate.Size = new Size(215, 45);
-                    line1.Width = 222;
-                    line2.Width = 222;
+                    btStaff.Size = new Size(pnlManu.Width - 5, 55);
+                    btCatg.Size = new Size(pnlManu.Width - 5, 55);
+                    btCoff.Size = new Size(pnlManu.Width - 5, 55);
+                    btUnit.Size = new Size(pnlManu.Width - 5, 55);
+                    btSale.Size = new Size(pnlManu.Width - 5, 55);
+                    btReport.Size = new Size(pnlManu.Width - 5, 55);
+                    btAnimate.Size = new Size(pnlManu.Width - 5, 45);
+                    line1.Width = pnlManu.Width - 5;
+                    line2.Width = pnlManu.Width - 5;
+                    lbCom_Name.Visible = true;
 
-                    lbCom_Name.Size = new Size(0, 31);
                     btStaff.Text = "Employee";
                     btCatg.Text = "Category";
                     btCoff.Text = "Coffee";
@@ -119,9 +120,8 @@ namespace ProjectCoffee
             }
             else
             {
+                lbCom_Name.Visible = false;
                 btAnimate.Image = Properties.Resources.list1;
-
-                
 
                 pnlManu.Width -= 40;
                 if (pnlManu.Width <= 61)
@@ -142,11 +142,8 @@ namespace ProjectCoffee
                     btReport.Size = new Size(55, 55);
                     btAnimate.Size = new Size(55, 45);
 
-
                     line1.Width = 60;
                     line2.Width = 60;
-
-                    lbCom_Name.Size = new Size(158, 31);
 
                     timer1.Stop();
                     slider = false;
@@ -202,6 +199,13 @@ namespace ProjectCoffee
         private void Form1_Load(object sender, EventArgs e)
         {
             AnimatedMenu.Start();
+        }
+
+        private void btLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin login = new frmLogin();
+            login.Show();
         }
 
         //

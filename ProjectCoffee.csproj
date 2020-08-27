@@ -68,8 +68,7 @@
     <Reference Include="Guna.UI">
       <HintPath>..\CShard_3cs2_Lad_P2_Salary\CShard_3cs2_Lad_P2_Salary\bin\Debug\Guna.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Message, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Message">
       <HintPath>..\Message.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -116,31 +115,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ceReport_Sale.cs">
+    <Compile Include="Report\ceReport_Sale.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ceReport_Sale.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crReportByYear.cs">
+    <Compile Include="Report\crReportByYear.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crReportByYear.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crReport_PerDay.cs">
+    <Compile Include="Report\crReport_PerDay.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crReport_PerDay.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crReport_PerMonth.cs">
+    <Compile Include="Report\crReport_PerMonth.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crReport_PerMonth.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crReprotByDateToDate.cs">
+    <Compile Include="Report\crReprotByDateToDate.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crReprotByDateToDate.rpt</DependentUpon>
@@ -160,28 +159,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCancaletor.cs">
+    <Compile Include="FormSale\frmCancaletor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCancaletor.Designer.cs">
+    <Compile Include="FormSale\frmCancaletor.Designer.cs">
       <DependentUpon>frmCancaletor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCategory.cs">
+    <Compile Include="FormMamage\frmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCategory.Designer.cs">
+    <Compile Include="FormMamage\frmCategory.Designer.cs">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCoffee.cs">
+    <Compile Include="FormMamage\frmCoffee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCoffee.Designer.cs">
+    <Compile Include="FormMamage\frmCoffee.Designer.cs">
       <DependentUpon>frmCoffee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomerPage.cs">
+    <Compile Include="FormSale\frmCustomerPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomerPage.Designer.cs">
+    <Compile Include="FormSale\frmCustomerPage.Designer.cs">
       <DependentUpon>frmCustomerPage.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
@@ -190,70 +189,70 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewUser.cs">
+    <Compile Include="FormEdit\frmNewUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewUser.Designer.cs">
+    <Compile Include="FormEdit\frmNewUser.Designer.cs">
       <DependentUpon>frmNewUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrintBill.cs">
+    <Compile Include="Report\frmPrintBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrintBill.Designer.cs">
+    <Compile Include="Report\frmPrintBill.Designer.cs">
       <DependentUpon>frmPrintBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReport_Sale.cs">
+    <Compile Include="Report\frmReport_Sale.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReport_Sale.Designer.cs">
+    <Compile Include="Report\frmReport_Sale.Designer.cs">
       <DependentUpon>frmReport_Sale.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSaveEditCategory.cs">
+    <Compile Include="FormEdit\frmSaveEditCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSaveEditCategory.Designer.cs">
+    <Compile Include="FormEdit\frmSaveEditCategory.Designer.cs">
       <DependentUpon>frmSaveEditCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSaveEditCoffee.cs">
+    <Compile Include="FormEdit\frmSaveEditCoffee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSaveEditCoffee.Designer.cs">
+    <Compile Include="FormEdit\frmSaveEditCoffee.Designer.cs">
       <DependentUpon>frmSaveEditCoffee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSaveEditStaff.cs">
+    <Compile Include="FormEdit\frmSaveEditStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSaveEditStaff.Designer.cs">
+    <Compile Include="FormEdit\frmSaveEditStaff.Designer.cs">
       <DependentUpon>frmSaveEditStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSaveEditUnit.cs">
+    <Compile Include="FormEdit\frmSaveEditUnit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSaveEditUnit.Designer.cs">
+    <Compile Include="FormEdit\frmSaveEditUnit.Designer.cs">
       <DependentUpon>frmSaveEditUnit.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStaff.cs">
+    <Compile Include="FormMamage\frmStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStaff.Designer.cs">
+    <Compile Include="FormMamage\frmStaff.Designer.cs">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStaff_Page.cs">
+    <Compile Include="FormSale\frmStaff_Page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStaff_Page.Designer.cs">
+    <Compile Include="FormSale\frmStaff_Page.Designer.cs">
       <DependentUpon>frmStaff_Page.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUnit.cs">
+    <Compile Include="FormMamage\frmUnit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUnit.Designer.cs">
+    <Compile Include="FormMamage\frmUnit.Designer.cs">
       <DependentUpon>frmUnit.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomePage.cs">
+    <Compile Include="FormMamage\HomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HomePage.Designer.cs">
+    <Compile Include="FormMamage\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="MyConnect.cs" />
@@ -262,75 +261,75 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="ceReport_Sale.rpt">
+    <EmbeddedResource Include="Report\ceReport_Sale.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ceReport_Sale.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="crReportByYear.rpt">
+    <EmbeddedResource Include="Report\crReportByYear.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crReportByYear.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="crReport_PerDay.rpt">
+    <EmbeddedResource Include="Report\crReport_PerDay.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crReport_PerDay.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="crReport_PerMonth.rpt">
+    <EmbeddedResource Include="Report\crReport_PerMonth.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crReport_PerMonth.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="crReprotByDateToDate.rpt">
+    <EmbeddedResource Include="Report\crReprotByDateToDate.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crReprotByDateToDate.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCancaletor.resx">
+    <EmbeddedResource Include="FormSale\frmCancaletor.resx">
       <DependentUpon>frmCancaletor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCategory.resx">
+    <EmbeddedResource Include="FormMamage\frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCoffee.resx">
+    <EmbeddedResource Include="FormMamage\frmCoffee.resx">
       <DependentUpon>frmCoffee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomerPage.resx">
+    <EmbeddedResource Include="FormSale\frmCustomerPage.resx">
       <DependentUpon>frmCustomerPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewUser.resx">
+    <EmbeddedResource Include="FormEdit\frmNewUser.resx">
       <DependentUpon>frmNewUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrintBill.resx">
+    <EmbeddedResource Include="Report\frmPrintBill.resx">
       <DependentUpon>frmPrintBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReport_Sale.resx">
+    <EmbeddedResource Include="Report\frmReport_Sale.resx">
       <DependentUpon>frmReport_Sale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSaveEditCategory.resx">
+    <EmbeddedResource Include="FormEdit\frmSaveEditCategory.resx">
       <DependentUpon>frmSaveEditCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSaveEditCoffee.resx">
+    <EmbeddedResource Include="FormEdit\frmSaveEditCoffee.resx">
       <DependentUpon>frmSaveEditCoffee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSaveEditStaff.resx">
+    <EmbeddedResource Include="FormEdit\frmSaveEditStaff.resx">
       <DependentUpon>frmSaveEditStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSaveEditUnit.resx">
+    <EmbeddedResource Include="FormEdit\frmSaveEditUnit.resx">
       <DependentUpon>frmSaveEditUnit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStaff.resx">
+    <EmbeddedResource Include="FormMamage\frmStaff.resx">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStaff_Page.resx">
+    <EmbeddedResource Include="FormSale\frmStaff_Page.resx">
       <DependentUpon>frmStaff_Page.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUnit.resx">
+    <EmbeddedResource Include="FormMamage\frmUnit.resx">
       <DependentUpon>frmUnit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomePage.resx">
+    <EmbeddedResource Include="FormMamage\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -343,7 +342,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="rdBillSale.rdlc" />
+    <EmbeddedResource Include="Report\rdBillSale.rdlc" />
     <None Include="dsTable_Rport.xsc">
       <DependentUpon>dsTable_Rport.xsd</DependentUpon>
     </None>
