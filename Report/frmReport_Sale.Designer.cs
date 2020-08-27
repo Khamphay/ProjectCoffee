@@ -62,6 +62,7 @@
             this.panel1.Controls.Add(this.Report);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 32);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(304, 605);
             this.panel1.TabIndex = 0;
@@ -88,6 +89,7 @@
             this.gunaGroupBox1.LineRight = 1;
             this.gunaGroupBox1.LineTop = 1;
             this.gunaGroupBox1.Location = new System.Drawing.Point(0, 0);
+            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Radius = 2;
             this.gunaGroupBox1.Size = new System.Drawing.Size(295, 605);
@@ -98,6 +100,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(92, 480);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(74, 40);
             this.button1.TabIndex = 3;
@@ -111,7 +114,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 268);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 28);
+            this.label2.Size = new System.Drawing.Size(82, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "ວັນທີເລີ່ມຕົ້ນ";
             // 
@@ -120,7 +123,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(14, 360);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 28);
+            this.label1.Size = new System.Drawing.Size(75, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "ວັນທີ່ສິນສຸດ";
             // 
@@ -137,6 +140,7 @@
             this.dEnd.ForeColor = System.Drawing.Color.Black;
             this.dEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dEnd.Location = new System.Drawing.Point(14, 391);
+            this.dEnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dEnd.Name = "dEnd";
@@ -146,7 +150,7 @@
             this.dEnd.OnPressedColor = System.Drawing.Color.Black;
             this.dEnd.OnPressedDepth = 3;
             this.dEnd.Radius = 2;
-            this.dEnd.Size = new System.Drawing.Size(267, 36);
+            this.dEnd.Size = new System.Drawing.Size(267, 37);
             this.dEnd.TabIndex = 1;
             this.dEnd.Text = "10-08-2020";
             this.dEnd.Value = new System.DateTime(2020, 8, 10, 0, 0, 0, 0);
@@ -164,6 +168,7 @@
             this.dSt.ForeColor = System.Drawing.Color.Black;
             this.dSt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dSt.Location = new System.Drawing.Point(14, 299);
+            this.dSt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dSt.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dSt.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dSt.Name = "dSt";
@@ -173,7 +178,7 @@
             this.dSt.OnPressedColor = System.Drawing.Color.Black;
             this.dSt.OnPressedDepth = 3;
             this.dSt.Radius = 2;
-            this.dSt.Size = new System.Drawing.Size(267, 36);
+            this.dSt.Size = new System.Drawing.Size(267, 37);
             this.dSt.TabIndex = 1;
             this.dSt.Text = "10-08-2020";
             this.dSt.Value = new System.DateTime(2020, 8, 10, 0, 0, 0, 0);
@@ -185,8 +190,9 @@
             this.rdbReportDate.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.rdbReportDate.FillColor = System.Drawing.Color.White;
             this.rdbReportDate.Location = new System.Drawing.Point(46, 77);
+            this.rdbReportDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbReportDate.Name = "rdbReportDate";
-            this.rdbReportDate.Size = new System.Drawing.Size(104, 20);
+            this.rdbReportDate.Size = new System.Drawing.Size(131, 28);
             this.rdbReportDate.TabIndex = 0;
             this.rdbReportDate.Text = "ລາຍງານປະຈຳວັນ";
             this.rdbReportDate.CheckedChanged += new System.EventHandler(this.rdbReportDate_CheckedChanged);
@@ -197,9 +203,10 @@
             this.rdbReportMonth.CheckedOffColor = System.Drawing.Color.Black;
             this.rdbReportMonth.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.rdbReportMonth.FillColor = System.Drawing.Color.White;
-            this.rdbReportMonth.Location = new System.Drawing.Point(46, 120);
+            this.rdbReportMonth.Location = new System.Drawing.Point(46, 121);
+            this.rdbReportMonth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbReportMonth.Name = "rdbReportMonth";
-            this.rdbReportMonth.Size = new System.Drawing.Size(111, 20);
+            this.rdbReportMonth.Size = new System.Drawing.Size(137, 28);
             this.rdbReportMonth.TabIndex = 0;
             this.rdbReportMonth.Text = "ລາຍງານເປັນເດືອນ";
             this.rdbReportMonth.CheckedChanged += new System.EventHandler(this.rdbReportMonth_CheckedChanged);
@@ -211,8 +218,9 @@
             this.rdbReportThisYear.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.rdbReportThisYear.FillColor = System.Drawing.Color.White;
             this.rdbReportThisYear.Location = new System.Drawing.Point(46, 164);
+            this.rdbReportThisYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbReportThisYear.Name = "rdbReportThisYear";
-            this.rdbReportThisYear.Size = new System.Drawing.Size(93, 20);
+            this.rdbReportThisYear.Size = new System.Drawing.Size(112, 28);
             this.rdbReportThisYear.TabIndex = 0;
             this.rdbReportThisYear.Text = "ລາຍງານເປັນປີ";
             this.rdbReportThisYear.CheckedChanged += new System.EventHandler(this.rdbReportThisYear_CheckedChanged);
@@ -225,8 +233,9 @@
             this.rdbReportAll.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.rdbReportAll.FillColor = System.Drawing.Color.White;
             this.rdbReportAll.Location = new System.Drawing.Point(46, 208);
+            this.rdbReportAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbReportAll.Name = "rdbReportAll";
-            this.rdbReportAll.Size = new System.Drawing.Size(99, 20);
+            this.rdbReportAll.Size = new System.Drawing.Size(120, 28);
             this.rdbReportAll.TabIndex = 0;
             this.rdbReportAll.Text = "ລາຍງານທັງໝົດ";
             this.rdbReportAll.CheckedChanged += new System.EventHandler(this.rdbReportAll_CheckedChanged);
@@ -248,6 +257,7 @@
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(304, 32);
+            this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.Size = new System.Drawing.Size(896, 605);
             this.crystalReportViewer1.TabIndex = 1;
@@ -268,6 +278,7 @@
             this.pnlTaskBar.LineColor = System.Drawing.Color.Black;
             this.pnlTaskBar.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.pnlTaskBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlTaskBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTaskBar.Name = "pnlTaskBar";
             this.pnlTaskBar.Size = new System.Drawing.Size(1200, 32);
             this.pnlTaskBar.TabIndex = 13;
@@ -281,7 +292,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 28);
+            this.label4.Size = new System.Drawing.Size(106, 23);
             this.label4.TabIndex = 20;
             this.label4.Text = "Report saling";
             // 
@@ -301,6 +312,7 @@
             this.Maximam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Maximam.ImageSize = new System.Drawing.Size(23, 23);
             this.Maximam.Location = new System.Drawing.Point(1127, 4);
+            this.Maximam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Maximam.Name = "Maximam";
             this.Maximam.OnHoverBaseColor = System.Drawing.Color.White;
             this.Maximam.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -308,7 +320,7 @@
             this.Maximam.OnHoverImage = null;
             this.Maximam.OnPressedColor = System.Drawing.Color.Black;
             this.Maximam.Radius = 4;
-            this.Maximam.Size = new System.Drawing.Size(25, 25);
+            this.Maximam.Size = new System.Drawing.Size(25, 26);
             this.Maximam.TabIndex = 15;
             this.toolTip1.SetToolTip(this.Maximam, "Maximize");
             this.Maximam.Click += new System.EventHandler(this.Maximam_Click);
@@ -329,6 +341,7 @@
             this.btClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btClose.ImageSize = new System.Drawing.Size(20, 20);
             this.btClose.Location = new System.Drawing.Point(1168, 4);
+            this.btClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btClose.Name = "btClose";
             this.btClose.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btClose.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -336,7 +349,7 @@
             this.btClose.OnHoverImage = null;
             this.btClose.OnPressedColor = System.Drawing.Color.Black;
             this.btClose.Radius = 4;
-            this.btClose.Size = new System.Drawing.Size(25, 25);
+            this.btClose.Size = new System.Drawing.Size(25, 26);
             this.btClose.TabIndex = 15;
             this.toolTip1.SetToolTip(this.btClose, "Close");
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
@@ -357,6 +370,7 @@
             this.btMinimam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btMinimam.ImageSize = new System.Drawing.Size(20, 20);
             this.btMinimam.Location = new System.Drawing.Point(1086, 4);
+            this.btMinimam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btMinimam.Name = "btMinimam";
             this.btMinimam.OnHoverBaseColor = System.Drawing.Color.White;
             this.btMinimam.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -364,7 +378,7 @@
             this.btMinimam.OnHoverImage = null;
             this.btMinimam.OnPressedColor = System.Drawing.Color.Black;
             this.btMinimam.Radius = 4;
-            this.btMinimam.Size = new System.Drawing.Size(25, 25);
+            this.btMinimam.Size = new System.Drawing.Size(25, 26);
             this.btMinimam.TabIndex = 15;
             this.toolTip1.SetToolTip(this.btMinimam, "Minimize");
             this.btMinimam.Click += new System.EventHandler(this.btMinimam_Click);
@@ -377,14 +391,13 @@
             // 
             // frmReport_Sale
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 28F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(1200, 637);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTaskBar);
-            this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);

@@ -52,7 +52,7 @@ namespace ProjectCoffee
             label.TextAlign = ContentAlignment.MiddleCenter;
             label.Name = "lbNoData";
             label.Text = "ບໍ່ມີລາຍການທີ່ກຳລັງສັ່ງຊື້";
-            label.Font = new Font("Lao_Ketmany2", 16, FontStyle.Regular);
+           // label.Font = new Font("Lao_Ketmany2", 16, FontStyle.Regular);
             flPnl.Controls.Add(label);
         }
         //Close Cafe List Sale in FlowPanel
@@ -192,7 +192,7 @@ namespace ProjectCoffee
                     btCalculator.FlatStyle = FlatStyle.Flat;
                     btCalculator.FlatAppearance.BorderSize = 1;
                     btCalculator.Location = new Point(21, 42);
-                    btCalculator.Size = new Size(84, 39);
+                    btCalculator.Size = new Size(88, 39);
                     btCalculator.Text = "ຄິດໄລ່";
                     btCalculator.Image = Properties.Resources.calculator;
                     btCalculator.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -207,7 +207,7 @@ namespace ProjectCoffee
                     btSave.FlatStyle = FlatStyle.Flat;
                     btSave.FlatAppearance.BorderSize = 1;
                     btSave.Location = new Point(21, 92);
-                    btSave.Size = new Size(84, 39);
+                    btSave.Size = new Size(88, 39);
                     btSave.Text = "ບັນທືກ";
                     btSave.Image = Properties.Resources.save;
                     btSave.TextImageRelation = TextImageRelation.ImageBeforeText;

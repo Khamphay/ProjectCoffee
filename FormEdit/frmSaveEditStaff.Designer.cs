@@ -67,7 +67,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(27, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 28);
+            this.label1.Size = new System.Drawing.Size(47, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "ລະຫັດ";
             // 
@@ -75,7 +75,7 @@
             // 
             this.txtid.Location = new System.Drawing.Point(27, 81);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(184, 36);
+            this.txtid.Size = new System.Drawing.Size(184, 31);
             this.txtid.TabIndex = 0;
             this.txtid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
@@ -84,7 +84,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(27, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 28);
+            this.label2.Size = new System.Drawing.Size(77, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "ຊື່ພະນັກງານ";
             // 
@@ -92,7 +92,7 @@
             // 
             this.txtname.Location = new System.Drawing.Point(27, 159);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(184, 36);
+            this.txtname.Size = new System.Drawing.Size(184, 31);
             this.txtname.TabIndex = 1;
             this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
@@ -101,7 +101,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(27, 207);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 28);
+            this.label3.Size = new System.Drawing.Size(72, 23);
             this.label3.TabIndex = 0;
             this.label3.Text = "ນາມສະກຸນ";
             // 
@@ -109,7 +109,7 @@
             // 
             this.txtsurename.Location = new System.Drawing.Point(27, 238);
             this.txtsurename.Name = "txtsurename";
-            this.txtsurename.Size = new System.Drawing.Size(184, 36);
+            this.txtsurename.Size = new System.Drawing.Size(184, 31);
             this.txtsurename.TabIndex = 2;
             this.txtsurename.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
@@ -118,7 +118,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(459, 50);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 28);
+            this.label4.Size = new System.Drawing.Size(34, 23);
             this.label4.TabIndex = 0;
             this.label4.Text = "ບ້ານ";
             // 
@@ -126,7 +126,7 @@
             // 
             this.txtvill.Location = new System.Drawing.Point(459, 81);
             this.txtvill.Name = "txtvill";
-            this.txtvill.Size = new System.Drawing.Size(184, 36);
+            this.txtvill.Size = new System.Drawing.Size(184, 31);
             this.txtvill.TabIndex = 6;
             this.txtvill.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
@@ -135,7 +135,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(245, 50);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 28);
+            this.label5.Size = new System.Drawing.Size(42, 23);
             this.label5.TabIndex = 0;
             this.label5.Text = "ເບີໂທ";
             // 
@@ -143,7 +143,7 @@
             // 
             this.txttel.Location = new System.Drawing.Point(245, 81);
             this.txttel.Name = "txttel";
-            this.txttel.Size = new System.Drawing.Size(184, 36);
+            this.txttel.Size = new System.Drawing.Size(184, 31);
             this.txttel.TabIndex = 3;
             this.txttel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
@@ -152,7 +152,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(245, 128);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 28);
+            this.label6.Size = new System.Drawing.Size(78, 23);
             this.label6.TabIndex = 0;
             this.label6.Text = "ບັດປະຈຳຕົວ";
             // 
@@ -160,7 +160,7 @@
             // 
             this.txtcard.Location = new System.Drawing.Point(245, 159);
             this.txtcard.Name = "txtcard";
-            this.txtcard.Size = new System.Drawing.Size(184, 36);
+            this.txtcard.Size = new System.Drawing.Size(184, 31);
             this.txtcard.TabIndex = 4;
             this.txtcard.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
@@ -169,7 +169,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(245, 207);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 28);
+            this.label7.Size = new System.Drawing.Size(51, 23);
             this.label7.TabIndex = 0;
             this.label7.Text = "Email";
             // 
@@ -177,7 +177,7 @@
             // 
             this.txtemail.Location = new System.Drawing.Point(245, 238);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(184, 36);
+            this.txtemail.Size = new System.Drawing.Size(184, 31);
             this.txtemail.TabIndex = 5;
             this.txtemail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
@@ -186,7 +186,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(459, 128);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 28);
+            this.label8.Size = new System.Drawing.Size(41, 23);
             this.label8.TabIndex = 0;
             this.label8.Text = "ເມືອງ";
             // 
@@ -194,7 +194,7 @@
             // 
             this.txtdis.Location = new System.Drawing.Point(459, 159);
             this.txtdis.Name = "txtdis";
-            this.txtdis.Size = new System.Drawing.Size(184, 36);
+            this.txtdis.Size = new System.Drawing.Size(184, 31);
             this.txtdis.TabIndex = 7;
             this.txtdis.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
@@ -203,7 +203,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(459, 207);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(39, 28);
+            this.label9.Size = new System.Drawing.Size(43, 23);
             this.label9.TabIndex = 0;
             this.label9.Text = "ແຂວງ";
             // 
@@ -211,7 +211,7 @@
             // 
             this.txtpro.Location = new System.Drawing.Point(459, 238);
             this.txtpro.Name = "txtpro";
-            this.txtpro.Size = new System.Drawing.Size(184, 36);
+            this.txtpro.Size = new System.Drawing.Size(184, 31);
             this.txtpro.TabIndex = 8;
             // 
             // rdbFemale
@@ -219,7 +219,7 @@
             this.rdbFemale.AutoSize = true;
             this.rdbFemale.Location = new System.Drawing.Point(113, 28);
             this.rdbFemale.Name = "rdbFemale";
-            this.rdbFemale.Size = new System.Drawing.Size(43, 32);
+            this.rdbFemale.Size = new System.Drawing.Size(43, 27);
             this.rdbFemale.TabIndex = 3;
             this.rdbFemale.Text = "ຍິງ";
             this.rdbFemale.UseVisualStyleBackColor = true;
@@ -230,7 +230,7 @@
             this.rdbMale.Checked = true;
             this.rdbMale.Location = new System.Drawing.Point(36, 28);
             this.rdbMale.Name = "rdbMale";
-            this.rdbMale.Size = new System.Drawing.Size(49, 32);
+            this.rdbMale.Size = new System.Drawing.Size(52, 27);
             this.rdbMale.TabIndex = 3;
             this.rdbMale.TabStop = true;
             this.rdbMale.Text = "ຊາຍ";
@@ -281,7 +281,7 @@
             this.lbCaption.ForeColor = System.Drawing.Color.White;
             this.lbCaption.Location = new System.Drawing.Point(3, 4);
             this.lbCaption.Name = "lbCaption";
-            this.lbCaption.Size = new System.Drawing.Size(43, 28);
+            this.lbCaption.Size = new System.Drawing.Size(47, 23);
             this.lbCaption.TabIndex = 21;
             this.lbCaption.Text = "Save";
             // 
@@ -391,7 +391,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(680, 441);

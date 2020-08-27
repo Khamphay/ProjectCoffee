@@ -84,7 +84,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(258, 140);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 28);
+            this.label7.Size = new System.Drawing.Size(51, 23);
             this.label7.TabIndex = 5;
             this.label7.Text = "ປະເພດ";
             // 
@@ -93,7 +93,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(258, 62);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 28);
+            this.label6.Size = new System.Drawing.Size(62, 23);
             this.label6.TabIndex = 6;
             this.label6.Text = "ຫົວໜ່ວຍ";
             // 
@@ -101,7 +101,7 @@
             // 
             this.txtSaleprice.Location = new System.Drawing.Point(34, 314);
             this.txtSaleprice.Name = "txtSaleprice";
-            this.txtSaleprice.Size = new System.Drawing.Size(210, 36);
+            this.txtSaleprice.Size = new System.Drawing.Size(210, 31);
             this.txtSaleprice.TabIndex = 3;
             this.txtSaleprice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             this.txtSaleprice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImprice_KeyPress);
@@ -111,7 +111,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(34, 283);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 28);
+            this.label5.Size = new System.Drawing.Size(64, 23);
             this.label5.TabIndex = 7;
             this.label5.Text = "ລາຄາຂາຍ";
             // 
@@ -119,7 +119,7 @@
             // 
             this.txtImprice.Location = new System.Drawing.Point(34, 244);
             this.txtImprice.Name = "txtImprice";
-            this.txtImprice.Size = new System.Drawing.Size(210, 36);
+            this.txtImprice.Size = new System.Drawing.Size(210, 31);
             this.txtImprice.TabIndex = 2;
             this.txtImprice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             this.txtImprice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImprice_KeyPress);
@@ -129,7 +129,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(34, 213);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 28);
+            this.label3.Size = new System.Drawing.Size(75, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "ລາຄານຳເຂົ້າ";
             // 
@@ -137,7 +137,7 @@
             // 
             this.txtname.Location = new System.Drawing.Point(34, 171);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(210, 36);
+            this.txtname.Size = new System.Drawing.Size(210, 31);
             this.txtname.TabIndex = 1;
             this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
@@ -146,7 +146,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(34, 140);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 28);
+            this.label2.Size = new System.Drawing.Size(50, 23);
             this.label2.TabIndex = 9;
             this.label2.Text = "ຊື່ກາເຟ";
             // 
@@ -154,7 +154,7 @@
             // 
             this.txtid.Location = new System.Drawing.Point(34, 93);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(210, 36);
+            this.txtid.Size = new System.Drawing.Size(210, 31);
             this.txtid.TabIndex = 0;
             this.txtid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
             // 
@@ -163,7 +163,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(34, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 28);
+            this.label1.Size = new System.Drawing.Size(47, 23);
             this.label1.TabIndex = 10;
             this.label1.Text = "ລະຫັດ";
             // 
@@ -172,7 +172,7 @@
             this.cbUnit.FormattingEnabled = true;
             this.cbUnit.Location = new System.Drawing.Point(258, 93);
             this.cbUnit.Name = "cbUnit";
-            this.cbUnit.Size = new System.Drawing.Size(210, 36);
+            this.cbUnit.Size = new System.Drawing.Size(210, 31);
             this.cbUnit.TabIndex = 6;
             this.cbUnit.SelectedIndexChanged += new System.EventHandler(this.cbUnit_SelectedIndexChanged);
             this.cbUnit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
@@ -182,7 +182,7 @@
             this.cbCatg.FormattingEnabled = true;
             this.cbCatg.Location = new System.Drawing.Point(258, 171);
             this.cbCatg.Name = "cbCatg";
-            this.cbCatg.Size = new System.Drawing.Size(210, 36);
+            this.cbCatg.Size = new System.Drawing.Size(210, 31);
             this.cbCatg.TabIndex = 5;
             this.cbCatg.SelectedIndexChanged += new System.EventHandler(this.cbCatg_SelectedIndexChanged);
             this.cbCatg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_EnterNextControl);
@@ -253,7 +253,7 @@
             this.lbCaption.ForeColor = System.Drawing.Color.White;
             this.lbCaption.Location = new System.Drawing.Point(3, 2);
             this.lbCaption.Name = "lbCaption";
-            this.lbCaption.Size = new System.Drawing.Size(43, 28);
+            this.lbCaption.Size = new System.Drawing.Size(47, 23);
             this.lbCaption.TabIndex = 20;
             this.lbCaption.Text = "Save";
             // 
@@ -337,7 +337,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Phetsarath OT", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(518, 504);

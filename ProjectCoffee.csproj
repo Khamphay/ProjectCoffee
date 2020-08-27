@@ -66,10 +66,10 @@
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI">
-      <HintPath>..\CShard_3cs2_Lad_P2_Salary\CShard_3cs2_Lad_P2_Salary\bin\Debug\Guna.UI.dll</HintPath>
+      <HintPath>D:\Cshart3cs2\ProjectCoffee\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Message">
-      <HintPath>..\Message.dll</HintPath>
+      <HintPath>D:\Cshart3cs2\Message.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>

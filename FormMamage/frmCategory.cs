@@ -20,6 +20,7 @@ namespace ProjectCoffee
         {
             InitializeComponent();
             _home = home;
+            MyVarible.dgvFornt(dgvCatg);
         }
 
 

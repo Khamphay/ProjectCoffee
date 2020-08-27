@@ -25,17 +25,7 @@ namespace ProjectCoffee
             txtAll.ReadOnly = true;
             txtSet.ReadOnly = true;
 
-            //Check Form TopMost
-            if (ProjectCoffee.Properties.Settings.Default.topMost == true)
-            {
-                cbMostTop.Checked=true;
-                this.TopMost = ProjectCoffee.Properties.Settings.Default.topMost;
-            }
-            else
-            {
-                cbMostTop.Checked = false;
-            }
-
+            
         }
 
         bool mouse = false;
@@ -51,19 +41,7 @@ namespace ProjectCoffee
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void cbMostTop_CheckedChanged(object sender, EventArgs e)
-        {
-            if(cbMostTop.Checked==true)
-            {
-               ProjectCoffee.Properties.Settings.Default.topMost = true;
-            }
-            else
-            {
-                ProjectCoffee.Properties.Settings.Default.topMost = false;
-            }
-            this.TopMost = Properties.Settings.Default.topMost;
-            ProjectCoffee.Properties.Settings.Default.Save();
-        }
+        
 
         private void pnlTaskBar_MouseMove(object sender, MouseEventArgs e)
         {

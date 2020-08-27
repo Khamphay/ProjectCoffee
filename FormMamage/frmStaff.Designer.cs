@@ -36,6 +36,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btBack = new Guna.UI.WinForms.GunaButton();
             this.gunaSeparator2 = new Guna.UI.WinForms.GunaSeparator();
+            this.btUser = new System.Windows.Forms.Button();
             this.btDel = new System.Windows.Forms.Button();
             this.btEdit = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaGroupBox3 = new Guna.UI.WinForms.GunaGroupBox();
             this.gunaSeparator3 = new Guna.UI.WinForms.GunaSeparator();
-            this.btUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.panel1.SuspendLayout();
             this.gunaGroupBox3.SuspendLayout();
@@ -61,7 +61,7 @@
             this.dgvStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
@@ -71,7 +71,7 @@
             this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -86,7 +86,7 @@
             this.dgvStaff.Name = "dgvStaff";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
@@ -155,6 +155,17 @@
             this.gunaSeparator2.Size = new System.Drawing.Size(939, 1);
             this.gunaSeparator2.TabIndex = 16;
             // 
+            // btUser
+            // 
+            this.btUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btUser.Location = new System.Drawing.Point(739, 36);
+            this.btUser.Name = "btUser";
+            this.btUser.Size = new System.Drawing.Size(63, 36);
+            this.btUser.TabIndex = 2;
+            this.btUser.Text = "User";
+            this.btUser.UseVisualStyleBackColor = true;
+            this.btUser.Click += new System.EventHandler(this.btUser_Click);
+            // 
             // btDel
             // 
             this.btDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -192,7 +203,7 @@
             // 
             this.txtSearch.Location = new System.Drawing.Point(140, 38);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(274, 36);
+            this.txtSearch.Size = new System.Drawing.Size(274, 31);
             this.txtSearch.TabIndex = 1;
             // 
             // label1
@@ -200,7 +211,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(89, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 28);
+            this.label1.Size = new System.Drawing.Size(49, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "ຄົ້ນຫາ:";
             // 
@@ -219,7 +230,7 @@
             this.gunaGroupBox3.BorderSize = 1;
             this.gunaGroupBox3.Controls.Add(this.gunaSeparator3);
             this.gunaGroupBox3.Controls.Add(this.dgvStaff);
-            this.gunaGroupBox3.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.gunaGroupBox3.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox3.LineBottom = 1;
             this.gunaGroupBox3.LineColor = System.Drawing.Color.White;
             this.gunaGroupBox3.LineLeft = 1;
@@ -243,17 +254,6 @@
             this.gunaSeparator3.Size = new System.Drawing.Size(919, 1);
             this.gunaSeparator3.TabIndex = 11;
             // 
-            // btUser
-            // 
-            this.btUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btUser.Location = new System.Drawing.Point(739, 36);
-            this.btUser.Name = "btUser";
-            this.btUser.Size = new System.Drawing.Size(63, 36);
-            this.btUser.TabIndex = 2;
-            this.btUser.Text = "User";
-            this.btUser.UseVisualStyleBackColor = true;
-            this.btUser.Click += new System.EventHandler(this.btUser_Click);
-            // 
             // frmStaff
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -261,7 +261,7 @@
             this.ClientSize = new System.Drawing.Size(939, 544);
             this.Controls.Add(this.gunaGroupBox3);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStaff";
             this.Text = "frmStaff";

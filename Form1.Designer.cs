@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI.Animation.Animation animation14 = new Guna.UI.Animation.Animation();
+            Guna.UI.Animation.Animation animation3 = new Guna.UI.Animation.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnlManu = new System.Windows.Forms.Panel();
             this.lbCom_Name = new System.Windows.Forms.Label();
@@ -89,10 +89,10 @@
             this.lbCom_Name.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbCom_Name.AutoSize = true;
             this.gunaTransition1.SetDecoration(this.lbCom_Name, Guna.UI.Animation.DecorationType.None);
-            this.lbCom_Name.Font = new System.Drawing.Font("Alice5 95", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCom_Name.Location = new System.Drawing.Point(25, 68);
+            this.lbCom_Name.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCom_Name.Location = new System.Drawing.Point(33, 68);
             this.lbCom_Name.Name = "lbCom_Name";
-            this.lbCom_Name.Size = new System.Drawing.Size(176, 34);
+            this.lbCom_Name.Size = new System.Drawing.Size(154, 21);
             this.lbCom_Name.TabIndex = 0;
             this.lbCom_Name.Text = "Cafe Of My Dream";
             // 
@@ -107,7 +107,7 @@
             this.gunaTransition1.SetDecoration(this.btAnimate, Guna.UI.Animation.DecorationType.None);
             this.btAnimate.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btAnimate.FocusedColor = System.Drawing.Color.Empty;
-            this.btAnimate.Font = new System.Drawing.Font("Alice5 95", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAnimate.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAnimate.ForeColor = System.Drawing.Color.White;
             this.btAnimate.Image = global::ProjectCoffee.Properties.Resources.menu_vertical1;
             this.btAnimate.ImageSize = new System.Drawing.Size(30, 30);
@@ -152,7 +152,7 @@
             this.btReport.FlatAppearance.BorderSize = 0;
             this.btReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(79)))), ((int)(((byte)(106)))));
             this.btReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btReport.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btReport.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btReport.Image = global::ProjectCoffee.Properties.Resources.report;
             this.btReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btReport.Location = new System.Drawing.Point(4, 503);
@@ -173,7 +173,7 @@
             this.btSale.FlatAppearance.BorderSize = 0;
             this.btSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(79)))), ((int)(((byte)(106)))));
             this.btSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSale.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSale.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSale.Image = global::ProjectCoffee.Properties.Resources.sale_30px;
             this.btSale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSale.Location = new System.Drawing.Point(4, 438);
@@ -194,7 +194,7 @@
             this.btCatg.FlatAppearance.BorderSize = 0;
             this.btCatg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(79)))), ((int)(((byte)(106)))));
             this.btCatg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCatg.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCatg.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCatg.Image = global::ProjectCoffee.Properties.Resources.icons8_sugar_cube_30;
             this.btCatg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btCatg.Location = new System.Drawing.Point(4, 373);
@@ -215,7 +215,7 @@
             this.btUnit.FlatAppearance.BorderSize = 0;
             this.btUnit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(79)))), ((int)(((byte)(106)))));
             this.btUnit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btUnit.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUnit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btUnit.Image = ((System.Drawing.Image)(resources.GetObject("btUnit.Image")));
             this.btUnit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btUnit.Location = new System.Drawing.Point(4, 308);
@@ -236,7 +236,7 @@
             this.btCoff.FlatAppearance.BorderSize = 0;
             this.btCoff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(79)))), ((int)(((byte)(106)))));
             this.btCoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCoff.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCoff.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCoff.Image = global::ProjectCoffee.Properties.Resources.icons8_tableware_30;
             this.btCoff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btCoff.Location = new System.Drawing.Point(4, 243);
@@ -257,7 +257,7 @@
             this.btStaff.FlatAppearance.BorderSize = 0;
             this.btStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(79)))), ((int)(((byte)(106)))));
             this.btStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btStaff.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btStaff.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btStaff.Image = ((System.Drawing.Image)(resources.GetObject("btStaff.Image")));
             this.btStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btStaff.Location = new System.Drawing.Point(4, 178);
@@ -386,7 +386,7 @@
             this.gunaTransition1.SetDecoration(this.btLogout, Guna.UI.Animation.DecorationType.None);
             this.btLogout.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btLogout.FocusedColor = System.Drawing.Color.Empty;
-            this.btLogout.Font = new System.Drawing.Font("Lao_SomPong", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLogout.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLogout.ForeColor = System.Drawing.Color.White;
             this.btLogout.Image = global::ProjectCoffee.Properties.Resources.minus;
             this.btLogout.ImageSize = new System.Drawing.Size(20, 20);
@@ -450,22 +450,22 @@
             // 
             this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.Scale;
             this.gunaTransition1.Cursor = null;
-            animation14.AnimateOnlyDifferences = true;
-            animation14.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation14.BlindCoeff")));
-            animation14.LeafCoeff = 0F;
-            animation14.MaxTime = 1F;
-            animation14.MinTime = 0F;
-            animation14.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation14.MosaicCoeff")));
-            animation14.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation14.MosaicShift")));
-            animation14.MosaicSize = 0;
-            animation14.Padding = new System.Windows.Forms.Padding(0);
-            animation14.RotateCoeff = 0F;
-            animation14.RotateLimit = 0F;
-            animation14.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation14.ScaleCoeff")));
-            animation14.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation14.SlideCoeff")));
-            animation14.TimeCoeff = 0F;
-            animation14.TransparencyCoeff = 0F;
-            this.gunaTransition1.DefaultAnimation = animation14;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.gunaTransition1.DefaultAnimation = animation3;
             // 
             // AnimatedMenu
             // 
@@ -482,7 +482,7 @@
             this.Controls.Add(this.pnlManu);
             this.Controls.Add(this.pnlTaskBar);
             this.gunaTransition1.SetDecoration(this, Guna.UI.Animation.DecorationType.None);
-            this.Font = new System.Drawing.Font("Alice5 95", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";

@@ -1000,8 +1000,8 @@
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>5in</PageHeight>
-    <PageWidth>3in</PageWidth>
+    <PageHeight>6in</PageHeight>
+    <PageWidth>4in</PageWidth>
     <InteractiveHeight>10in</InteractiveHeight>
     <InteractiveWidth>10in</InteractiveWidth>
     <LeftMargin>0.1in</LeftMargin>

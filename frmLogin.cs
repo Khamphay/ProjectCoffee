@@ -121,26 +121,6 @@ namespace ProjectCoffee
             }
         }
 
-        private void picFacebook_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.facebook.com/perrycountycafe/");
-        }
-
-        private void picTweeter_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picInstragram_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.instagram.com/cafebuur/");
-        }
-
-        private void picIatam_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/Khamphay");
-        }
-
         private void btLogin_Click(object sender, EventArgs e)
         {
             Login();

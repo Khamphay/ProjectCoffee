@@ -19,6 +19,7 @@ namespace ProjectCoffee
         {
             InitializeComponent();
             _home = home;
+            MyVarible.dgvFornt(dgvStaff);
         }
 
         MySqlConnection con = MyConnect.getConnted();
@@ -197,7 +198,11 @@ namespace ProjectCoffee
 
         private void btDel_Click(object sender, EventArgs e)
         {
-            Delete(dgvStaff.Rows[index].Cells[0].Value.ToString());
+           if(index>=0){
+                Delete(dgvStaff.Rows[index].Cells[0].Value.ToString());
+           }else{
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດລົບຂໍ້ມູນໄດ້ ກະລຸນາເລືອກຂໍ້ມູນທີ່ຕ້ອງການລົບ ແລ້ວລອງໃໝ່ອິກຄັ້ງ ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+           }
         }
 
         private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -212,30 +217,37 @@ namespace ProjectCoffee
 
         private void btEdit_Click(object sender, EventArgs e)
         {
-            if (staff != null)
+            if (index >= 0)
             {
-                staff.Close();
+                if (staff != null)
+                {
+                    staff.Close();
+                }
+                staff = new frmSaveEditStaff(this);
+
+                staff.txtid.Text = dgvStaff.Rows[index].Cells[0].Value.ToString();
+                staff.txtname.Text = dgvStaff.Rows[index].Cells[1].Value.ToString();
+                staff.txtsurename.Text = dgvStaff.Rows[index].Cells[2].Value.ToString();
+
+                if (dgvStaff.Rows[index].Cells[3].Value.ToString() == "ຊາຍ")
+                {
+                    staff.rdbMale.Checked = true;
+                }
+                staff.txttel.Text = dgvStaff.Rows[index].Cells[4].Value.ToString();
+                staff.txtcard.Text = dgvStaff.Rows[index].Cells[5].Value.ToString();
+                staff.txtemail.Text = dgvStaff.Rows[index].Cells[6].Value.ToString();
+                staff.txtvill.Text = dgvStaff.Rows[index].Cells[7].Value.ToString();
+                staff.txtdis.Text = dgvStaff.Rows[index].Cells[8].Value.ToString();
+                staff.txtpro.Text = dgvStaff.Rows[index].Cells[9].Value.ToString();
+                staff.txtname.Text = dgvStaff.Rows[index].Cells[1].Value.ToString();
+                staff.lbCaption.Text = "Edit employee";
+                staff.txtid.Enabled = false;
+                staff.Show();
             }
-            staff = new frmSaveEditStaff(this);
-
-            staff.txtid.Text = dgvStaff.Rows[index].Cells[0].Value.ToString();
-            staff.txtname.Text = dgvStaff.Rows[index].Cells[1].Value.ToString();
-            staff.txtsurename.Text = dgvStaff.Rows[index].Cells[2].Value.ToString();
-
-            if (dgvStaff.Rows[index].Cells[3].Value.ToString() == "ຊາຍ")
+            else
             {
-                staff.rdbMale.Checked = true;
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດແກ້ໄຂຂໍ້ມູນໄດ້ ກະລຸນາເລືອກຂໍ້ມູນທີ່ຕ້ອງການລົບ ແລ້ວລອງໃໝ່ອິກຄັ້ງ ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            staff.txttel.Text = dgvStaff.Rows[index].Cells[4].Value.ToString();
-            staff.txtcard.Text = dgvStaff.Rows[index].Cells[5].Value.ToString();
-            staff.txtemail.Text = dgvStaff.Rows[index].Cells[6].Value.ToString();
-            staff.txtvill.Text = dgvStaff.Rows[index].Cells[7].Value.ToString();
-            staff.txtdis.Text = dgvStaff.Rows[index].Cells[8].Value.ToString();
-            staff.txtpro.Text = dgvStaff.Rows[index].Cells[9].Value.ToString();
-            staff.txtname.Text = dgvStaff.Rows[index].Cells[1].Value.ToString();
-            staff.lbCaption.Text = "Edit employee";
-            staff.txtid.Enabled = false;
-            staff.Show();
         }
 
         private void btBack_Click(object sender, EventArgs e)

@@ -67,7 +67,7 @@
             this.dgvCatg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Phetsarath OT", 12F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
@@ -77,7 +77,7 @@
             this.dgvCatg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Phetsarath OT", 12F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -91,7 +91,7 @@
             this.dgvCatg.Name = "dgvCatg";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Phetsarath OT", 12F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -160,7 +160,7 @@
             // 
             this.txtSearch.Location = new System.Drawing.Point(140, 38);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(274, 36);
+            this.txtSearch.Size = new System.Drawing.Size(274, 31);
             this.txtSearch.TabIndex = 1;
             // 
             // label1
@@ -168,7 +168,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(89, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 28);
+            this.label1.Size = new System.Drawing.Size(49, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "ຄົ້ນຫາ:";
             // 
@@ -176,7 +176,7 @@
             // 
             this.btDel.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(55)))), ((int)(((byte)(86)))));
             this.btDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDel.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.btDel.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDel.Location = new System.Drawing.Point(199, 278);
             this.btDel.Name = "btDel";
             this.btDel.Size = new System.Drawing.Size(63, 36);
@@ -189,7 +189,7 @@
             // 
             this.btEdit.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(55)))), ((int)(((byte)(86)))));
             this.btEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btEdit.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.btEdit.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEdit.Location = new System.Drawing.Point(118, 278);
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(63, 36);
@@ -202,7 +202,7 @@
             // 
             this.btAdd.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(55)))), ((int)(((byte)(86)))));
             this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAdd.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.btAdd.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAdd.Location = new System.Drawing.Point(37, 279);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(63, 36);
@@ -226,7 +226,7 @@
             this.gunaGroupBox1.Controls.Add(this.btAdd);
             this.gunaGroupBox1.Controls.Add(this.btEdit);
             this.gunaGroupBox1.Controls.Add(this.btDel);
-            this.gunaGroupBox1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGroupBox1.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox1.LineBottom = 1;
             this.gunaGroupBox1.LineColor = System.Drawing.Color.White;
             this.gunaGroupBox1.LineLeft = 1;
@@ -242,37 +242,37 @@
             // 
             // txtname
             // 
-            this.txtname.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtname.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtname.Location = new System.Drawing.Point(13, 159);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(270, 36);
+            this.txtname.Size = new System.Drawing.Size(270, 31);
             this.txtname.TabIndex = 31;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(13, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 28);
+            this.label2.Size = new System.Drawing.Size(51, 23);
             this.label2.TabIndex = 29;
             this.label2.Text = "ປະເພດ";
             // 
             // txtid
             // 
-            this.txtid.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtid.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtid.Location = new System.Drawing.Point(13, 81);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(270, 36);
+            this.txtid.Size = new System.Drawing.Size(270, 31);
             this.txtid.TabIndex = 32;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(13, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 28);
+            this.label3.Size = new System.Drawing.Size(47, 23);
             this.label3.TabIndex = 30;
             this.label3.Text = "ລະຫັດ";
             // 
@@ -291,7 +291,7 @@
             this.gunaGroupBox2.BorderSize = 1;
             this.gunaGroupBox2.Controls.Add(this.gunaSeparator3);
             this.gunaGroupBox2.Controls.Add(this.dgvCatg);
-            this.gunaGroupBox2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.gunaGroupBox2.Font = new System.Drawing.Font("Phetsarath OT", 12F);
             this.gunaGroupBox2.LineBottom = 1;
             this.gunaGroupBox2.LineColor = System.Drawing.Color.White;
             this.gunaGroupBox2.LineLeft = 1;
@@ -323,7 +323,7 @@
             this.Controls.Add(this.gunaGroupBox2);
             this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Phetsarath OT", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCategory";
             this.Text = "frmCategory";

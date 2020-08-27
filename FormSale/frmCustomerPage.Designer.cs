@@ -89,7 +89,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(443, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 28);
+            this.label5.Size = new System.Drawing.Size(47, 21);
             this.label5.TabIndex = 6;
             this.label5.Text = "ຄົ້ນຫາ:";
             // 
@@ -98,7 +98,7 @@
             this.txtSearch.Location = new System.Drawing.Point(494, 20);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(238, 36);
+            this.txtSearch.Size = new System.Drawing.Size(238, 30);
             this.txtSearch.TabIndex = 5;
             this.toolTip1.SetToolTip(this.txtSearch, "Shearch");
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
@@ -108,7 +108,7 @@
             this.lbBill.AutoSize = true;
             this.lbBill.Location = new System.Drawing.Point(52, 24);
             this.lbBill.Name = "lbBill";
-            this.lbBill.Size = new System.Drawing.Size(48, 28);
+            this.lbBill.Size = new System.Drawing.Size(46, 21);
             this.lbBill.TabIndex = 4;
             this.lbBill.Text = "00/00";
             // 
@@ -117,7 +117,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 28);
+            this.label4.Size = new System.Drawing.Size(54, 21);
             this.label4.TabIndex = 4;
             this.label4.Text = "ເລກບິນ:";
             // 
@@ -127,7 +127,7 @@
             this.lbPrice_Total_display.AutoSize = true;
             this.lbPrice_Total_display.Location = new System.Drawing.Point(1083, 24);
             this.lbPrice_Total_display.Name = "lbPrice_Total_display";
-            this.lbPrice_Total_display.Size = new System.Drawing.Size(59, 28);
+            this.lbPrice_Total_display.Size = new System.Drawing.Size(62, 21);
             this.lbPrice_Total_display.TabIndex = 1;
             this.lbPrice_Total_display.Text = "0.00 ກີບ";
             this.lbPrice_Total_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,7 +138,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(1004, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 28);
+            this.label2.Size = new System.Drawing.Size(80, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "ລາຄາທັງໝົດ:";
             // 
@@ -148,7 +148,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(935, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 28);
+            this.label3.Size = new System.Drawing.Size(37, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "ຈອກ";
             // 
@@ -158,7 +158,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(812, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 28);
+            this.label1.Size = new System.Drawing.Size(93, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "ຈຳນວນທັງໝົດ:";
             // 
@@ -168,7 +168,7 @@
             this.btCancel.Image = global::ProjectCoffee.Properties.Resources.delete;
             this.btCancel.Location = new System.Drawing.Point(314, 19);
             this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(89, 39);
+            this.btCancel.Size = new System.Drawing.Size(98, 39);
             this.btCancel.TabIndex = 2;
             this.btCancel.Text = "ຍົກເລີກ";
             this.btCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -196,7 +196,7 @@
             this.lbQtyTotal_display.AutoSize = true;
             this.lbQtyTotal_display.Location = new System.Drawing.Point(902, 24);
             this.lbQtyTotal_display.Name = "lbQtyTotal_display";
-            this.lbQtyTotal_display.Size = new System.Drawing.Size(20, 28);
+            this.lbQtyTotal_display.Size = new System.Drawing.Size(18, 21);
             this.lbQtyTotal_display.TabIndex = 0;
             this.lbQtyTotal_display.Text = "0";
             this.lbQtyTotal_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -231,7 +231,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(3, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 28);
+            this.label6.Size = new System.Drawing.Size(93, 21);
             this.label6.TabIndex = 21;
             this.label6.Text = "Choose item";
             // 
@@ -358,7 +358,7 @@
             this.Controls.Add(this.flPnl);
             this.Controls.Add(this.gunaLinePanel2);
             this.Controls.Add(this.pnlTaskBar);
-            this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCustomerPage";

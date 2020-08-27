@@ -39,27 +39,15 @@
             this.txtUser = new Guna.UI.WinForms.GunaLineTextBox();
             this.txtPass = new Guna.UI.WinForms.GunaLineTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.picTweeter = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.picInstragram = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.picIatam = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.picFacebook = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.cbShowPass = new Guna.UI.WinForms.GunaImageCheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btLogin = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
-            this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.gunaCirclePictureBox3 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.pnlTaskBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTweeter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInstragram)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picIatam)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -173,7 +161,6 @@
             this.txtUser.PasswordChar = '\0';
             this.txtUser.Size = new System.Drawing.Size(301, 39);
             this.txtUser.TabIndex = 0;
-            this.txtUser.TextOffsetX = 40;
             // 
             // txtPass
             // 
@@ -190,77 +177,16 @@
             this.txtPass.PasswordChar = '\0';
             this.txtPass.Size = new System.Drawing.Size(301, 39);
             this.txtPass.TabIndex = 1;
-            this.txtPass.TextOffsetX = 40;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lao_SomPong", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(193, 102);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(199, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 47);
+            this.label1.Size = new System.Drawing.Size(82, 31);
             this.label1.TabIndex = 14;
             this.label1.Text = "Login";
-            // 
-            // picTweeter
-            // 
-            this.picTweeter.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picTweeter.BackColor = System.Drawing.Color.Transparent;
-            this.picTweeter.BaseColor = System.Drawing.Color.White;
-            this.picTweeter.Image = ((System.Drawing.Image)(resources.GetObject("picTweeter.Image")));
-            this.picTweeter.Location = new System.Drawing.Point(188, 409);
-            this.picTweeter.Name = "picTweeter";
-            this.picTweeter.Size = new System.Drawing.Size(30, 30);
-            this.picTweeter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTweeter.TabIndex = 1;
-            this.picTweeter.TabStop = false;
-            this.picTweeter.UseTransfarantBackground = false;
-            this.picTweeter.Click += new System.EventHandler(this.picTweeter_Click);
-            // 
-            // picInstragram
-            // 
-            this.picInstragram.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picInstragram.BackColor = System.Drawing.Color.Transparent;
-            this.picInstragram.BaseColor = System.Drawing.Color.White;
-            this.picInstragram.Image = ((System.Drawing.Image)(resources.GetObject("picInstragram.Image")));
-            this.picInstragram.Location = new System.Drawing.Point(253, 409);
-            this.picInstragram.Name = "picInstragram";
-            this.picInstragram.Size = new System.Drawing.Size(30, 30);
-            this.picInstragram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picInstragram.TabIndex = 1;
-            this.picInstragram.TabStop = false;
-            this.picInstragram.UseTransfarantBackground = false;
-            this.picInstragram.Click += new System.EventHandler(this.picInstragram_Click);
-            // 
-            // picIatam
-            // 
-            this.picIatam.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picIatam.BackColor = System.Drawing.Color.Transparent;
-            this.picIatam.BaseColor = System.Drawing.Color.White;
-            this.picIatam.Image = ((System.Drawing.Image)(resources.GetObject("picIatam.Image")));
-            this.picIatam.Location = new System.Drawing.Point(320, 409);
-            this.picIatam.Name = "picIatam";
-            this.picIatam.Size = new System.Drawing.Size(30, 30);
-            this.picIatam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picIatam.TabIndex = 1;
-            this.picIatam.TabStop = false;
-            this.picIatam.UseTransfarantBackground = false;
-            this.picIatam.Click += new System.EventHandler(this.picIatam_Click);
-            // 
-            // picFacebook
-            // 
-            this.picFacebook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picFacebook.BackColor = System.Drawing.Color.Transparent;
-            this.picFacebook.BaseColor = System.Drawing.Color.White;
-            this.picFacebook.Image = ((System.Drawing.Image)(resources.GetObject("picFacebook.Image")));
-            this.picFacebook.Location = new System.Drawing.Point(117, 409);
-            this.picFacebook.Name = "picFacebook";
-            this.picFacebook.Size = new System.Drawing.Size(30, 30);
-            this.picFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFacebook.TabIndex = 1;
-            this.picFacebook.TabStop = false;
-            this.picFacebook.UseTransfarantBackground = false;
-            this.picFacebook.Click += new System.EventHandler(this.picFacebook_Click);
             // 
             // gunaCirclePictureBox1
             // 
@@ -288,27 +214,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lao_SomPong", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(81, 158);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 28);
+            this.label2.Size = new System.Drawing.Size(81, 19);
             this.label2.TabIndex = 14;
             this.label2.Text = "User name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lao_SomPong", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(81, 246);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 28);
+            this.label3.Size = new System.Drawing.Size(72, 19);
             this.label3.TabIndex = 14;
             this.label3.Text = "Password";
             // 
             // btLogin
             // 
-            this.btLogin.Font = new System.Drawing.Font("Lao_SomPong", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogin.Location = new System.Drawing.Point(133, 341);
+            this.btLogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLogin.Location = new System.Drawing.Point(133, 374);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(75, 38);
             this.btLogin.TabIndex = 3;
@@ -318,8 +244,8 @@
             // 
             // btCancel
             // 
-            this.btCancel.Font = new System.Drawing.Font("Lao_SomPong", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCancel.Location = new System.Drawing.Point(243, 341);
+            this.btCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCancel.Location = new System.Drawing.Point(243, 374);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(91, 38);
             this.btCancel.TabIndex = 4;
@@ -327,44 +253,14 @@
             this.btCancel.UseVisualStyleBackColor = true;
             this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
-            // gunaCirclePictureBox2
-            // 
-            this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaCirclePictureBox2.Image")));
-            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(76, 191);
-            this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
-            this.gunaCirclePictureBox2.Size = new System.Drawing.Size(36, 36);
-            this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox2.TabIndex = 16;
-            this.gunaCirclePictureBox2.TabStop = false;
-            this.gunaCirclePictureBox2.UseTransfarantBackground = false;
-            // 
-            // gunaCirclePictureBox3
-            // 
-            this.gunaCirclePictureBox3.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("gunaCirclePictureBox3.Image")));
-            this.gunaCirclePictureBox3.Location = new System.Drawing.Point(76, 279);
-            this.gunaCirclePictureBox3.Name = "gunaCirclePictureBox3";
-            this.gunaCirclePictureBox3.Size = new System.Drawing.Size(36, 36);
-            this.gunaCirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox3.TabIndex = 16;
-            this.gunaCirclePictureBox3.TabStop = false;
-            this.gunaCirclePictureBox3.UseTransfarantBackground = false;
-            // 
             // frmLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(491, 451);
-            this.Controls.Add(this.gunaCirclePictureBox3);
-            this.Controls.Add(this.gunaCirclePictureBox2);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btLogin);
-            this.Controls.Add(this.picTweeter);
-            this.Controls.Add(this.picInstragram);
             this.Controls.Add(this.cbShowPass);
-            this.Controls.Add(this.picIatam);
-            this.Controls.Add(this.picFacebook);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPass);
@@ -381,13 +277,7 @@
             this.pnlTaskBar.ResumeLayout(false);
             this.pnlTaskBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTweeter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInstragram)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picIatam)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,10 +292,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaLineTextBox txtPass;
         private Guna.UI.WinForms.GunaLineTextBox txtUser;
-        private Guna.UI.WinForms.GunaCirclePictureBox picTweeter;
-        private Guna.UI.WinForms.GunaCirclePictureBox picInstragram;
-        private Guna.UI.WinForms.GunaCirclePictureBox picIatam;
-        private Guna.UI.WinForms.GunaCirclePictureBox picFacebook;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
         private Guna.UI.WinForms.GunaImageCheckBox cbShowPass;
         private System.Windows.Forms.Label label3;
@@ -413,8 +299,6 @@
         private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.Label label4;
-        private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox2;
-        private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox3;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }

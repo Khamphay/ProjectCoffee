@@ -35,7 +35,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btMinimam = new Guna.UI.WinForms.GunaButton();
             this.btClose = new Guna.UI.WinForms.GunaButton();
-            this.cbMostTop = new Guna.UI.WinForms.GunaCheckBox();
             this.btSave = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -75,7 +74,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 28);
+            this.label5.Size = new System.Drawing.Size(127, 23);
             this.label5.TabIndex = 19;
             this.label5.Text = "Cucalate Money";
             // 
@@ -133,20 +132,6 @@
             this.btClose.TabIndex = 16;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
-            // cbMostTop
-            // 
-            this.cbMostTop.BaseColor = System.Drawing.Color.White;
-            this.cbMostTop.CheckedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.cbMostTop.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cbMostTop.FillColor = System.Drawing.Color.White;
-            this.cbMostTop.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMostTop.Location = new System.Drawing.Point(12, 257);
-            this.cbMostTop.Name = "cbMostTop";
-            this.cbMostTop.Size = new System.Drawing.Size(109, 32);
-            this.cbMostTop.TabIndex = 10;
-            this.cbMostTop.Text = "ສະແດງຢູ່ເທິງສຸດ";
-            this.cbMostTop.CheckedChanged += new System.EventHandler(this.cbMostTop_CheckedChanged);
-            // 
             // btSave
             // 
             this.btSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -163,40 +148,40 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lao_Ketmany2", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(43, 198);
+            this.label4.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(22, 202);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 34);
+            this.label4.Size = new System.Drawing.Size(87, 26);
             this.label4.TabIndex = 15;
             this.label4.Text = "ເງິນຖອນ:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lao_Ketmany2", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 148);
+            this.label3.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(4, 152);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 34);
+            this.label3.Size = new System.Drawing.Size(109, 26);
             this.label3.TabIndex = 16;
             this.label3.Text = "ເງິນທີ່ໄດ້ຮັບ:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lao_Ketmany2", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 98);
+            this.label2.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 34);
+            this.label2.Size = new System.Drawing.Size(108, 26);
             this.label2.TabIndex = 17;
             this.label2.Text = "ເງິນທັງໝົດ:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lao_Ketmany2", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Phetsarath OT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(130, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 37);
+            this.label1.Size = new System.Drawing.Size(140, 30);
             this.label1.TabIndex = 18;
             this.label1.Text = "ຄິດໄລ່ເງິນຖອນ";
             // 
@@ -210,7 +195,7 @@
             this.txtSet.FocusedBaseColor = System.Drawing.Color.White;
             this.txtSet.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
             this.txtSet.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtSet.Font = new System.Drawing.Font("Lao_Ketmany2", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSet.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSet.Location = new System.Drawing.Point(122, 193);
             this.txtSet.Name = "txtSet";
             this.txtSet.PasswordChar = '\0';
@@ -228,7 +213,7 @@
             this.txtGet.FocusedBaseColor = System.Drawing.Color.White;
             this.txtGet.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
             this.txtGet.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtGet.Font = new System.Drawing.Font("Lao_Ketmany2", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGet.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGet.Location = new System.Drawing.Point(122, 143);
             this.txtGet.Name = "txtGet";
             this.txtGet.PasswordChar = '\0';
@@ -249,7 +234,7 @@
             this.txtAll.FocusedBaseColor = System.Drawing.Color.White;
             this.txtAll.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
             this.txtAll.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtAll.Font = new System.Drawing.Font("Lao_Ketmany2", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAll.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAll.Location = new System.Drawing.Point(122, 93);
             this.txtAll.Name = "txtAll";
             this.txtAll.PasswordChar = '\0';
@@ -275,9 +260,8 @@
             this.Controls.Add(this.txtGet);
             this.Controls.Add(this.txtAll);
             this.Controls.Add(this.btSave);
-            this.Controls.Add(this.cbMostTop);
             this.Controls.Add(this.pnlTaskBar);
-            this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -298,7 +282,6 @@
         private Guna.UI.WinForms.GunaLinePanel pnlTaskBar;
         private Guna.UI.WinForms.GunaButton btMinimam;
         private Guna.UI.WinForms.GunaButton btClose;
-        private Guna.UI.WinForms.GunaCheckBox cbMostTop;
         private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
