@@ -18,7 +18,7 @@ namespace ProjectCoffee
         {
             try
             {
-                string server = "Server=localhost; User id=root; Password=12345678; database=dbcafe;";
+                string server = "Server=localhost; User id=root; Password=; database=dbcafe;";
                 if (con.State == ConnectionState.Open)
                 {
                     con.Close();
