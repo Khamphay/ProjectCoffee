@@ -1,3 +1,3 @@
 # ProjectCoffee
-#cafe
-# Database: "dbcafe" using MySql
+# Database: "dbcafe" MySql
+# Developed by: Mr. Khamphay
