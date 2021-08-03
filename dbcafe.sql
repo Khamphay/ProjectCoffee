@@ -867,7 +867,7 @@ CREATE TABLE `vw_subreport` (
 --
 DROP TABLE IF EXISTS `vw_coff_catg`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`Khamphay`@`localhost` SQL SECURITY DEFINER VIEW `vw_coff_catg`  AS  select `tbcoffee`.`Coff_ID` AS `Coff_ID`,`tbcategory`.`Catg_Name` AS `Catg_Name` from (`tbcoffee` join `tbcategory` on(`tbcoffee`.`Catg_ID` = `tbcategory`.`Catg_ID`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_coff_catg`  AS  select `tbcoffee`.`Coff_ID` AS `Coff_ID`,`tbcategory`.`Catg_Name` AS `Catg_Name` from (`tbcoffee` join `tbcategory` on(`tbcoffee`.`Catg_ID` = `tbcategory`.`Catg_ID`)) ;
 
 -- --------------------------------------------------------
 
@@ -876,7 +876,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`Khamphay`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `vw_coff_unit`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`Khamphay`@`localhost` SQL SECURITY DEFINER VIEW `vw_coff_unit`  AS  select `tbcoffee`.`Coff_ID` AS `Coff_ID`,`tbunit`.`Uni_Name` AS `Uni_Name` from (`tbcoffee` join `tbunit` on(`tbcoffee`.`Uni_ID` = `tbunit`.`Uni_ID`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_coff_unit`  AS  select `tbcoffee`.`Coff_ID` AS `Coff_ID`,`tbunit`.`Uni_Name` AS `Uni_Name` from (`tbcoffee` join `tbunit` on(`tbcoffee`.`Uni_ID` = `tbunit`.`Uni_ID`)) ;
 
 -- --------------------------------------------------------
 
@@ -885,7 +885,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`Khamphay`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `vw_salereport`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`Khamphay`@`localhost` SQL SECURITY DEFINER VIEW `vw_salereport`  AS  select `tbsaledetail`.`Bill_ID` AS `Bill_ID`,`tbsaledetail`.`Coff_ID` AS `Coff_ID`,`tbcoffee`.`Coff_Name` AS `Coff_Name`,`tbcoffee`.`Im_Price` AS `Im_Price`,`tbcoffee`.`Sale_Price` AS `Sale_Price`,`tbcategory`.`Catg_Name` AS `Catg_Name`,`tbunit`.`Uni_Name` AS `Uni_Name`,`tbsale`.`Qty` AS `Qty`,`tbsale`.`Total` AS `Total`,`tbsale`.`BDate` AS `BDate`,`tbsale`.`St_ID` AS `St_ID` from ((((`tbsale` join `tbsaledetail` on(`tbsale`.`Bill_ID` = `tbsaledetail`.`Bill_ID`)) join `tbcoffee` on(`tbsaledetail`.`Coff_ID` = `tbcoffee`.`Coff_ID`)) join `tbcategory` on(`tbcoffee`.`Catg_ID` = `tbcategory`.`Catg_ID`)) join `tbunit` on(`tbcoffee`.`Uni_ID` = `tbunit`.`Uni_ID`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_salereport`  AS  select `tbsaledetail`.`Bill_ID` AS `Bill_ID`,`tbsaledetail`.`Coff_ID` AS `Coff_ID`,`tbcoffee`.`Coff_Name` AS `Coff_Name`,`tbcoffee`.`Im_Price` AS `Im_Price`,`tbcoffee`.`Sale_Price` AS `Sale_Price`,`tbcategory`.`Catg_Name` AS `Catg_Name`,`tbunit`.`Uni_Name` AS `Uni_Name`,`tbsale`.`Qty` AS `Qty`,`tbsale`.`Total` AS `Total`,`tbsale`.`BDate` AS `BDate`,`tbsale`.`St_ID` AS `St_ID` from ((((`tbsale` join `tbsaledetail` on(`tbsale`.`Bill_ID` = `tbsaledetail`.`Bill_ID`)) join `tbcoffee` on(`tbsaledetail`.`Coff_ID` = `tbcoffee`.`Coff_ID`)) join `tbcategory` on(`tbcoffee`.`Catg_ID` = `tbcategory`.`Catg_ID`)) join `tbunit` on(`tbcoffee`.`Uni_ID` = `tbunit`.`Uni_ID`)) ;
 
 -- --------------------------------------------------------
 
@@ -894,7 +894,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`Khamphay`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `vw_subreport`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`Khamphay`@`localhost` SQL SECURITY DEFINER VIEW `vw_subreport`  AS  select `tbsaledetail`.`Bill_ID` AS `Bill_ID`,`tbsaledetail`.`Coff_ID` AS `Coff_ID`,`tbcoffee`.`Coff_Name` AS `Coff_Name`,`tbcoffee`.`Im_Price` AS `Im_Price`,`tbcoffee`.`Sale_Price` AS `Sale_Price`,`tbcategory`.`Catg_Name` AS `Catg_Name`,`tbunit`.`Uni_Name` AS `Uni_Name`,`tbsaledetail`.`Qty` AS `Qty`,`tbsaledetail`.`Sale_Price` AS `Price`,`tbsaledetail`.`SDate` AS `SDate` from (((`tbsaledetail` join `tbcoffee` on(`tbsaledetail`.`Coff_ID` = `tbcoffee`.`Coff_ID`)) join `tbcategory` on(`tbcoffee`.`Catg_ID` = `tbcategory`.`Catg_ID`)) join `tbunit` on(`tbcoffee`.`Uni_ID` = `tbunit`.`Uni_ID`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_subreport`  AS  select `tbsaledetail`.`Bill_ID` AS `Bill_ID`,`tbsaledetail`.`Coff_ID` AS `Coff_ID`,`tbcoffee`.`Coff_Name` AS `Coff_Name`,`tbcoffee`.`Im_Price` AS `Im_Price`,`tbcoffee`.`Sale_Price` AS `Sale_Price`,`tbcategory`.`Catg_Name` AS `Catg_Name`,`tbunit`.`Uni_Name` AS `Uni_Name`,`tbsaledetail`.`Qty` AS `Qty`,`tbsaledetail`.`Sale_Price` AS `Price`,`tbsaledetail`.`SDate` AS `SDate` from (((`tbsaledetail` join `tbcoffee` on(`tbsaledetail`.`Coff_ID` = `tbcoffee`.`Coff_ID`)) join `tbcategory` on(`tbcoffee`.`Catg_ID` = `tbcategory`.`Catg_ID`)) join `tbunit` on(`tbcoffee`.`Uni_ID` = `tbunit`.`Uni_ID`)) ;
 
 --
 -- Indexes for dumped tables
